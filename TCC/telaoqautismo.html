@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Inicial</title>
+      <link rel="icon" href="favicons/teste.png" type="image/png">
+    <style>
+        .div-cabecalho {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            margin-right: 0px;
+            background-color: #000035;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            font-family: Fira Sans, sans-serif;
+        }
+    
+        .div-final {
+            display: flex;
+            margin-top: 110%;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            margin-right: 0px;
+            background-color: #000035;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            font-family: Fira Sans, sans-serif;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            font-size: 34px;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            margin-right: 10px;
+            font-size: 38px;
+        }
+        
+        .logo2 {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            margin-left: 0%;
+            font-size: 14px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .logo-icon2 {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            position: relative;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 5px 0;
+            position: sticky;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #ffffff;
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        .login-button {
+            background: linear-gradient(45deg, #ffffff, #ffffff);
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            font-family: arial,sans-serif;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(134, 132, 132, 0.3);
+        }
+        
+        .login-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(250, 251, 252, 0.4);
+        }
+        .font{
+            font-family: Fira Sans, sans-serif;;
+            color: black;
+        }
+        .imagem{
+         margin-right: 0%;   
+
+        }
+        #openBtn {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #openBtn:hover {
+        background-color: #45a049;
+    }
+    #openBtn2 {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #openBtn2:hover {
+        background-color: #45a049;
+    }
+
+    #openBtn3 {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #openBtn3:hover {
+        background-color: #45a049;
+    }
+    
+    .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+    
+    .popup-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        border-bottom: 1px solid #f60000;
+    }
+    
+    .popup-title {
+        margin: 0;
+        font-size: 18px;
+        font-family: Fira Sans, sans-serif;
+    }
+    
+    .close-btn {
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        color: #aaa;
+    }
+    
+    .close-btn:hover {
+        color: #333;
+    }
+    
+    .popup-content {
+        padding: 15px;
+    }
+    
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+    .close-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: rgba(255, 0, 0, 0.8);
+            transition: all 0.2s ease;
+            line-height: 1;
+            padding: 0 4px;
+        }
+        
+        .close-btn:hover {
+            color: rgb(175, 6, 6);
+            transform: scale(1.1);
+        }
+        
+        .popup-content {
+            padding: 20px;
+            line-height: 1.6;
+            font-family: Fira Sans, sans-serif;
+            
+        }
+        
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            backdrop-filter: blur(3px);
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -45%);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+                .popup:hover {
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+        }
+        
+    
+        .popup-content p {
+            margin-bottom: 15px;
+        }
+        
+        .popup.show {
+            animation: fadeInScale 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+    </style>
+    
+</head>
+<body >
+
+    <div class="div-cabecalho">
+        <a href="#" class="logo">
+            <span class="logo-icon">🌐</span>
+        </a>
+        
+        <ul class="nav-links">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Tutorial</a></li>
+            <li><a href="#">Sobre agente</a></li>
+            <li><a href="#">Atividades</a></li>
+            <li><a href="#">Convivendo com TEA</a></li>
+            <li><a href="#">O que é o autismo</a></li>
+        </ul>
+        <button class="login-button">
+        <a href="#" class="logo2">
+            <span class="logo-icon2"><img src="imagens/botaodelogin.png" width="25px" height="25px" class="imagem"></span><span class="font">Logar</span></span>
+        </a>
+         
+        </button>
+    </div>
+
+
+ <button id="openBtn">Diagnostico</button>
+    
+    <div class="overlay" id="overlay"></div>
+    
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <h3 class="popup-title">
+                Como posso saber o diagonostico?
+            </h3>
+            <button class="close-btn">&times;</button>
+        </div>
+        <div class="popup-content">
+            
+sdfdsgfhgjdfagads
+
+        </div>
+    </div>
+
+
+    <button id="openBtn2">caracteristicas</button>
+    
+    <div class="overlay" id="overlay2"></div>
+    
+    <div class="popup" id="popup2">
+        <div class="popup-header">
+            <h3 class="popup-title">
+                                Como posso saber as caracteristicas?
+            </h3>
+            <button class="close-btn">&times;</button>
+        </div>
+        <div class="popup-content">
+dsada
+        </div>
+    </div>
+
+    <button id="openBtn3">tratamento</button>
+    
+    <div class="overlay" id="overlay3"></div>
+    
+    <div class="popup" id="popup3">
+        <div class="popup-header">
+            <h3 class="popup-title">
+        Como posso saber os tratamentos?
+            </h3>
+            <button class="close-btn">&times;</button>
+        </div>
+        <div class="popup-content">
+asdasdsadasda
+        </div>
+    </div>
+
+
+
+    <script src="json.js"> </script>
+
+
+
+
+
+
+    <div class="div-final">
+
+        <ul class="nav-links">
+            <li><a href="#">Início</a></li></br>
+            <li><a href="#">Tutorial</a></li></br>
+            <li><a href="#">Sobre agente</a></li></br>
+            <li><a href="#">Atividades</a></li></br>
+            <li><a href="#">Convivendo com TEA</a></li></br>
+            <li><a href="#">O que é o autismo</a></li></br>
+        </ul>
+
+
+            <span class="logo-icon">🌐</span>
+        </a>
+        
+    </div>
+   
+</body>
+</html>
