@@ -3,14 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina Inicial</title>
+    <title>O que é o autismo</title>
       <link rel="icon" href="favicons/teste.png" type="image/png">
     <style>
+        body{
+            background-image: url(imagens/aUTISMO.jpg) ;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-size: 100%;
+            margin-top: 0;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+
+        }
         .div-cabecalho {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px;
+            top: 0;
             margin-right: 0px;
             background-color: #000035;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -122,45 +134,57 @@
         #openBtn {
         padding: 10px 20px;
         font-size: 16px;
-        background-color: #4CAF50;
+        background-color: #120A5C;
         color: white;
-        border: none;
+        margin-top: 5%;
+        margin-left: 700px;
+        border-color: #4626CF;
+        border-width: 5px;
+        box-sizing: border-box;
         border-radius: 4px;
         cursor: pointer;
         transition: background-color 0.3s;
     }
     
     #openBtn:hover {
-        background-color: #45a049;
+        background-color: #4626CF;
     }
     #openBtn2 {
         padding: 10px 20px;
         font-size: 16px;
-        background-color: #4CAF50;
+        background-color: #120A5C;
         color: white;
-        border: none;
+        margin-top: 5%;
+        margin-left: 10px;
+        border-color: #4626CF;
+        border-width: 5px;
+        box-sizing: border-box;
         border-radius: 4px;
         cursor: pointer;
         transition: background-color 0.3s;
     }
     
     #openBtn2:hover {
-        background-color: #45a049;
+        background-color: #4626CF;
     }
 
     #openBtn3 {
         padding: 10px 20px;
         font-size: 16px;
-        background-color: #4CAF50;
+        background-color: #120A5C;
         color: white;
-        border: none;
+        margin-top: 5%;
+        margin-left: 10px;
+        border-color: #4626CF;
+        border-width: 5px;
+        box-sizing: border-box;
         border-radius: 4px;
         cursor: pointer;
         transition: background-color 0.3s;
     }
     
     #openBtn3:hover {
-        background-color: #45a049;
+        background-color: #4626CF;
     }
     
     .popup {
@@ -232,6 +256,42 @@
             transform: scale(1.1);
         }
         
+
+
+        .close-btn2 {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: rgba(255, 0, 0, 0.8);
+            transition: all 0.2s ease;
+            line-height: 1;
+            padding: 0 4px;
+        }
+
+        .close-btn2:hover {
+            color: rgb(175, 6, 6);
+            transform: scale(1.1);
+        }
+
+
+        .close-btn3 {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: rgba(255, 0, 0, 0.8);
+            transition: all 0.2s ease;
+            line-height: 1;
+            padding: 0 4px;
+        }
+
+        .close-btn3:hover {
+            color: rgb(175, 6, 6);
+            transform: scale(1.1);
+        }
+
+
         .popup-content {
             padding: 20px;
             line-height: 1.6;
@@ -284,23 +344,24 @@
                 transform: translate(-50%, -50%) scale(1);
             }
         }
+    
     </style>
     
 </head>
-<body >
+<body>
 
     <div class="div-cabecalho">
-        <a href="#" class="logo">
+        <a href="home.html" class="logo">
             <span class="logo-icon">🌐</span>
         </a>
         
         <ul class="nav-links">
-            <li><a href="#">Início</a></li>
+            <li><a href="home.html">Início</a></li>
             <li><a href="#">Tutorial</a></li>
             <li><a href="#">Sobre agente</a></li>
             <li><a href="#">Atividades</a></li>
             <li><a href="#">Convivendo com TEA</a></li>
-            <li><a href="#">O que é o autismo</a></li>
+            <li><a href="telaoqautismo.html">O que é o autismo</a></li>
         </ul>
         <button class="login-button">
         <a href="#" class="logo2">
@@ -339,7 +400,7 @@ sdfdsgfhgjdfagads
             <h3 class="popup-title">
                                 Como posso saber as caracteristicas?
             </h3>
-            <button class="close-btn">&times;</button>
+            <button class="close-btn2">&times;</button>
         </div>
         <div class="popup-content">
 dsada
@@ -355,7 +416,7 @@ dsada
             <h3 class="popup-title">
         Como posso saber os tratamentos?
             </h3>
-            <button class="close-btn">&times;</button>
+            <button class="close-btn3">&times;</button>
         </div>
         <div class="popup-content">
 asdasdsadasda
@@ -374,12 +435,12 @@ asdasdsadasda
     <div class="div-final">
 
         <ul class="nav-links">
-            <li><a href="#">Início</a></li></br>
+            <li><a href="home.html">Início</a></li></br>
             <li><a href="#">Tutorial</a></li></br>
             <li><a href="#">Sobre agente</a></li></br>
             <li><a href="#">Atividades</a></li></br>
             <li><a href="#">Convivendo com TEA</a></li></br>
-            <li><a href="#">O que é o autismo</a></li></br>
+            <li><a href="telaoqautismo.html">O que é o autismo</a></li></br>
         </ul>
 
 

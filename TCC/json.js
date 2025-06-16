@@ -4,21 +4,20 @@ const popup = document.getElementById('popup');
 const overlay = document.getElementById('overlay');
 
 
-// Abrir pop-up
 openBtn.addEventListener('click', () => {
     popup.style.display = 'block';
     overlay.style.display = 'block';
     popup.classList.add('show');
 });
 
-// Fechar pop-up ao clicar no X
+
 closeBtn.addEventListener('click', () => {
     popup.style.display = 'none';
     overlay.style.display = 'none';
     popup.classList.remove('show');
 });
 
-// Fechar pop-up ao clicar no overlay (fora do pop-up)
+
 overlay.addEventListener('click', () => {
     popup.style.display = 'none';
     overlay.style.display = 'none';
@@ -29,7 +28,7 @@ overlay.addEventListener('click', () => {
 
 
 const openBtn2 = document.getElementById('openBtn2');
-const closeBtn2 = document.querySelector('.close-btn');
+const closeBtn2 = document.querySelector('.close-btn2');
 const popup2 = document.getElementById('popup2');
 const overlay2 = document.getElementById('overlay2');
 
@@ -60,7 +59,7 @@ overlay2.addEventListener('click', () => {
 
 
 const openBtn3 = document.getElementById('openBtn3');
-const closeBtn3 = document.querySelector('.close-btn');
+const closeBtn3 = document.querySelector('.close-btn3');
 const popup3 = document.getElementById('popup3');
 const overlay3 = document.getElementById('overlay3');
 
