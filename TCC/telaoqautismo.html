@@ -7,7 +7,8 @@
       <link rel="icon" href="favicons/teste.png" type="image/png">
     <style>
         body{
-            background-image: url(imagens/aUTISMO.jpg) ;
+            background-image: url(imagens/aUTISMO.jpg);
+            height: 100%;
             background-repeat: no-repeat;
             background-size: cover;
             background-size: 100%;
@@ -15,6 +16,23 @@
             margin-left: 0;
             margin-right: 0;
             margin-bottom: 0;
+
+        }
+
+
+        .div-botoes{
+            color: white;
+            margin-top: 100px;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+            align-items: center;
+            background-color: white;
+            border-top: 5px solid ;
+            border-image: linear-gradient(to right, red, orange, yellow, blue);
+            text-align: center;
+            border-bottom: 5px solid;
+            border-image-slice: 1;
 
         }
         .div-cabecalho {
@@ -31,7 +49,7 @@
     
         .div-final {
             display: flex;
-            margin-top: 110%;
+            margin-top: 0%;
             justify-content: space-between;
             align-items: center;
             padding: 20px;
@@ -136,11 +154,13 @@
         font-size: 16px;
         background-color: #120A5C;
         color: white;
-        margin-top: 5%;
-        margin-left: 700px;
+        margin-right: 10px;
         border-color: #4626CF;
+        border-bottom:10px solid #4626CF;
+        border-right:10px solid #4626CF;
         border-width: 5px;
         box-sizing: border-box;
+        margin-top: 20px;
         border-radius: 4px;
         cursor: pointer;
         transition: background-color 0.3s;
@@ -152,11 +172,12 @@
     #openBtn2 {
         padding: 10px 20px;
         font-size: 16px;
-        background-color: #120A5C;
+        background-color: #9fac09;
         color: white;
-        margin-top: 5%;
-        margin-left: 10px;
-        border-color: #4626CF;
+        margin-right: 10px;
+        border-color: #c4cf26;
+        border-bottom:10px solid #c4cf26;
+        border-right:10px solid #c4cf26;
         border-width: 5px;
         box-sizing: border-box;
         border-radius: 4px;
@@ -165,26 +186,25 @@
     }
     
     #openBtn2:hover {
-        background-color: #4626CF;
+        background-color: yellow;
     }
 
     #openBtn3 {
         padding: 10px 20px;
         font-size: 16px;
-        background-color: #120A5C;
+        background-color: #5c0a0a;
         color: white;
-        margin-top: 5%;
-        margin-left: 10px;
-        border-color: #4626CF;
+        border-color: #cf2626;
+        border-bottom:10px solid #cf2626;
+        border-right:10px solid #cf2626;
         border-width: 5px;
-        box-sizing: border-box;
         border-radius: 4px;
         cursor: pointer;
         transition: background-color 0.3s;
     }
     
     #openBtn3:hover {
-        background-color: #4626CF;
+        background-color: red;
     }
     
     .popup {
@@ -194,18 +214,46 @@
         left: 50%;
         transform: translate(-50%, -50%);
         width: 300px;
-        background-color: white;
+        background-color: rgb(95, 88, 226);
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         z-index: 1000;
     }
+
+    .popup2 {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        background-color: rgb(229, 245, 5);
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .popup3 {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        background-color: rgb(246, 76, 76);
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+    
+    
     
     .popup-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 10px 15px;
-        border-bottom: 1px solid #f60000;
+        border-bottom: 1px solid #000000;
     }
     
     .popup-title {
@@ -245,14 +293,14 @@
             border: none;
             font-size: 24px;
             cursor: pointer;
-            color: rgba(255, 0, 0, 0.8);
+            color: rgba(101, 0, 0, 0.8);
             transition: all 0.2s ease;
             line-height: 1;
             padding: 0 4px;
         }
         
         .close-btn:hover {
-            color: rgb(175, 6, 6);
+            color: rgb(255, 0, 0);
             transform: scale(1.1);
         }
         
@@ -263,14 +311,14 @@
             border: none;
             font-size: 24px;
             cursor: pointer;
-            color: rgba(255, 0, 0, 0.8);
+            color: rgba(101, 0, 0, 0.8);
             transition: all 0.2s ease;
             line-height: 1;
             padding: 0 4px;
         }
 
         .close-btn2:hover {
-            color: rgb(175, 6, 6);
+            color: rgb(255, 0, 0);
             transform: scale(1.1);
         }
 
@@ -280,14 +328,14 @@
             border: none;
             font-size: 24px;
             cursor: pointer;
-            color: rgba(255, 0, 0, 0.8);
+            color: rgba(101, 0, 0, 0.8);
             transition: all 0.2s ease;
             line-height: 1;
             padding: 0 4px;
         }
 
         .close-btn3:hover {
-            color: rgb(175, 6, 6);
+            color: rgb(255, 0, 0);
             transform: scale(1.1);
         }
 
@@ -322,9 +370,16 @@
             }
         }
                 .popup:hover {
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 12px 30px rgba(13, 0, 255, 0.25);
+        }
+
+        .popup2:hover {
+            box-shadow: 0 12px 30px rgba(225, 255, 0, 0.25);
         }
         
+        .popup3:hover {
+            box-shadow: 0 12px 30px rgba(255, 0, 0, 0.25);
+        }
     
         .popup-content p {
             margin-bottom: 15px;
@@ -333,6 +388,23 @@
         .popup.show {
             animation: fadeInScale 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
+        
+        .popup2-content p {
+            margin-bottom: 15px;
+        }
+        
+        .popup2.show {
+            animation: fadeInScale 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .popup3-content p {
+            margin-bottom: 15px;
+        }
+        
+        .popup3.show {
+            animation: fadeInScale 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
         
         @keyframes fadeInScale {
             0% {
@@ -343,6 +415,15 @@
                 opacity: 1;
                 transform: translate(-50%, -50%) scale(1);
             }
+        }
+
+
+        .divteste{
+            width: 100%;
+            height: 550px;
+            margin-top: 50px;
+            margin-left: 0;
+            background-color: rgb(255, 255, 255);
         }
     
     </style>
@@ -371,7 +452,9 @@
         </button>
     </div>
 
-
+<div class="div-botoes" style="word-wrap: break-word;">
+    <div class="font">
+        <center>
  <button id="openBtn">Diagnostico</button>
     
     <div class="overlay" id="overlay"></div>
@@ -395,7 +478,7 @@ sdfdsgfhgjdfagads
     
     <div class="overlay" id="overlay2"></div>
     
-    <div class="popup" id="popup2">
+    <div class="popup2" id="popup2">
         <div class="popup-header">
             <h3 class="popup-title">
                                 Como posso saber as caracteristicas?
@@ -411,7 +494,7 @@ dsada
     
     <div class="overlay" id="overlay3"></div>
     
-    <div class="popup" id="popup3">
+    <div class="popup3" id="popup3">
         <div class="popup-header">
             <h3 class="popup-title">
         Como posso saber os tratamentos?
@@ -422,9 +505,30 @@ dsada
 asdasdsadasda
         </div>
     </div>
+</center>
+<div class="divteste">
+    <center>
+skdjfkdsjfksdjfjahgdlkjgçlkdsjflkdsjfjdsafkjdsalkfjdsalkfjçdsalkhglkdsjgadlijaish
+djhfkjagfhkjdshflkjjdshlkjfhdsakjfhdsafkjhdsakjfdsaf
+sda
+safdfsadfdsafdsafdsafdsafsdafdsasadsadasdadad asdsadadasddasdsadasdsadsa
+sadsadsadsadsadsad asdsadadasddasdsadasdsadsa
+skdjfkdsjfksdjfjahgdlkjgçlkdsjflkdsjfjdsafkjdsalkfjdsalkfjçdsalkhglkdsjgadlijaish
+djhfkjagfhkjdshflkjjdshlkjfhdsakjfhdsafkjhdsakjfdsaf
+sda
+safdfsadfdsafdsafdsafdsafsdafdsasadsadasdadad asdsadadasddasdsadasdsadsa
+sadsadsadsadsadsad asdsadadasddasdsadasdsadsa
+skdjfkdsjfksdjfjahgdlkjgçlkdsjflkdsjfjdsafkjdsalkfjdsalkfjçdsalkhglkdsjgadlijaish
+djhfkjagfhkjdshflkjjdshlkjfhdsakjfhdsafkjhdsakjfdsaf
+sda
+safdfsadfdsafdsafdsafdsafsdafdsasadsadasdadad asdsadadasddasdsadasdsadsa
+sadsadsadsadsadsad asdsadadasddasdsadasdsadsa
+</center>
 
 
-
+</div>
+</div>
+</div>
     <script src="json.js"> </script>
 
 
