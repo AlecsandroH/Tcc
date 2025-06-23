@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O que é o autismo</title>
-      <link rel="icon" href="favicons/teste.png" type="image/png">
+      <link rel="icon" href="favicons/logo.png" type="image/png">
     <style>
-        body{
-            background-image: url(imagens/aUTISMO.jpg);
-            height: 100%;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-size: 100%;
-            margin-top: 0;
-            margin-left: 0;
-            margin-right: 0;
-            margin-bottom: 0;
+
+        /* Fundo css*/
+        .imagem-container {
+            width: 100%;
+            height: 300px;
 
         }
-
-
+        
+        .imagem-container img {
+            width: 100%;
+            height: 100%;
+            object-position: center;
+            object-fit: cover;
+            
+        }
+        /*Botoes css*/
         .div-botoes{
             color: white;
-            margin-top: 100px;
+            margin-top: 0;
             margin-left: 0;
             margin-right: 0;
             margin-bottom: 0;
@@ -35,94 +37,7 @@
             border-image-slice: 1;
 
         }
-        .div-cabecalho {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            top: 0;
-            margin-right: 0px;
-            background-color: #000035;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            font-family: Fira Sans, sans-serif;
-        }
-    
-        .div-final {
-            display: flex;
-            margin-top: 0%;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            margin-right: 0px;
-            background-color: #000035;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            font-family: Fira Sans, sans-serif;
-        }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            font-weight: bold;
-            font-size: 34px;
-            color: #2c3e50;
-            text-decoration: none;
-        }
-
-        .logo-icon {
-            margin-right: 10px;
-            font-size: 38px;
-        }
-        
-        .logo2 {
-            display: flex;
-            align-items: center;
-            font-weight: bold;
-            margin-left: 0%;
-            font-size: 14px;
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-        .logo-icon2 {
-            margin-right: 10px;
-            font-size: 18px;
-        }
-
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-            position: relative;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #ffffff;
-            font-weight: 500;
-            transition: color 0.3s;
-            padding: 5px 0;
-            position: sticky;
-        }
-
-        .nav-links a:hover {
-            color: #ffffff;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: #ffffff;
-            transition: width 0.3s;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
         .login-button {
             background: linear-gradient(45deg, #ffffff, #ffffff);
             color: rgb(0, 0, 0);
@@ -141,14 +56,7 @@
             transform: translateY(-3px);
             box-shadow: 0 7px 15px rgba(250, 251, 252, 0.4);
         }
-        .font{
-            font-family: Fira Sans, sans-serif;;
-            color: black;
-        }
-        .imagem{
-         margin-right: 0%;   
 
-        }
         #openBtn {
         padding: 10px 20px;
         font-size: 16px;
@@ -419,24 +327,124 @@
             }
         }
 
+        /* vai ter em todas as paginas css*/
+        .div-cabecalho {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            top: 0;
+            margin-right: 0px;
+            background-color: #000035;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            font-family: Fira Sans, sans-serif;
+        }
+    
+        .div-final {
+            display: flex;
+            margin-top: 0%;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            margin-right: 0px;
+            background-color: #000035;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            font-family: Fira Sans, sans-serif;
+        }
 
-        .divteste{
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            font-size: 34px;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            margin-right: 10px;
+            font-size: 38px;
+        }
+        
+        .logo2 {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            margin-left: 0%;
+            font-size: 14px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .logo-icon2 {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            position: relative;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 5px 0;
+            position: sticky;
+        }
+
+        .nav-links a:hover {
+            color: linear-gradient(to right, red, orange, yellow, blue);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-image: linear-gradient(to right, red, orange, yellow, blue);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+      
+        /*Textos css*/
+        .font{
+            font-family: Fira Sans, sans-serif;;
+            color: black;
+        }
+   
+      
+
+        .divtexto{
             width: 100%;
             height: 550px;
             margin-top: 50px;
             margin-left: 0;
             background-color: rgb(255, 255, 255);
         }
-    
+
+
+        
     </style>
     
 </head>
 <body>
-
+  
     <div class="div-cabecalho">
         <a href="home.html" class="logo">
             <span class="logo-icon">🌐</span>
         </a>
+
         
         <ul class="nav-links">
             <li><a href="home.html">Início</a></li>
@@ -446,12 +454,18 @@
             <li><a href="#">Convivendo com TEA</a></li>
             <li><a href="telaoqautismo.html">O que é o autismo</a></li>
         </ul>
+
+
         <button class="login-button">
         <a href="#" class="logo2">
-            <span class="logo-icon2"><img src="imagens/botaodelogin.png" width="25px" height="25px" class="imagem"></span><span class="font">Logar</span></span>
+            <span class="logo-icon2"><img src="imagens/user.png" width="25px" height="25px" class="imagem"></span><span class="font">Logar</span></span>
         </a>
          
         </button>
+    </div>
+
+    <div class="imagem-container">
+        <img src="imagens/fundoescritoautista.jpg">
     </div>
 
 <div class="div-botoes" style="word-wrap: break-word;">
@@ -470,7 +484,7 @@
         </div>
         <div class="popup-content">
             
-sdfdsgfhgjdfagads
+Texto aqui
 
         </div>
     </div>
@@ -488,7 +502,7 @@ sdfdsgfhgjdfagads
             <button class="close-btn2">&times;</button>
         </div>
         <div class="popup-content">
-dsada
+            Texto aqui
         </div>
     </div>
 
@@ -504,27 +518,13 @@ dsada
             <button class="close-btn3">&times;</button>
         </div>
         <div class="popup-content">
-asdasdsadasda
+            Texto aqui
         </div>
     </div>
 </center>
-<div class="divteste">
+<div class="divtexto">
     <center>
-skdjfkdsjfksdjfjahgdlkjgçlkdsjflkdsjfjdsafkjdsalkfjdsalkfjçdsalkhglkdsjgadlijaish
-djhfkjagfhkjdshflkjjdshlkjfhdsakjfhdsafkjhdsakjfdsaf
-sda
-safdfsadfdsafdsafdsafdsafsdafdsasadsadasdadad asdsadadasddasdsadasdsadsa
-sadsadsadsadsadsad asdsadadasddasdsadasdsadsa
-skdjfkdsjfksdjfjahgdlkjgçlkdsjflkdsjfjdsafkjdsalkfjdsalkfjçdsalkhglkdsjgadlijaish
-djhfkjagfhkjdshflkjjdshlkjfhdsakjfhdsafkjhdsakjfdsaf
-sda
-safdfsadfdsafdsafdsafdsafsdafdsasadsadasdadad asdsadadasddasdsadasdsadsa
-sadsadsadsadsadsad asdsadadasddasdsadasdsadsa
-skdjfkdsjfksdjfjahgdlkjgçlkdsjflkdsjfjdsafkjdsalkfjdsalkfjçdsalkhglkdsjgadlijaish
-djhfkjagfhkjdshflkjjdshlkjfhdsakjfhdsafkjhdsakjfdsaf
-sda
-safdfsadfdsafdsafdsafdsafsdafdsasadsadasdadad asdsadadasddasdsadasdsadsa
-sadsadsadsadsadsad asdsadadasddasdsadasdsadsa
+texto aqui
 </center>
 
 

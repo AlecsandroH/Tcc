@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina Inicial</title>
-      <link rel="icon" href="favicons/teste.png" type="image/png">
+      <link rel="icon" href="favicons/logo.png" type="image/png">
     <style>
         body{
             margin-top: 0;
@@ -47,6 +47,7 @@
         .logo-icon {
             margin-right: 10px;
             font-size: 38px;
+            background-image: url(favicons/logo.png);
         }
         
         .logo2 {
@@ -82,7 +83,7 @@
         }
 
         .nav-links a:hover {
-            color: #ffffff;
+            color: linear-gradient(to right, red, orange, yellow, blue);
         }
 
         .nav-links a::after {
@@ -92,9 +93,10 @@
             height: 2px;
             bottom: 0;
             left: 0;
-            background-color: #ffffff;
+            background-image: linear-gradient(to right, red, orange, yellow, blue);
             transition: width 0.3s;
         }
+
 
         .nav-links a:hover::after {
             width: 100%;
@@ -110,7 +112,7 @@
             font-size: 16px;
             font-family: arial,sans-serif;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(134, 132, 132, 0.3);
+            box-shadow: 0 4px 10px rgba(134, 132, 132,  0.3);
         }
         
         .login-button:hover {
@@ -143,7 +145,7 @@
         </ul>
         <button class="login-button">
         <a href="#" class="logo2">
-            <span class="logo-icon2"><img src="imagens/botaodelogin.png" width="25px" height="25px" class="imagem"></span><span class="font">Logar</span></span>
+            <span class="logo-icon2"><img src="imagens/user.png" width="25px" height="25px" class="imagem"></span><span class="font">Logar</span></span>
         </a>
          
         </button>
@@ -163,7 +165,6 @@
 
 
             <span class="logo-icon">🌐</span>
-        </a>
         
     </div>
    
