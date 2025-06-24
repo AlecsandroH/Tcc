@@ -1,0 +1,21 @@
+        .font{
+            font-family: Fira Sans, sans-serif;;
+            color: black;
+        }
+
+        .font2{
+
+            font-family: Fira Sans, sans-serif;;
+            color: rgb(255, 255, 255);
+            
+        }
+   
+      
+
+        .divtexto{
+            width: 100%;
+            height: 550px;
+            margin-top: 50px;
+            margin-left: 0;
+            background-color: rgb(255, 255, 255);
+        }
