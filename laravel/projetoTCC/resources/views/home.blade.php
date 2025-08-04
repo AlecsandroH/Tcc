@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina Inicial</title>
-      <link rel="icon" href="favicons/logocerta.png" sizes="64x64"  type="image/png">
+ 
+    <link rel="icon" href="{{asset('favicons/favicon.ico.png')}}" type="image/png">
+    <link rel="icon" href="{{asset('favicons/apple-touch-icon.png')}}" type="image/png">
+    <link rel="icon" href="{{asset('favicons/favicon-16x16.png')}}" type="image/png">
+    <link rel="icon" href="{{asset('favicons/favicon-32x32.png')}}" type="image/png">
       
         <!--Link css-->
       <link href="{{asset('css/csspadrao.css')}}" rel="stylesheet">
@@ -17,7 +21,7 @@
 <body >
     <div class="div-cabecalho">
         <a href="/" class="logo">
-            <span class="logo-icon">🌐</span>
+            <span class="logo-icon"><img src="favicons/apple-touch-icon.png" alt="logo" width="50%" height="50%"></span>
         </a>
         
         <ul class="nav-links">
@@ -25,7 +29,7 @@
             <li><a href="#">Tutorial</a></li>
             <li><a href="#">Sobre agente</a></li>
             <li><a href="#">Atividades</a></li>
-            <li><a href="#">Convivendo com TEA</a></li>
+            <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
             <li><a href="/telaoqautismo">O que é o autismo</a></li>
         </ul>
         <button class="login-button">
@@ -51,12 +55,12 @@ dsadsadsa
             <li><a href="#">Tutorial</a></li></br>
             <li><a href="#">Sobre agente</a></li></br>
             <li><a href="#">Atividades</a></li></br>
-            <li><a href="#">Convivendo com TEA</a></li></br>
+            <li><a href="/convivendocomtea">Convivendo com TEA</a></li></br>
             <li><a href="/telaoqautismo">O que é o autismo</a></li></br>
         </ul>
 
 
-            <span class="logo-icon">🌐</span>
+            <span class="logo-icon"><img src="favicons/apple-touch-icon.png" alt="logo" width="50%" height="50%"></span>
         
     </div>
    

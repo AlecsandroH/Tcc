@@ -21,3 +21,7 @@ Route::get('/', function () {
 Route::get('/telaoqautismo', function () {
     return view('telaoqautismo');
 });
+
+Route::get('/convivendocomtea', function () {
+    return view('convivendocomtea');
+});

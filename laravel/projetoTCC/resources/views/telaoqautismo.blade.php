@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O que é o autismo</title>
 
-    <link rel="icon" href="{{asset('favicons/logocerta.png')}}"  sizes="64x64" type="image/png">
+    <link rel="icon" href="{{asset('favicons/favicon.ico.png')}}" type="image/png">
+    <link rel="icon" href="{{asset('favicons/apple-touch-icon.png')}}" type="image/png">
+    <link rel="icon" href="{{asset('favicons/favicon-16x16.png')}}" sizes="16x16" type="image/png">
+    <link rel="icon" href="{{asset('favicons/favivon-32x32.png')}}" sizes="32x32" type="image/png">
 
     <!--Link css-->
     <link href="{{asset('css/botoes.css')}}" rel="stylesheet">
@@ -19,7 +22,7 @@
   
     <div class="div-cabecalho">
         <a href="/" class="logo">
-            <span class="logo-icon">🌐</span>
+            <span class="logo-icon"><img src="favicons/apple-touch-icon.png" alt="logo" width="50%" height="50%"></span>
         </a>
 
         
@@ -28,7 +31,7 @@
             <li><a href="#">Tutorial</a></li>
             <li><a href="#">Sobre agente</a></li>
             <li><a href="#">Atividades</a></li>
-            <li><a href="#">Convivendo com TEA</a></li>
+            <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
             <li><a href="/telaoqautismo">O que é o autismo</a></li>
         </ul>
 
@@ -42,7 +45,7 @@
     </div>
 
     <div class="imagem-container">
-        <img src="imagens/fundoescritoautista.jpg">
+        <img src="imagens/fundoquebra.jpg">
     </div>
 
 <div class="div-botoes" style="word-wrap: break-word;">
@@ -122,12 +125,14 @@ texto aqui
             <li><a href="#">Tutorial</a></li></br>
             <li><a href="#">Sobre agente</a></li></br>
             <li><a href="#">Atividades</a></li></br>
-            <li><a href="#">Convivendo com TEA</a></li></br>
+            <li><a href="/convivendocomtea">Convivendo com TEA</a></li></br>
             <li><a href="/telaoqautismo">O que é o autismo</a></li></br>
         </ul>
 
 
-            <span class="logo-icon">🌐</span>
+       
+        <span class="logo-icon"><img src="favicons/apple-touch-icon.png" alt="logo" width="50%" height="50%"></span>
+        
         </a>
         
     </div>
