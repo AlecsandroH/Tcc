@@ -64,17 +64,28 @@ texo explicando como é conviver com um autista<br/>
     <div class="container">
         <div class="manual-item left">
             <h2>Informações de Apoio</h2>
-            <p>Material completo com orientações e recursos disponíveis para apoio e assistência em diversas situações.</p>
+            <p>Material completo com orientações e recursos disponíveis para apoio e assistência em diversas situações. 
+            <br/>    
+            <button id="openinfA">Ver mais</button>
+        </p>
         </div>
         
         <div class="manual-item right">
-            <h2>Perguntas dos Parentes</h2>
-            <p>Respostas às dúvidas mais frequentes dos familiares, com linguagem clara e acessível.</p>
+            <h2>Duvidas  frequentes</h2>
+            <p>Respostas às dúvidas mais frequentes dos familiares, com linguagem clara e acessível.
+            <br/>
+            <button id="openPP">
+                 <a href="/forum" class="logo2">
+                    Ver mais</button>
+        </p>
         </div>
         
         <div class="manual-item left-alt">
             <h2>Leis e Direitos</h2>
-            <p>Compilação das principais legislações e direitos assegurados por lei, com explicações detalhadas.</p>
+            <p>Compilação das principais legislações e direitos assegurados por lei, com explicações detalhadas.
+                <br/>
+                <button id="openLD">Ver mais</button>
+            </p>
         </div>
     </div>
 </div>

@@ -1,6 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\pstController;
+
+
+Route::get('/', [PstController::class, 'index']);
+Route::post('/posts', [PstController::class, 'store']);
+Route::get('/posts', [PstController::class, 'fetch']);
 
 /*
 |--------------------------------------------------------------------------
@@ -24,4 +30,8 @@ Route::get('/telaoqautismo', function () {
 
 Route::get('/convivendocomtea', function () {
     return view('convivendocomtea');
+});
+
+Route::get('/forum', function () {
+    return view('forum');
 });
