@@ -1,12 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\pstController;
+use App\Http\Controllers\ForumController;
 
 
-Route::get('/', [PstController::class, 'index']);
-Route::post('/posts', [PstController::class, 'store']);
-Route::get('/posts', [PstController::class, 'fetch']);
+
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +30,11 @@ Route::get('/convivendocomtea', function () {
     return view('convivendocomtea');
 });
 
-Route::get('/forum', function () {
-    return view('forum');
+Route::get('/forum', [ForumController::class, 'index']);
+Route::post('/posts', [ForumController::class, 'store'])->name('posts.store');
+Route::get('/posts', [ForumController::class, 'getPosts'])->name('posts.get');
+Route::delete('/posts/{id}', [ForumController::class, 'destroy'])->name('posts.destroy');
+Route::get('/clear-posts', function() {
+    file_put_contents(storage_path('app/posts.json'), json_encode([]));
+    return redirect('/')->with('status', 'Todas as postagens foram removidas!');
 });

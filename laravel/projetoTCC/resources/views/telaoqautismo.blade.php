@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O que é o autismo</title>
 
+    <!--Link Favicons-->
     <link rel="icon" href="{{asset('favicons/favicon.ico.png')}}" type="image/png">
     <link rel="icon" href="{{asset('favicons/apple-touch-icon.png')}}" type="image/png">
     <link rel="icon" href="{{asset('favicons/favicon-16x16.png')}}" sizes="16x16" type="image/png">
@@ -36,10 +37,6 @@
         </ul>
 
 
-        <button class="login-button">
-        <a href="#" class="logo2">
-            <span class="logo-icon2"><img src="imagens/user.png" width="25px" height="25px" class="imagem"></span><span class="font">Logar</span></span>
-        </a>
          
         </button>
     </div>

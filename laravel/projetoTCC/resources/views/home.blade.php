@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina Inicial</title>
- 
+    <!--Link Favicons-->
     <link rel="icon" href="{{asset('favicons/favicon.ico.png')}}" type="image/png">
     <link rel="icon" href="{{asset('favicons/apple-touch-icon.png')}}" type="image/png">
     <link rel="icon" href="{{asset('favicons/favicon-16x16.png')}}" type="image/png">
     <link rel="icon" href="{{asset('favicons/favicon-32x32.png')}}" type="image/png">
       
-        <!--Link css-->
-      <link href="{{asset('css/csspadrao.css')}}" rel="stylesheet">
-     <link href="{{asset('css/textos.css')}}" rel="stylesheet">
-     <link href="{{asset('css/cssimage.css')}}" rel="stylesheet">
-     <link href="{{asset('css/botoes.css')}}" rel="stylesheet">
+    <!--Link css-->
+    <link href="{{asset('css/csspadrao.css')}}" rel="stylesheet">
+    <link href="{{asset('css/textos.css')}}" rel="stylesheet">
+    <link href="{{asset('css/cssimage.css')}}" rel="stylesheet">
+    <link href="{{asset('css/botoes.css')}}" rel="stylesheet">
 
 
 </head>
@@ -32,12 +32,7 @@
             <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
             <li><a href="/telaoqautismo">O que é o autismo</a></li>
         </ul>
-        <button class="login-button">
-        <a href="#" class="logo2">
-            <span class="logo-icon2"><img src="imagens/user.png" width="25px" height="25px" class="imagem"></span><span class="font">Logar</span></span>
-        </a>
-         
-        </button>
+
     </div>
 
 

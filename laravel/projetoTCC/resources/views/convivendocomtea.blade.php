@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Convivendo com tea</title>
-
+     <!--Link Favicons-->
     <link rel="icon" href="{{asset('favicons/favicon.ico.png')}}" type="image/png">
     <link rel="icon" href="{{asset('favicons/apple-touch-icon.png')}}" type="image/png">
     <link rel="icon" href="{{asset('favicons/favicon-16x16.png')}}" sizes="16x16" type="image/png">
     <link rel="icon" href="{{asset('favicons/favivon-32x32.png')}}" sizes="32x32" type="image/png">
 
-        <!--Link css-->
-        <link href="{{asset('css/botoes.css')}}" rel="stylesheet">
-     <link href="{{asset('css/cssimage.css')}}" rel="stylesheet">
-     <link href="{{asset('css/csspadrao.css')}}" rel="stylesheet">
-     <link href="{{asset('css/textos.css')}}" rel="stylesheet">
-     <link href="{{asset('css/cssmanuais.css')}}" rel="stylesheet">
+    <!--Link css-->
+    <link href="{{asset('css/botoes.css')}}" rel="stylesheet">
+    <link href="{{asset('css/cssimage.css')}}" rel="stylesheet">
+    <link href="{{asset('css/csspadrao.css')}}" rel="stylesheet">
+    <link href="{{asset('css/textos.css')}}" rel="stylesheet">
+    <link href="{{asset('css/cssmanuais.css')}}" rel="stylesheet">
 
 </head>
 <body>
@@ -35,11 +35,7 @@
         </ul>
 
 
-        <button class="login-button">
-        <a href="#" class="logo2">
-            <span class="logo-icon2"><img src="imagens/user.png" width="25px" height="25px" class="imagem"></span><span class="font">Logar</span></span>
-        </a>
-         
+
         </button>
     </div>
 
@@ -96,12 +92,12 @@ texo explicando como é conviver com um autista<br/>
     <div class="div-final">
 
 <ul class="nav-links">
-    <li><a href="/">Início</a></li></br>
-    <li><a href="#">Tutorial</a></li></br>
-    <li><a href="#">Sobre agente</a></li></br>
-    <li><a href="#">Atividades</a></li></br>
-    <li><a href="/convivendocomtea">Convivendo com TEA</a></li></br>
-    <li><a href="/telaoqautismo">O que é o autismo</a></li></br>
+    <li><a href="/">Início</a></li>
+    <li><a href="#">Tutorial</a></li>
+    <li><a href="#">Sobre agente</a></li>
+    <li><a href="#">Atividades</a></li>
+    <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
+    <li><a href="/telaoqautismo">O que é o autismo</a></li>
 </ul>
 
 

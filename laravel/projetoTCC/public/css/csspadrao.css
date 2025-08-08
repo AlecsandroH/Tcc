@@ -8,7 +8,7 @@ body{
 
 .div-cabecalho {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 20px;
     top: 0;
@@ -42,7 +42,7 @@ body{
 
 .div-final {
     display: flex;
-    margin-top: 0%;
+    bottom: 0;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
@@ -87,6 +87,7 @@ body{
     gap: 30px;
     list-style: none;
     position: relative;
+    justify-content: space-between;
 }
 
 .nav-links a {
