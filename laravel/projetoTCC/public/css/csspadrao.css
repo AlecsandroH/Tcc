@@ -1,10 +1,9 @@
-body{
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 0;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
 }
-
 
 .div-cabecalho {
     display: flex;
@@ -20,17 +19,31 @@ body{
 
 .div-meio{
     color: rgb(0, 0, 0);
-    margin-top: 50px;
+    margin-top: 0;
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0;
     height: 1000px;
     align-items: center;
     background-color: white;
-    border-top: 5px solid ;
-    border-image: linear-gradient(to right, red, orange, yellow, blue);
+    bottom: 0;
+    top: 0;
+    
+
+}
+
+.div-centro-manuais{
+    color: rgb(255, 255, 255);
+    margin-top: 0px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    height: 500px;
+    align-items: center;
+    background-color: white;
     text-align: center;
-    border-bottom: 5px solid;
+     border-top: 5px solid ;
+    border-image: linear-gradient(to right, red, orange, yellow, blue);
     border-image-slice: 1;
 
 }
@@ -39,17 +52,21 @@ body{
 
 
 
-
 .div-final {
-    display: flex;
-    bottom: 0;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    margin-right: 0px;
+    position: flex;  
+    bottom: 0;      
+    left: 0;         
+    width: 100%;     
     background-color: #000035;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    font-family: Fira Sans, sans-serif;
+    border-top: 5px solid;
+    border-image: linear-gradient(to right, red, orange, yellow, blue);
+    border-image-slice: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     
 }
 
 .logo {
@@ -84,12 +101,14 @@ body{
 
 .nav-links {
     display: flex;
-    gap: 30px;
+    flex-direction: row;
+    gap: 20px;
     list-style: none;
-    position: relative;
-    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    white-space: nowrap; 
 }
-
 .nav-links a {
     text-decoration: none;
     color: #ffffff;
@@ -101,6 +120,9 @@ body{
 
 .nav-links a:hover {
     color: linear-gradient(to right, red, orange, yellow, blue);
+
+    color: #ff9a00;
+
 }
 
 .nav-links a::after {
@@ -110,10 +132,13 @@ body{
     height: 2px;
     bottom: 0;
     left: 0;
+    color: #ff9a00;
     background-image: linear-gradient(to right, red, orange, yellow, blue);
     transition: width 0.3s;
 }
 
 .nav-links a:hover::after {
     width: 100%;
+    color: #ff9a00;
+
 }

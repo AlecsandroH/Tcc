@@ -1,19 +1,5 @@
 /*Todos os botões*/
-.div-botoes{
-    color: white;
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    align-items: center;
-    background-color: white;
-    border-top: 5px solid ;
-    border-image: linear-gradient(to right, red, orange, yellow, blue);
-    text-align: center;
-    border-bottom: 5px solid;
-    border-image-slice: 1;
 
-}
 
 .login-button {
     background: linear-gradient(45deg, #ffffff, #ffffff);

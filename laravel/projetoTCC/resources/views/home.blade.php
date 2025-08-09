@@ -46,12 +46,12 @@ dsadsadsa
     <div class="div-final">
 
         <ul class="nav-links">
-            <li><a href="/">Início</a></li></br>
-            <li><a href="#">Tutorial</a></li></br>
-            <li><a href="#">Sobre agente</a></li></br>
-            <li><a href="#">Atividades</a></li></br>
-            <li><a href="/convivendocomtea">Convivendo com TEA</a></li></br>
-            <li><a href="/telaoqautismo">O que é o autismo</a></li></br>
+            <li><a href="/">Início</a></li>
+            <li><a href="#">Tutorial</a></li>
+            <li><a href="#">Sobre agente</a></li>
+            <li><a href="#">Atividades</a></li>
+            <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
+            <li><a href="/telaoqautismo">O que é o autismo</a></li>
         </ul>
 
 

@@ -17,7 +17,8 @@
     <link href="{{asset('css/forum.css')}}" rel="stylesheet">
 
 </head>
-<body class="bg-gray-100">
+<body>
+
 
 <div class="div-cabecalho">
         <a href="/" class="logo">
@@ -35,19 +36,23 @@
         </ul>
 
 </div>
-    <!-- Conteúdo principal do seu site -->
+
+<div class="div-meio">
+
+
     <div class="container mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold mb-6">Meu Site Principal</h1>
+        <h1 class="text-3xl font-bold mb-6">Converse com outras pessoas!</h1>
         
 <!-- Botão para abrir o fórum -->
+ <h2>Escreva como é sua experiencia, vivendo com um TEA</h2>
 <button data-open-forum class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 mb-6">
-    Abrir Fórum
+Sua experiencia
 </button>
 
 
         <!-- Área onde as postagens recentes aparecerão -->
         <div id="recentPosts" class="mb-8">
-            <h2 class="text-xl font-semibold mb-4">Postagens Recentes</h2>
+            <h2>Postagens Recentes</h2>
             <div id="postsContainer" class="space-y-4">
                 @foreach($posts as $post)
                     @include('partials.post', ['post' => $post])
@@ -55,35 +60,32 @@
             </div>
         </div>
         
-        <!-- Restante do conteúdo do seu site -->
-        <div class="bg-white p-6 rounded-lg shadow">
-            <p>Conteúdo principal do seu site aqui...</p>
-        </div>
+
     </div>
     
     <!-- Modal do Fórum -->
-    <div id="forumModal" class="forum-modal">
+    <div id="forumModal" class="forum-modal" >
         <div class="forum-content">
-            <div class="flex justify-between items-center mb-4">
+            <div class="flex justify-between items-center mb-4" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
                 <h2 class="text-2xl font-bold">Fórum Rápido</h2>
-                <button onclick="forum.close()"class="text-gray-500 hover:text-gray-700">
-                    ✕
-                </button>
+<button onclick="forum.close()" >
+    ✕
+</button>
             </div>
             
             <!-- Formulário de postagem -->
-            <form id="postForm" class="mb-6">
-                @csrf
-                <div class="mb-4">
-                    <label for="author_name" class="block text-sm font-medium text-gray-700">Nome (opcional)</label>
-                    <input type="text" name="author_name" id="author_name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
-                </div>
-                <div class="mb-4">
-                    <label for="content" class="block text-sm font-medium text-gray-700">Mensagem</label>
-                    <textarea name="content" id="content" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" required></textarea>
-                </div>
-                <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Postar</button>
-            </form>
+<form id="postForm">
+    @csrf
+    <div class="form-message-group">
+        <label for="author_name" id="sim" >Nome (opcional): </label>
+        <input type="text" name="author_name" id="author_name" placeholder="Digite seu nome">
+    </div>
+    <div class="form-message-group">
+        <label for="content">Mensagem: </label>
+        <textarea name="content" id="content" rows="3" placeholder="Conte-nos Sua experiencia" required></textarea>
+    </div>
+    <button type="submit"><b>Postar</b></button>
+</form>
             
             <!-- Lista de posts no modal -->
             <div id="modalPostsContainer" class="space-y-4">
@@ -97,6 +99,24 @@
 
     <!--Scripts/javascript-->
     <script src="/js/forum.js"> </script>
+
+</div>
+        <div class="div-final">
+        <span class="font">
+        <ul class="nav-links">
+            <li><a href="/">Início</a></li>
+            <li><a href="#">Tutorial</a></li>
+            <li><a href="#">Sobre agente</a></li>
+            <li><a href="#">Atividades</a></li>
+            <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
+            <li><a href="/telaoqautismo">O que é o autismo</a></li>
+        </ul>
+        </span>
+
+            <span class="logo-icon"><img src="favicons/apple-touch-icon.png" alt="logo" width="50%" height="50%"></span>
+        
+    </div>
+   
 
 </body>
 </html>

@@ -14,7 +14,7 @@
     <!--Link css-->
     <link href="{{asset('css/botoes.css')}}" rel="stylesheet">
      <link href="{{asset('css/cssimage.css')}}" rel="stylesheet">
-     <link href="{{asset('css/csspadrao.css')}}" rel="stylesheet">
+    <link href="{{asset('css/csspadrao.css')}}" rel="stylesheet">
      <link href="{{asset('css/textos.css')}}" rel="stylesheet">
 
     
@@ -45,7 +45,7 @@
         <img src="imagens/fundoquebra.jpg">
     </div>
 
-<div class="div-botoes" style="word-wrap: break-word;">
+<div class="div-meio" style="word-wrap: break-word;">
     <div class="font">
         <center>
  <button id="openBtn">Diagnostico</button>
@@ -116,21 +116,18 @@ texto aqui
 
 
     <div class="div-final">
-
+        <span class="font">
         <ul class="nav-links">
-            <li><a href="/">Início</a></li></br>
-            <li><a href="#">Tutorial</a></li></br>
-            <li><a href="#">Sobre agente</a></li></br>
-            <li><a href="#">Atividades</a></li></br>
-            <li><a href="/convivendocomtea">Convivendo com TEA</a></li></br>
-            <li><a href="/telaoqautismo">O que é o autismo</a></li></br>
+            <li><a href="/">Início</a></li>
+            <li><a href="#">Tutorial</a></li>
+            <li><a href="#">Sobre agente</a></li>
+            <li><a href="#">Atividades</a></li>
+            <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
+            <li><a href="/telaoqautismo">O que é o autismo</a></li>
         </ul>
+        </span>
 
-
-       
-        <span class="logo-icon"><img src="favicons/apple-touch-icon.png" alt="logo" width="50%" height="50%"></span>
-        
-        </a>
+            <span class="logo-icon"><img src="favicons/apple-touch-icon.png" alt="logo" width="50%" height="50%"></span>
         
     </div>
    

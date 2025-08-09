@@ -46,8 +46,8 @@ public function addPost($data)
         'id' => uniqid(),
         'author_name' => $data['author_name'] ?? 'Anônimo',
         'content' => $data['content'],
-        'created_at' => now()->toDateTimeString(),
-        'user_token' => $data['user_token'] // Adiciona token do usuário
+        'user_token' => $data['user_token'] ?? null
+
     ];
     
     array_unshift($posts, $newPost);
@@ -55,7 +55,6 @@ public function addPost($data)
     
     return $newPost;
 }
-
     
 }
 

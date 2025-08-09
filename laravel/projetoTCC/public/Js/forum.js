@@ -88,45 +88,43 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('Ocorreu um erro ao tentar deletar a postagem.');
             }
         },
+   updatePosts: function(posts) {
+    const renderPost = (post) => {
+        const isOwner = post.user_token === this.userToken;
         
-        updatePosts: function(posts) {
-            const renderPost = (post) => {
-                const date = new Date(post.created_at);
-                const isOwner = post.user_token === this.userToken;
+        return `
+            <div class="post bg-white p-4 rounded-lg shadow mb-4">
+                <div class="flex justify-between items-start">
+                    <h3 class="font-semibold">${post.author_name || 'Anônimo'}</h3>
+                </div>
+                <p class="mt-2 text-gray-100 mb-4">${post.content}</p>
                 
-                return `
-                    <div class="bg-white p-4 rounded-lg shadow mb-4 relative">
-                        <div class="flex justify-between items-start">
-                            <h3 class="font-semibold">${post.author_name || 'Anônimo'}</h3>
-                            <span class="text-sm text-gray-500">
-                                ${date.toLocaleString()}
-                            </span>
-                        </div>
-                        <p class="mt-2 text-gray-800">${post.content}</p>
-                        
-                        ${isOwner ? `
-                        <button onclick="forum.deletePost('${post.id}')" 
-                                class="absolute top-2 right-2 text-red-500 hover:text-red-700 text-sm"
-                                title="Deletar minha postagem">
-                            Deletar
-                        </button>
-                        ` : ''}
-                    </div>
-                `;
-            };
-            
-            const containers = [
-                'modalPostsContainer',
-                'postsContainer'
-            ];
-            
-            containers.forEach(containerId => {
-                const container = document.getElementById(containerId);
-                if (container) {
-                    container.innerHTML = posts.map(renderPost).join('');
-                }
-            });
-        },
+                ${isOwner ? `
+                <div class="flex justify-end">
+                    <button onclick="forum.deletePost('${post.id}')" 
+                            class="delete-btn"
+                            title="Deletar postagem">
+                        <span>Deletar</span>
+                    </button>
+                </div>
+                ` : ''}
+            </div>
+        `;
+    };
+    
+    // Resto da função permanece igual
+    const containers = [
+        'modalPostsContainer',
+        'postsContainer'
+    ];
+    
+    containers.forEach(containerId => {
+        const container = document.getElementById(containerId);
+        if (container) {
+            container.innerHTML = posts.map(renderPost).join('');
+        }
+    });
+},
         
         submitForm: async function(e) {
             e.preventDefault();
