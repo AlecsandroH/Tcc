@@ -74,19 +74,22 @@ Sua experiencia
             </div>
             
             <!-- Formulário de postagem -->
+      
 <form id="postForm">
     @csrf
     <div class="form-message-group">
+           
         <label for="author_name" id="sim" >Nome (opcional): </label>
         <input type="text" name="author_name" id="author_name" placeholder="Digite seu nome">
     </div>
     <div class="form-message-group">
         <label for="content">Mensagem: </label>
-        <textarea name="content" id="content" rows="3" placeholder="Conte-nos Sua experiencia" required></textarea>
+        <textarea name="content" id="content" rows="3" placeholder="Conte-nos Sua experiencia"   required></textarea>
+        
     </div>
     <button type="submit"><b>Postar</b></button>
 </form>
-            
+        
             <!-- Lista de posts no modal -->
             <div id="modalPostsContainer" class="space-y-4">
                 @foreach($posts as $post)

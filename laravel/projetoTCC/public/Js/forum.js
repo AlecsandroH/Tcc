@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return `
             <div class="post bg-white p-4 rounded-lg shadow mb-4">
                 <div class="flex justify-between items-start">
-                    <h3 class="font-semibold">${post.author_name || 'Anônimo'}</h3>
+                    <h3 class="font">${post.author_name || 'Anônimo'}</h3>
                 </div>
                 <p class="mt-2 text-gray-100 mb-4">${post.content}</p>
                 

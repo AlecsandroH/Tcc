@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ForumController;
+use App\Http\Controllers\AutismoController;
 
 
 
@@ -38,3 +39,5 @@ Route::get('/clear-posts', function() {
     file_put_contents(storage_path('app/posts.json'), json_encode([]));
     return redirect('/')->with('status', 'Todas as postagens foram removidas!');
 });
+
+Route::get('/autismo', [AutismoController::class, 'index']);

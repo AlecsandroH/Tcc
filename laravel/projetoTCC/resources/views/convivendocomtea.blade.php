@@ -89,7 +89,11 @@
             <h2>Leis e Direitos</h2>
             <p>Compilação das principais legislações e direitos assegurados por lei, com explicações detalhadas.
                 <br/>
-                <button id="openLD">Ver mais</button>
+                <button id="openLD">
+                    <a href="/autismo" class="logo2">
+                        Ver mais
+                    </a>
+                    </button>
             </p>
                 </span>
         </div>
