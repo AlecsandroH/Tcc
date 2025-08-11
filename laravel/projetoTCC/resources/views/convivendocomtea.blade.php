@@ -65,7 +65,11 @@
             <h2>Informações de Apoio</h2>
             <p>Material completo com orientações e recursos disponíveis para apoio e assistência em diversas situações. 
             <br/>    
-            <button id="openinfA">Ver mais</button>
+            <button id="openinfA">
+                <a href="/infapoio" class="logo2">
+                    Ver mais
+</a>
+                </button>
         </p>
                 </span>
         </div>

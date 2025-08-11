@@ -31,6 +31,11 @@ Route::get('/convivendocomtea', function () {
     return view('convivendocomtea');
 });
 
+
+Route::get('/infapoio', function () {
+    return view('infapoio');
+});
+
 Route::get('/forum', [ForumController::class, 'index']);
 Route::post('/posts', [ForumController::class, 'store'])->name('posts.store');
 Route::get('/posts', [ForumController::class, 'getPosts'])->name('posts.get');

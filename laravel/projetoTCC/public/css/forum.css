@@ -1,4 +1,45 @@
+meio {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    flex: 1; 
+    padding: 20px;
+    color: #333;
+    background-color: #fff0f5; /* Lavanda claro */
+}
+header {
+    background-color: #9370db; /* Lavanda médio */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+details {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: white;
+}
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    color: #9370db;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #e6e6fa;
+    margin-top: 20px;
+}
 
+
+
+
+
+
+
+/*
 .div-meio {
     max-width: 900px;
     margin: 50px auto 80px;
@@ -33,7 +74,7 @@ button[data-open-forum]:hover {
     background-color: #1e40af;
 }
 
-/* Postagens recentes */
+
 #recentPosts {
     margin-bottom: 40px;
 }
@@ -50,7 +91,7 @@ button[data-open-forum]:hover {
     gap: 15px;
 }
 
-/* Caixa branca do conteúdo principal */
+
 .bg-white {
     background: white;
     padding: 20px 25px;
@@ -63,11 +104,12 @@ button[data-open-forum]:hover {
 
 
 
-/* Modal do fórum */
+
+
 .forum-modal {
     display: none;
     position: fixed;
-    inset: 0; /* shorthand for top, right, bottom, left 0 */
+    inset: 0; /* shorthand for top, right, bottom, left 0 
     background: rgba(0,0,0,0.6);
     z-index: 9999;
     justify-content: center;
@@ -116,7 +158,7 @@ button[onclick="forum.close()"]:hover {
     color: #ff4500;
 }
 
-/* Formulário */
+
 
 form#postForm {
     display: flex;
@@ -188,7 +230,7 @@ form#postForm button[type="submit"]:hover {
     background-color: #ffd000;
 }
 
-/* Responsividade simples */
+
 @media (max-width: 700px) {
     .div-cabecalho {
         flex-direction: column;
@@ -233,14 +275,13 @@ form#postForm button[type="submit"]:hover {
     white-space: pre-wrap;
 }
 
-/*delete botao*/
-/* Container da postagem */
+
 .post {
     position: relative;
-    padding-bottom: 30px; /* Espaço para o botão */
+    padding-bottom: 30px;
 }
 
-/* Estilo do botão deletar abaixo da postagem */
+
 .delete-btn {
     position: absolute;
     bottom: 10px;
@@ -269,13 +310,13 @@ form#postForm button[type="submit"]:hover {
     transform: translateY(0);
 }
 
-/* Ícone de lixeira */
+
 .delete-btn::before {
     content: "🗑";
     font-size: 14px;
 }
 
-/* Versão apenas com ícone */
+
 .delete-btn.icon-only {
     width: 26px;
     height: 26px;
@@ -287,7 +328,7 @@ form#postForm button[type="submit"]:hover {
     display: none;
 }
 
-/* Acessibilidade */
+
 .delete-btn:focus {
     outline: 2px solid #3b82f6;
     outline-offset: 2px;

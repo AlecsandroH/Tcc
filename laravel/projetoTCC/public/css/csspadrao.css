@@ -120,7 +120,6 @@ body {
 
 .nav-links a:hover {
     color: linear-gradient(to right, red, orange, yellow, blue);
-
     color: #ff9a00;
 
 }
