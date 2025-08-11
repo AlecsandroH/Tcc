@@ -4,41 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rede de Apoio para Autistas</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            color: #333;
-            background-color: #f0fff0; /* Verde claro suave */
-        }
-        header {
-            background-color: #3cb371; /* Verde médio */
-            color: white;
-            padding: 20px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .card {
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 20px;
-        }
-        h2 {
-            color: #2e8b57; /* Verde escuro */
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #e6ffe6;
-            margin-top: 20px;
-        }
-    </style>
+
+        <link rel="icon" href="{{asset('favicons/favicon.ico.png')}}" type="image/png">
+    <link rel="icon" href="{{asset('favicons/apple-touch-icon.png')}}" type="image/png">
+    <link rel="icon" href="{{asset('favicons/favicon-16x16.png')}}" sizes="16x16" type="image/png">
+    <link rel="icon" href="{{asset('favicons/favivon-32x32.png')}}" sizes="32x32" type="image/png">
+
+
+    <link href="{{asset('css/botoes.css')}}" rel="stylesheet">
+    <link href="{{asset('css/cssimage.css')}}" rel="stylesheet">
+    <link href="{{asset('css/csspadrao.css')}}" rel="stylesheet">
+    <link href="{{asset('css/textos.css')}}" rel="stylesheet">
+    <link href="{{asset('css/infapoio.css')}}" rel="stylesheet">
 </head>
 <body>
+      <header class="div-cabecalho">
+        <a href="/" class="logo">
+            <span class="logo-icon"><img src="favicons/apple-touch-icon.png" alt="logo" width="50%" height="50%"></span>
+        </a>
+        
+        <ul class="nav-links">
+            <li><a href="/">Início</a></li>
+            <li><a href="#">Tutorial</a></li>
+            <li><a href="#">Sobre agente</a></li>
+            <li><a href="#">Atividades</a></li>
+            <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
+            <li><a href="/telaoqautismo">O que é o autismo</a></li>
+        </ul>
+
+
+
+        </button>
+
+</header>
+
     <header>
         <h1>Rede de Apoio para Autistas e Familiares</h1>
     </header>
@@ -63,8 +62,23 @@
         <p><strong>Recursos:</strong> Aplicativos como <a href="https://www.prodeaf.net" target="_blank">ProDeaf</a> e <a href="https://www.handtalk.me" target="_blank">Hand Talk</a> auxiliam na comunicação não-verbal.</p>
     </div>
 
-    <footer>
-        <p>&copy; 2023 RedeApoioAutista.org | <a href="leis-autismo.html">Conheça seus direitos</a></p>
-    </footer>
+    <footer class="div-final">
+
+<ul class="nav-links">
+    <li><a href="/">Início</a></li>
+    <li><a href="#">Tutorial</a></li>
+    <li><a href="#">Sobre agente</a></li>
+    <li><a href="#">Atividades</a></li>
+    <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
+    <li><a href="/telaoqautismo">O que é o autismo</a></li>
+
+</ul>
+
+
+    <span class="logo-icon"><img src="favicons/apple-touch-icon.png" alt="logo" width="50%" height="50%"></span>
+
+</footer>
+
+
 </body>
 </html>

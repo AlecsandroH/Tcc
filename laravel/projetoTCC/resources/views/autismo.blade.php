@@ -4,52 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Direitos das Pessoas Autistas</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            color: #333;
-            background-color: #f0f8ff; /* Azul claro suave */
-        }
-        header {
-            background-color: #4169e1; /* Azul real */
-            color: white;
-            padding: 20px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        section {
-            margin-bottom: 30px;
-            padding: 15px;
-            border-bottom: 1px solid #ddd;
-            background-color: white;
-            border-radius: 5px;
-        }
-        h2 {
-            color: #4169e1;
-        }
-        a {
-            color: #1e90ff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #e6e6fa; /* Lavanda */
-            margin-top: 20px;
-        }
-    </style>
+    
+        <link rel="icon" href="{{asset('favicons/favicon.ico.png')}}" type="image/png">
+    <link rel="icon" href="{{asset('favicons/apple-touch-icon.png')}}" type="image/png">
+    <link rel="icon" href="{{asset('favicons/favicon-16x16.png')}}" sizes="16x16" type="image/png">
+    <link rel="icon" href="{{asset('favicons/favivon-32x32.png')}}" sizes="32x32" type="image/png">
+
+
+    <link href="{{asset('css/botoes.css')}}" rel="stylesheet">
+    <link href="{{asset('css/cssimage.css')}}" rel="stylesheet">
+    <link href="{{asset('css/csspadrao.css')}}" rel="stylesheet">
+    <link href="{{asset('css/textos.css')}}" rel="stylesheet">
+    <link href="{{asset('css/leis.css')}}" rel="stylesheet">
+
 </head>
 <body>
-    <header>
-        <h1>Direitos das Pessoas Autistas no Brasil</h1>
-    </header>
+    <header class="div-cabecalho">
+        <a href="/" class="logo">
+            <span class="logo-icon"><img src="favicons/apple-touch-icon.png" alt="logo" width="50%" height="50%"></span>
+        </a>
+        
+        <ul class="nav-links">
+            <li><a href="/">Início</a></li>
+            <li><a href="#">Tutorial</a></li>
+            <li><a href="#">Sobre agente</a></li>
+            <li><a href="#">Atividades</a></li>
+            <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
+            <li><a href="/telaoqautismo">O que é o autismo</a></li>
+        </ul>
 
+
+
+        </button>
+
+</header>
+<center>
+    <header class="header">
+        
+        <h1>Direitos das Pessoas Autistas no Brasil</h1>
+      
+    </header>
+  </center>
     <section>
         <h2>Lei Berenice Piana (Lei 12.764/2012)</h2>
         <p><strong>O que garante:</strong> Direito a diagnóstico precoce, tratamento multidisciplinar, educação inclusiva e proteção social.</p>
@@ -76,8 +71,23 @@
         </ul>
     </section>
 
-    <footer>
-        <p>&copy; 2023 RedeApoioAutista.org | <a href="duvidas-autismo.html">Dúvidas Frequentes</a></p>
-    </footer>
+   <footer class="div-final">
+
+<ul class="nav-links">
+    <li><a href="/">Início</a></li>
+    <li><a href="#">Tutorial</a></li>
+    <li><a href="#">Sobre agente</a></li>
+    <li><a href="#">Atividades</a></li>
+    <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
+    <li><a href="/telaoqautismo">O que é o autismo</a></li>
+
+</ul>
+
+
+    <span class="logo-icon"><img src="favicons/apple-touch-icon.png" alt="logo" width="50%" height="50%"></span>
+
+</footer>
+
+
 </body>
 </html>
