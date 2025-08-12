@@ -16,6 +16,8 @@
     <link href="{{asset('css/csspadrao.css')}}" rel="stylesheet">
     <link href="{{asset('css/textos.css')}}" rel="stylesheet">
     <link href="{{asset('css/cssmanuais.css')}}" rel="stylesheet">
+    <link href="{{asset('css/reset.css')}}" rel="stylesheet">
+
 
 </head>
 <body>
@@ -29,7 +31,7 @@
             <li><a href="/">Início</a></li>
             <li><a href="#">Tutorial</a></li>
             <li><a href="#">Sobre agente</a></li>
-            <li><a href="#">Atividades</a></li>
+            <li><a href="/atividades">Atividades</a></li>
             <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
             <li><a href="/telaoqautismo">O que é o autismo</a></li>
         </ul>
@@ -80,7 +82,7 @@
             <p>Respostas às dúvidas mais frequentes dos familiares, com linguagem clara e acessível.
             <br/>
             <button id="openPP">
-                 <a href="/forum" class="logo2">
+                 <a href="/Duvidas-Frequentes" class="logo2">
                     Ver mais
 </a>
                 </button>
@@ -94,7 +96,7 @@
             <p>Compilação das principais legislações e direitos assegurados por lei, com explicações detalhadas.
                 <br/>
                 <button id="openLD">
-                    <a href="/autismo" class="logo2">
+                    <a href="/leisedireitos" class="logo2">
                         Ver mais
                     </a>
                     </button>
@@ -111,7 +113,7 @@
             <li><a href="/">Início</a></li>
             <li><a href="#">Tutorial</a></li>
             <li><a href="#">Sobre agente</a></li>
-            <li><a href="#">Atividades</a></li>
+            <li><a href="/atividades">Atividades</a></li>
             <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
             <li><a href="/telaoqautismo">O que é o autismo</a></li>
 

@@ -1,7 +1,8 @@
-        .header {
-            background-color: #4169e1; /* Azul real */
+         .header {
+            background-color: #f4d643; /* Azul real */
             color: white;
             padding: 20px;
+            width: 100%;
             margin-top: 20px;
             border-radius: 10px;
             text-align: center;
@@ -16,10 +17,10 @@
             border-radius: 5px;
         }
         h2 {
-            color: #4169e1;
+            color: #e1cc41;
         }
         a {
-            color: #1e90ff;
+            color: #ffd000;
             text-decoration: none;
         }
         a:hover {

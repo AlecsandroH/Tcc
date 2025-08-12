@@ -6,6 +6,6 @@ class AutismoController extends Controller
 {
     public function index()
     {
-        return view('autismo');
+        return view('leisedireitos');
     }
 }

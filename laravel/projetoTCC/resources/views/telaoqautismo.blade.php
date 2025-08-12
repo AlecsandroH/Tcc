@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0">
     <title>O que é o autismo</title>
 
     <!--Link Favicons-->
@@ -16,6 +16,7 @@
      <link href="{{asset('css/cssimage.css')}}" rel="stylesheet">
     <link href="{{asset('css/csspadrao.css')}}" rel="stylesheet">
      <link href="{{asset('css/textos.css')}}" rel="stylesheet">
+     <link href="{{asset('css/reset.css')}}" rel="stylesheet">
 
     
 </head>
@@ -31,7 +32,7 @@
             <li><a href="/">Início</a></li>
             <li><a href="#">Tutorial</a></li>
             <li><a href="#">Sobre agente</a></li>
-            <li><a href="#">Atividades</a></li>
+            <li><a href="/atividades">Atividades</a></li>
             <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
             <li><a href="/telaoqautismo">O que é o autismo</a></li>
         </ul>
@@ -121,7 +122,7 @@ texto aqui
             <li><a href="/">Início</a></li>
             <li><a href="#">Tutorial</a></li>
             <li><a href="#">Sobre agente</a></li>
-            <li><a href="#">Atividades</a></li>
+            <li><a href="/atividades">Atividades</a></li>
             <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
             <li><a href="/telaoqautismo">O que é o autismo</a></li>
         </ul>

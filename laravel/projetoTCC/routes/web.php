@@ -35,12 +35,17 @@ Route::get('/infapoio', function () {
     return view('infapoio');
 });
 
-Route::get('/forum', function () {
-    return view('forum');
+Route::get('/Duvidas-Frequentes', function () {
+    return view('DuvidasF');
+});
+
+Route::get('/atividades', function () {
+    return view('atividades');
 });
 
 
-Route::get('/autismo', [AutismoController::class, 'index']);
+
+Route::get('/leisedireitos', [AutismoController::class, 'index']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

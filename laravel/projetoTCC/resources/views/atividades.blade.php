@@ -1,26 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina Inicial</title>
-    <!--Link Favicons-->
-    <link rel="icon" href="{{asset('favicons/favicon.ico.png')}}" type="image/png">
+    <title>Atividades</title>
+</head>
+<body>
+
+<link rel="icon" href="{{asset('favicons/favicon.ico.png')}}" type="image/png">
     <link rel="icon" href="{{asset('favicons/apple-touch-icon.png')}}" type="image/png">
     <link rel="icon" href="{{asset('favicons/favicon-16x16.png')}}" type="image/png">
     <link rel="icon" href="{{asset('favicons/favicon-32x32.png')}}" type="image/png">
       
-    <!--Link css-->
-    <link href="{{asset('css/csspadrao.css')}}" rel="stylesheet">
-    <link href="{{asset('css/textos.css')}}" rel="stylesheet">
+
+<link href="{{asset('css/csspadrao.css')}}" rel="stylesheet">
+<link href="{{asset('css/reset.css')}}" rel="stylesheet">
     <link href="{{asset('css/cssimage.css')}}" rel="stylesheet">
-    <link href="{{asset('css/reset.css')}}" rel="stylesheet">
-    <link href="{{asset('css/botoes.css')}}" rel="stylesheet">
 
-
-</head>
-<body >
-    <div class="div-cabecalho">
+<div class="div-cabecalho">
         <a href="/" class="logo">
             <span class="logo-icon"><img src="favicons/apple-touch-icon.png" alt="logo" width="50%" height="50%"></span>
         </a>
@@ -59,6 +56,6 @@ dsadsadsa
             <span class="logo-icon"><img src="favicons/apple-touch-icon.png" alt="logo" width="50%" height="50%"></span>
         
     </div>
-   
+    
 </body>
 </html>

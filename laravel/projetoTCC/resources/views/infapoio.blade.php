@@ -11,11 +11,10 @@
     <link rel="icon" href="{{asset('favicons/favivon-32x32.png')}}" sizes="32x32" type="image/png">
 
 
-    <link href="{{asset('css/botoes.css')}}" rel="stylesheet">
     <link href="{{asset('css/cssimage.css')}}" rel="stylesheet">
     <link href="{{asset('css/csspadrao.css')}}" rel="stylesheet">
-    <link href="{{asset('css/textos.css')}}" rel="stylesheet">
     <link href="{{asset('css/infapoio.css')}}" rel="stylesheet">
+    <link href="{{asset('css/reset.css')}}" rel="stylesheet">
 </head>
 <body>
       <header class="div-cabecalho">
@@ -27,7 +26,7 @@
             <li><a href="/">Início</a></li>
             <li><a href="#">Tutorial</a></li>
             <li><a href="#">Sobre agente</a></li>
-            <li><a href="#">Atividades</a></li>
+            <li><a href="/atividades">Atividades</a></li>
             <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
             <li><a href="/telaoqautismo">O que é o autismo</a></li>
         </ul>
@@ -68,7 +67,7 @@
     <li><a href="/">Início</a></li>
     <li><a href="#">Tutorial</a></li>
     <li><a href="#">Sobre agente</a></li>
-    <li><a href="#">Atividades</a></li>
+    <li><a href="/atividades">Atividades</a></li>
     <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
     <li><a href="/telaoqautismo">O que é o autismo</a></li>
 
