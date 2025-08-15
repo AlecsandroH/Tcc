@@ -1,0 +1,488 @@
+.games-carousel {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4f0fb 100%);
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    margin-bottom: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.games-carousel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: linear-gradient(90deg, #4CAF50, #8BC34A);
+}
+
+.games-title {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #000000;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    font-size: 2.2rem;
+}
+
+.games-title:after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 5px;
+    background: linear-gradient(90deg, #4CAF50, #8BC34A);
+    bottom: -15px;
+    left: 20%;
+    border-radius: 3px;
+    transform: skewX(-15deg);
+}
+
+/* Container do carrossel */
+.carousel-container {
+    position: relative;
+    padding: 0 50px;
+}
+
+.game-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    margin: 0 20px;
+    border: none;
+    transform: scale(0.95);
+    opacity: 0.9;
+}
+
+.carousel-item.active .game-card {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.game-img {
+    height: 250px;
+    object-fit: cover;
+    transition: all 0.4s ease;
+    border-bottom: 4px solid #4CAF50;
+}
+
+.game-card:hover .game-img {
+    transform: scale(1.02);
+    opacity: 0.95;
+}
+
+.game-body {
+    padding: 40px;
+    text-align: center;
+    background: #2c3e50;
+    border-radius: 0 0 15px 15px;
+}
+
+.game-title {
+    color: #000000;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.game-title:after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    background: #4CAF50;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+}
+
+.play-btn {
+    background: linear-gradient(135deg, #4CAF50 0%, #8BC34A 100%);
+    border: none;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.play-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.4);
+    background: linear-gradient(135deg, #43A047 0%, #7CB342 100%);
+    color: white;
+}
+
+.play-btn:active {
+    transform: translateY(1px);
+}
+
+/* Controles do carrossel */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #4CAF50;
+    border-radius: 10%;
+    top: 50%;
+    margin-top: 150px;
+    transform: translateY(-50%);
+    opacity: 100%;
+    transition: all 0.3s ease;
+ 
+   
+    
+}
+
+.carousel-control-prev {
+    left: -10px;
+}
+
+.carousel-control-next {
+    right: -10px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: #4CAF50;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-size: 100%;
+    width: 25px;
+    height: 25px;
+    transition: all 0.3s ease;
+    filter: brightness(0) invert(0.5);
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    filter: brightness(0) invert(1);
+    transform: scale(1.2);
+
+}
+
+/* Indicadores */
+.carousel-indicators {
+    bottom: 20px; 
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    z-index: 10;
+}
+
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(168, 160, 160, 0.5); 
+    border: none;
+    margin: 0 5px;
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators button.active {
+    background-color: #00FF08;  
+    transform: scale(1.2);  
+
+}
+
+.carousel-indicators button:hover:not(.active) {
+    background-color: rgba(168, 160, 160, 0.8);  
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+    .games-title {
+        font-size: 1.8rem;
+    }
+    
+    .game-img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .games-carousel {
+        padding: 30px 15px;
+        border-radius: 15px;
+    }
+    
+    .carousel-container {
+        padding: 0 30px;
+    }
+    
+    .game-card {
+        margin: 0 10px;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .carousel-control-prev {
+        left: -5px;
+    }
+    
+    .carousel-control-next {
+        right: -5px;
+    }
+    
+    .carousel-indicators {
+        bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .games-title {
+        font-size: 1.5rem;
+    }
+    
+    .game-img {
+        height: 180px;
+    }
+    
+    .game-body {
+        padding: 20px 15px;
+    }
+    
+    .play-btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+}
+/*
+.games-carousel {
+        background: linear-gradient(135deg, #f5f7fa 0%, #e4f0fb 100%);
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin-bottom: 50px;
+    }
+    
+    .games-title {
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        color: #000000;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        margin-bottom: 30px;
+        position: relative;
+        display: inline-block;
+    }
+    
+    .games-title:after {
+        content: '';
+        position: absolute;
+        width: 80%;
+        height: 4px;
+        background: linear-gradient(100deg,red, orange, yellow, blue);
+        bottom: -10px;
+        left: 10%;
+        border-radius: 2px;
+    }
+    
+    .game-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        margin: 0 15px;
+        border: none;
+        margin-bottom: 0;
+    }
+
+    
+    .game-img {
+        height: 200px;
+        object-fit: cover;
+        border-bottom: 3px solid #4CAF50;
+        transition: all 0.3s ease;
+    }
+    
+    .game-card:hover .game-img {
+        opacity: 0.9;
+    }
+    
+    .game-body {
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .game-title {
+        color: #000000;
+        font-weight: 700;
+        margin-bottom: 15px;
+        font-size: 1.4rem;
+    }
+    
+    .play-btn {
+        background: linear-gradient(135deg, #af4c4c 0%, #c34a4a 100%);
+        border: none;
+        padding: 8px 25px;
+        border-radius: 50px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(175, 76, 76, 0.3);
+    }
+    
+    .play-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(175, 76, 76, 0.4);
+        background: linear-gradient(135deg, #a04343 0%, #b34242 100%);
+    }
+    
+.carousel-control-next,.carousel-control-prev {
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    background-color: black;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #4CAF50;
+    z-index: 10;
+}
+
+
+.carousel-control-prev {
+    left: 20px;
+    
+} 
+
+.carousel-control-next {
+    right: 20px;
+}
+
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: #4CAF50; 
+    transform: translateY(-50%) scale(1.1);
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-size: 100%;
+    filter: brightness(0) invert(1);
+    width: 30px;
+    height: 30px;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    transform: scale(1.2);
+}
+
+
+@media (max-width: 768px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .carousel-control-prev {
+        left: 10px;
+    }
+    
+    .carousel-control-next {
+        right: 10px;
+    }
+}
+
+.game-body {
+    padding-bottom: 40px;
+}
+.carousel-indicators {
+    bottom: 20px; 
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    z-index: 10;
+}
+
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(168, 160, 160, 0.5); 
+    border: none;
+    margin: 0 5px;
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators button.active {
+    background-color: #00FF08;  
+    transform: scale(1.2);  
+
+}
+
+.carousel-indicators button:hover:not(.active) {
+    background-color: rgba(168, 160, 160, 0.8);  
+}
+    
+    @media (max-width: 768px) {
+        .games-carousel {
+            padding: 20px 15px;
+        }
+        
+        .carousel-control-prev {
+            left: 0;
+        }
+        
+        .carousel-control-next {
+            right: 0;
+        }
+        
+        .game-img {
+            height: 150px;
+        }
+    }
+*/
