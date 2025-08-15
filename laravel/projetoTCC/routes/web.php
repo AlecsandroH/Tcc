@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AutismoController;
+use App\Http\Controllers\GameController;
 
 
 
@@ -39,9 +40,12 @@ Route::get('/Duvidas-Frequentes', function () {
     return view('DuvidasF');
 });
 
-Route::get('/atividades', function () {
-    return view('atividades');
-});
+
+Route::get('/atividades', [GameController::class, 'index'])->name('atividades');
+Route::get('/jogo-cores', [GameController::class, 'cores'])->name('jogo.cores');
+Route::get('/jogo-memoria', [GameController::class, 'memoria'])->name('jogo.memoria');
+Route::get('/jogo-objetos', [GameController::class, 'objetos'])->name('jogo.objetos');
+Route::get('/jogo-quebra', [GameController::class, 'quebra'])->name('jogo.quebra');
 
 Route::get('/sobrenos', function () {
     return view('sobrenos');
