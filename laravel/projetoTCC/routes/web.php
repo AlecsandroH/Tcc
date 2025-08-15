@@ -43,7 +43,9 @@ Route::get('/atividades', function () {
     return view('atividades');
 });
 
-
+Route::get('/sobrenos', function () {
+    return view('sobrenos');
+});
 
 Route::get('/leisedireitos', [AutismoController::class, 'index']);
 Auth::routes();
