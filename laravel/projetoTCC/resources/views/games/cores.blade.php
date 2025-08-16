@@ -2,62 +2,101 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo das Cores</title>
-    <style>
-        body { 
-            text-align: center; 
-            font-family: Arial, sans-serif; 
-            background: #f0f0f0; 
-        }
-        h2 {
-            font-size: 28px;
-            margin-top: 20px;
-        }
-        .color-btn { 
-            width: 120px; 
-            height: 120px; 
-            margin: 10px; 
-            border: none; 
-            cursor: pointer; 
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-            transition: transform 0.2s;
-        }
-        .color-btn:hover {
-            transform: scale(1.1);
-        }
-    </style>
+
+        <link rel="icon" href="{{asset('favicons/favicon.ico.png')}}" type="image/png">
+    <link rel="icon" href="{{asset('favicons/apple-touch-icon.png')}}" type="image/png">
+    <link rel="icon" href="{{asset('favicons/favicon-16x16.png')}}" type="image/png">
+    <link rel="icon" href="{{asset('favicons/favicon-32x32.png')}}" type="image/png">
+    
+    <link href="{{asset('css/csspadrao.css')}}" rel="stylesheet">
+    <link href="{{asset('css/reset.css')}}" rel="stylesheet">
+    <link href="{{asset('css/cssimage.css')}}" rel="stylesheet">
+     <link href="{{asset('css/cores.css')}}" rel="stylesheet">
 </head>
 <body>
-    <h2>Escolha a cor: <span id="targetColor"></span></h2>
-    <div id="buttons"></div>
+    
+<header class="div-cabecalho">
+        <a href="/" class="logo">
+            <span class="logo-icon"><img src="favicons/apple-touch-icon.png" alt="logo" width="50%" height="50%"></span>
+        </a>
+        
+        <ul class="nav-links">
+            <li><a href="/">Início</a></li>
+            <li><a href="#">Tutorial</a></li>
+            <li><a href="#">Sobre agente</a></li>
+            <li><a href="/atividades">Atividades</a></li>
+            <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
+            <li><a href="/telaoqautismo">O que é o autismo</a></li>
+        </ul>
 
-    <script>
-        const colors = [
-            { nome: 'Vermelho', valor: 'red' },
-            { nome: 'Azul', valor: 'blue' },
-            { nome: 'Verde', valor: 'green' },
-            { nome: 'Amarelo', valor: 'yellow' }
-        ];
+</header>
+<center>
+    <div class="game-container">
+        <div class="game-header">
+            <h2>Jogo das Cores</h2>
+        </div>
+        
+        <div class="game-content">
+            <div class="target-display">
+                Encontre a cor: <span id="targetColor" class="target-color"></span>
+            </div>
+            
+            <div class="colors-grid" id="buttons"></div>
+        </div>
+        
+        <div class="game-footer">
+            <div class="details-container">
+                <details>
+                    <summary>Como jogar?</summary>
+                    <div class="details-content">
+                        <p>O jogo vai pedir para você encontrar uma cor específica. Clique no quadrado que corresponde à cor solicitada. Se acertar, você ganha! Se errar, tente novamente.</p>
+                        <p>Este jogo ajuda no reconhecimento de cores e é especialmente útil para crianças com TEA.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>Para o que serve o Jogo?</summary>
+                    <div class="details-content">
+                        <p>texto</p>
+                        <p>trexto.</p>
+                    </div>
+                </details>
+            </div>
+            
+            <a href="/atividades" class="btn-voltar">Voltar</a>
+        </div>
+    </div>
 
-        let target = colors[Math.floor(Math.random() * colors.length)];
-        document.getElementById('targetColor').innerText = target.nome;
+<div class="message" id="message">
+    <div class="message-content">
+        <span class="message-emoji" id="messageEmoji"></span>
+        <div class="message-text" id="messageText"></div>
+        <div class="message-buttons">
+            <button class="message-btn" id="btnJogarNovamente">Jogar Novamente</button>
 
-        const buttonsDiv = document.getElementById('buttons');
-        colors.forEach(cor => {
-            let btn = document.createElement('button');
-            btn.className = 'color-btn';
-            btn.style.background = cor.valor;
-            btn.onclick = () => {
-                if (cor.nome === target.nome) {
-                    alert('Parabéns!');
-                    location.reload();
-                } else {
-                    alert('Tente novamente!');
-                }
-            };
-            buttonsDiv.appendChild(btn);
-        });
-    </script>
+        </div>
+    </div>
+</div>
+</div>
+
+
+    <script src="js/cores.js"></script>
+</center>
+        <footer class="div-final">
+
+        <ul class="nav-links">
+            <li><a href="/">Início</a></li>
+            <li><a href="#">Tutorial</a></li>
+            <li><a href="#">Sobre agente</a></li>
+            <li><a href="/atividades">Atividades</a></li>
+            <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
+            <li><a href="/telaoqautismo">O que é o autismo</a></li>
+        </ul>
+
+
+            <span class="logo-icon"><img src="favicons/apple-touch-icon.png" alt="logo" width="50%" height="50%"></span>
+        
+</footer>
 </body>
 </html>

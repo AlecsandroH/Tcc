@@ -14,8 +14,9 @@
 <link href="{{asset('css/csspadrao.css')}}" rel="stylesheet">
 <link href="{{asset('css/reset.css')}}" rel="stylesheet">
     <link href="{{asset('css/cssimage.css')}}" rel="stylesheet">
-    <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('css/atividades.css')}}" rel="stylesheet">
      <link href="{{asset('css/textos.css')}}" rel="stylesheet">
+
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -90,7 +91,7 @@
                 <!-- Jogo 4 -->
                 <div class="carousel-item">
                     <div class="game-card">
-                        <img src="{{ asset('imagens/quebra-cabeca.jpg') }}" class="d-block w-100 game-img" alt="Quebra-Cabeça">
+                        <img src="{{ asset('imagens/quebra.jpg') }}" class="d-block w-100 game-img" alt="Quebra-Cabeça">
                         <div class="game-body">
                             <h4 class="game-title">Quebra-Cabeça</h4>
                             <p class="font">Monte peças e divirta-se</p>
@@ -115,7 +116,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
-    <div class="div-final">
+    <footer class="div-final">
 
         <ul class="nav-links">
             <li><a href="/">Início</a></li>
@@ -129,7 +130,7 @@
 
             <span class="logo-icon"><img src="favicons/apple-touch-icon.png" alt="logo" width="50%" height="50%"></span>
         
-    </div>
+</footer>
     
 </body>
 </html>
