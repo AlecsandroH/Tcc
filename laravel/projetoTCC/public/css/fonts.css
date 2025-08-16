@@ -1,0 +1,35 @@
+/* Quick Sans - Definição da fonte */
+@font-face {
+    font-family: 'Quick Sans';
+    src: url('../fonts/QuickSans-Regular.woff2') format('woff2'),
+         url('../fonts/QuickSans-Regular.woff') format('woff');
+    font-weight: 400; /* Peso normal */
+    font-style: normal;
+    font-display: swap; /* Otimização de carregamento */
+}
+
+@font-face {
+    font-family: 'Quick Sans';
+    src: url('../fonts/QuickSans-Bold.woff2') format('woff2'),
+         url('../fonts/QuickSans-Bold.woff') format('woff');
+    font-weight: 700; /* Peso negrito */
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Quick Sans';
+    src: url('../fonts/QuickSans-Regular.woff2') format('woff2'),
+         url('../fonts/QuickSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Aplica a fonte globalmente */
+body {
+    font-family: 'Quick Sans', sans-serif !important; /* !important garante prioridade */
+}
+/* Estilos adicionais (opcional) */
+h1, h2, h3 {
+    font-weight: 700; /* Usa a variação bold */
+}

@@ -16,10 +16,12 @@
     <link href="{{asset('css/cssimage.css')}}" rel="stylesheet">
     <link href="{{asset('css/reset.css')}}" rel="stylesheet">
     <link href="{{asset('css/botoes.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/fonts.css') }}">
 
 
 </head>
-<body >
+<body class="font">
+     @yield('content')
     <div class="div-cabecalho">
         <a href="/" class="logo">
             <span class="logo-icon"><img src="favicons/apple-touch-icon.png" alt="logo" width="50%" height="50%"></span>
@@ -38,9 +40,9 @@
 
 
     <div class="div-meio">
-        <span class="font">
-dsadsadsa
-</span>
+    
+
+
 </div>
 
 
