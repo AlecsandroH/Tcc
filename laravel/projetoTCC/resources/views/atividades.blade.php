@@ -23,7 +23,7 @@
 <body class="bg-light">
 
 
-<div class="div-cabecalho">
+<header class="div-cabecalho">
         <a href="/" class="logo">
             <span class="logo-icon"><img src="favicons/apple-touch-icon.png" alt="logo" width="50%" height="50%"></span>
         </a>
@@ -37,7 +37,7 @@
             <li><a href="/telaoqautismo">O que é o autismo</a></li>
         </ul>
 
-    </div>
+</header>
 
 <div class="container mt-5">
     <div class="games-carousel">
