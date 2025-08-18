@@ -16,12 +16,11 @@
     <link href="{{asset('css/cssimage.css')}}" rel="stylesheet">
     <link href="{{asset('css/reset.css')}}" rel="stylesheet">
     <link href="{{asset('css/botoes.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/fonts.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-
+   
 </head>
-<body class="font">
-     @yield('content')
+<body>
     <div class="div-cabecalho">
         <a href="/" class="logo">
             <span class="logo-icon"><img src="favicons/apple-touch-icon.png" alt="logo" width="50%" height="50%"></span>
@@ -40,10 +39,13 @@
 
 
     <div class="div-meio">
-    
-
-
+        <span>
+    dsadasdasdasdas
+</span>
+<br/>
+sadasda
 </div>
+
 
 
     <div class="div-final">

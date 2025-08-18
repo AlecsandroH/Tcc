@@ -31,7 +31,7 @@
         <ul class="nav-links">
             <li><a href="/">Início</a></li>
             <li><a href="#">Tutorial</a></li>
-            <li><a href="#">Sobre agente</a></li>
+            <li><a href="/sobrenos">Sobre nós</a></li>
             <li><a href="/atividades">Atividades</a></li>
             <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
             <li><a href="/telaoqautismo">O que é o autismo</a></li>

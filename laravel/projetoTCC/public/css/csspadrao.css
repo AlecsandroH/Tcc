@@ -1,115 +1,73 @@
+:root {
+    --cor-primaria: #000035;
+    --cor-secundaria: #ff9a00;
+    --cor-texto: #333;
+    --cor-branco: #ffffff;
+    --gradiente: linear-gradient(to right, red, orange, yellow, blue);
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
+    color: var(--cor-texto);
     background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--cor-primaria);
 }
 
 .div-cabecalho {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 15px 5%;
+    background-color: var(--cor-primaria);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    position: flex;
     top: 0;
-    margin-bottom: 0;
-    width: 100%;
-    margin-right: 0px;
-    background-color: #000035;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    font-family: Fira Sans, sans-serif;
-}
-
-.div-meio{
-    color: rgb(0, 0, 0);
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    height: 1000px;
-    align-items: center;
-    width: 100%;
-    background-color: white;
-    bottom: 0;
-    top: 0;
-    
-
-}
-
-
-
-
-
-.div-final {
-    position: flex;  
-    bottom: 0;      
-    left: 0;
-    margin-top: 0;       
-    width: 100%;
-    background-color: #000035;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    border-top: 5px solid;
-    border-image: linear-gradient(to right, red, orange, yellow, blue);
-    border-image-slice: 1;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-     
+    z-index: 100;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    font-weight: bold;
-    font-size: 34px;
-    color: #2c3e50;
-    text-decoration: none;
 }
 
-.logo-icon {
-    margin-right: 10px;
-    font-size: 38px;
+.logo-icon img {
+    width: 60px;
+    height: auto;
+    transition: transform 0.3s;
 }
 
-.logo2 {
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    margin-left: 0%;
-    font-size: 14px;
-    color: #ffffff;
-    text-decoration: none;
+.logo-icon img:hover {
+    transform: scale(1.05);
 }
-
-.logo-icon2 {
-    margin-right: 10px;
-    font-size: 18px;
-}
-
 
 .nav-links {
     display: flex;
-    flex-direction: row;
-    gap: 20px;
+    gap: 30px;
     list-style: none;
     margin: 0;
     padding: 0;
-    justify-content: center;
-    white-space: nowrap; 
 }
+
 .nav-links a {
     text-decoration: none;
-    color: #ffffff;
-    font-weight: 500;
-    transition: color 0.3s;
+    color: var(--cor-branco);
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
     padding: 5px 0;
-    position: sticky;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: linear-gradient(to right, red, orange, yellow, blue);
-    color: #ff9a00;
-
+    color: var(--cor-secundaria);
 }
 
 .nav-links a::after {
@@ -119,13 +77,57 @@ body {
     height: 2px;
     bottom: 0;
     left: 0;
-    color: #ff9a00;
-    background-image: linear-gradient(to right, red, orange, yellow, blue);
+    background: var(--gradiente);
     transition: width 0.3s;
 }
 
 .nav-links a:hover::after {
     width: 100%;
-    color: #ff9a00;
+}
 
+.div-meio {
+    min-height: calc(100vh - 160px);
+    padding: 40px 5%;
+    background-color: var(--cor-branco);
+    color: var(--cor-texto);
+}
+
+.div-final {
+    background-color: var(--cor-primaria);
+    padding: 30px 5%;
+    border-top: 5px solid;
+    border-image: var(--gradiente);
+    border-image-slice: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.div-final .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.div-final .logo-icon img {
+    width: 80px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .div-cabecalho {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .nav-links {
+        gap: 15px;
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-links a {
+        font-size: 1rem;
+    }
 }

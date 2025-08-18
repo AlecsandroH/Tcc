@@ -26,7 +26,7 @@
         <ul class="nav-links">
             <li><a href="/">Início</a></li>
             <li><a href="#">Tutorial</a></li>
-            <li><a href="#">Sobre agente</a></li>
+            <li><a href="/sobrenos">Sobre nós</a></li>
             <li><a href="/atividades">Atividades</a></li>
             <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
             <li><a href="/telaoqautismo">O que é o autismo</a></li>
@@ -57,7 +57,7 @@
                 <select id="imageSelect" class="btn-outline">
                     <option value="imagens/quebra.jpg">Quebra-Cabeça Padrão</option>
                     <option value="imagens/mapa.jpg">Natureza</option>
-                    <option value="https://source.unsplash.com/random/600x600/?animal">Animais</option>
+                    <option value="imagens/cores.jpg">Animais</option>
                     <option value="https://source.unsplash.com/random/600x600/?city">Cidade</option>
                     <option value="https://source.unsplash.com/random/600x600/?art">Arte</option>
                 </select>
