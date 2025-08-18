@@ -11,10 +11,12 @@
     <link rel="icon" href="{{asset('favicons/favivon-32x32.png')}}" sizes="32x32" type="image/png">
 
 
-    <link href="{{asset('css/cssimage.css')}}" rel="stylesheet">
+
     <link href="{{asset('css/csspadrao.css')}}" rel="stylesheet">
     <link href="{{asset('css/duvidasF.css')}}" rel="stylesheet">
+    <link href="{{asset('css/cssimage.css')}}" rel="stylesheet">
     <link href="{{asset('css/reset.css')}}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
 </head>
 <body>

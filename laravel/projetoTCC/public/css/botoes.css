@@ -355,4 +355,12 @@ border-color: #ffd900;
 }
 
 
-/*Todos os botões*/
+/*botao tela oq é autismo*/
+
+.textos-botao {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+    line-height: 1.6;
+}

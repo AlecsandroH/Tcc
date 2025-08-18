@@ -17,6 +17,8 @@
     <link href="{{asset('css/textos.css')}}" rel="stylesheet">
     <link href="{{asset('css/cssmanuais.css')}}" rel="stylesheet">
     <link href="{{asset('css/reset.css')}}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
 
 </head>
@@ -45,10 +47,10 @@
     <div class="div-centro-manuais">
         <center>
         <div class ="divtexto-manuais">
-<span class="font">
+<span class="textos">
     <br/>
 </br>
-<p> texo explicando como é conviver com um autista
+<p> tetxo explicando como é conviver com um autista
 
 </p>
 </span>
@@ -58,8 +60,8 @@
 
 
 <div class="header">
-        <h1>MANUAIS</h1>
-    </div>
+    <span class="textos-manuais">    MANUAIS</span>
+        </div>
 
     <div class="container">
         <div class="manual-item left">
@@ -67,10 +69,8 @@
             <h2>Informações de Apoio</h2>
             <p>Material completo com orientações e recursos disponíveis para apoio e assistência em diversas situações. 
             <br/>    
-            <button id="openinfA">
-                <a href="/infapoio" class="logo2">
+            <button id="openinfA" onclick="window.location.href='/infapoio';">
                     Ver mais
-</a>
                 </button>
         </p>
                 </span>
@@ -81,10 +81,9 @@
             <h2>Duvidas  frequentes</h2>
             <p>Respostas às dúvidas mais frequentes dos familiares, com linguagem clara e acessível.
             <br/>
-            <button id="openPP">
-                 <a href="/Duvidas-Frequentes" class="logo2">
+            <br/>
+            <button id="openPP"  onclick="window.location.href='/Duvidas-Frequentes';">
                     Ver mais
-</a>
                 </button>
         </p>
             </span>
@@ -95,14 +94,14 @@
             <h2>Leis e Direitos</h2>
             <p>Compilação das principais legislações e direitos assegurados por lei, com explicações detalhadas.
                 <br/>
-                <button id="openLD">
-                    <a href="/leisedireitos" class="logo2">
+                </br>
+                <button id="openLD" onclick="window.location.href='/leisedireitos';">
                         Ver mais
-                    </a>
                     </button>
             </p>
                 </span>
         </div>
+        
     </div>
 
 

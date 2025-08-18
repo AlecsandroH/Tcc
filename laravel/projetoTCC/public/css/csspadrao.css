@@ -15,10 +15,31 @@ body {
     line-height: 1.6;
 }
 
+
+.textos {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+.textos-var2 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+    line-height: 1.6;
+}
+
+
+
 h1, h2, h3, h4 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    color: var(--cor-primaria);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--cor-texto);
+    line-height: 1.6;
 }
 
 .div-cabecalho {
@@ -131,3 +152,6 @@ h1, h2, h3, h4 {
         font-size: 1rem;
     }
 }
+
+
+

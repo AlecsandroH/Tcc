@@ -16,6 +16,7 @@
     <link href="{{asset('css/cssimage.css')}}" rel="stylesheet">
     <link href="{{asset('css/atividades.css')}}" rel="stylesheet">
      <link href="{{asset('css/textos.css')}}" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -58,8 +59,9 @@
                         <img src="{{ asset('imagens/cores.jpg') }}" class="d-block w-100 game-img" alt="Jogo das Cores">
                         <div class="game-body">
                             <h4 class="game-title">Jogo das Cores</h4>
-                            <p class="font">Aprenda cores de forma divertida</p>
-                            <a href="{{ route('jogo.cores') }}" class="btn play-btn">Jogar Agora</a>
+                            <p class="textos-var2">Aprenda cores de forma divertida</p>
+                            <br/>
+                            <a href="{{ route('jogo.cores') }}" class="btn play-btn"><span class="textos-var2">Jogar Agora</span></a>
                         </div>
                     </div>
                 </div>
@@ -70,8 +72,9 @@
                         <img src="{{ asset('imagens/memoria.jpg') }}" class="d-block w-100 game-img" alt="Jogo da Memória">
                         <div class="game-body">
                             <h4 class="game-title">Jogo da Memória</h4>
-                            <p class="font">Desenvolva sua memória visual</p>
-                            <a href="{{ route('jogo.memoria') }}" class="btn play-btn">Jogar Agora</a>
+                            <p class="textos-var2">Desenvolva sua memória visual</p>
+                            <br/>
+                            <a href="{{ route('jogo.memoria') }}" class="btn play-btn"><span class="textos-var2">Jogar Agora</span></a>
                         </div>
                     </div>
                 </div>
@@ -82,7 +85,7 @@
                         <img src="{{ asset('imagens/objetos.jpg') }}" class="d-block w-100 game-img" alt="Caça ao Objeto">
                         <div class="game-body">
                             <h4 class="game-title">Caça ao Objeto</h4>
-                            <p class="font">Encontre os objetos escondidos</p>
+                            <p class="textos-var2">Encontre os objetos escondidos</p>
                             <a href="{{ route('jogo.objetos') }}" class="btn play-btn">Jogar Agora</a>
                         </div>
                     </div>

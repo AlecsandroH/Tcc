@@ -154,16 +154,15 @@
     }
 
 
-    // Botões
     btnAgain.onclick = ()=>{ overlay.classList.remove('active'); shufflePieces(); };
     btnShuffle.onclick = shufflePieces;
     levelSelect.onchange = initGame;
     imageSelect.onchange = function() {
         IMG_URL = this.value;
-        imageUpload.value = ''; // Limpa upload se selecionar imagem pronta
+        imageUpload.value = '';
         initGame();
     };
 
-    // inicializa
+
     initGame();
 })();

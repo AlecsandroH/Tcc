@@ -17,6 +17,7 @@
     <link href="{{asset('css/csspadrao.css')}}" rel="stylesheet">
      <link href="{{asset('css/textos.css')}}" rel="stylesheet">
      <link href="{{asset('css/reset.css')}}" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
     
 </head>
@@ -49,7 +50,7 @@
 <div class="div-meio" style="word-wrap: break-word;">
     <div class="font">
         <center>
- <button id="openBtn">Diagnostico</button>
+ <button id="openBtn"><span class="textos-botao">Diagnostico</span></button>
     
     <div class="overlay" id="overlay"></div>
     
@@ -62,6 +63,8 @@
         </div>
         <div class="popup-content">
 
+<span class="textos">
+<p>
 - Observação dos Sinais Precoces: Os primeiros sinais do autismo geralmente aparecem antes dos 3 anos. Os pais e cuidadores devem estar atentos a comportamentos como dificuldades na comunicação, interação social e padrões de comportamento repetitivos. 
 
 - Triagem Inicial: Muitos pediatras utilizam questionários de triagem para identificar se uma criança pode estar no espectro autista. Essa triagem pode incluir perguntas sobre o desenvolvimento da criança e seu comportamento em diferentes situações. 
@@ -74,22 +77,26 @@
 
 - Testes Complementares: Em alguns casos, testes adicionais podem ser realizados para descartar outras condições ou para entender melhor as necessidades da criança.
 
+</p>
+</span>
         </div>
     </div>
 
 
-    <button id="openBtn2">caracteristicas</button>
+    <button id="openBtn2"><span class="textos-botao">caracteristicas</span></button>
     
     <div class="overlay" id="overlay2"></div>
     
     <div class="popup2" id="popup2">
         <div class="popup-header">
             <h3 class="popup-title">
-                                Como posso saber as caracteristicas?
+             Como posso saber as caracteristicas?
             </h3>
             <button class="close-btn2">&times;</button>
         </div>
         <div class="popup-content">
+            <span class="textos">
+                <p>
         As principais características do autismo estão relacionadas a déficits na interação social e comunicação, incluindo:
 
 - Padrões incomuns de fala
@@ -101,10 +108,12 @@
 - Dificuldade em compreender os sentimentos dos outros e expressar os seus
 - Comportamentos repetitivos ou incomuns
 - Hiperfoco por determinados objetos
+</p>
+</span>
         </div>
     </div>
 
-    <button id="openBtn3">tratamento</button>
+    <button id="openBtn3"><span class="textos-botao">tratamento</span></button>
     
     <div class="overlay" id="overlay3"></div>
     
@@ -116,7 +125,8 @@
             <button class="close-btn3">&times;</button>
         </div>
         <div class="popup-content">
-            <p class="font">
+            <span class="textos">
+            <p>
         O tratamento para o autismo envolve uma abordagem multidisciplinar que inclui terapias comportamentais, intervenções educacionais e, em alguns casos, medicamentos, visando melhorar a qualidade de vida e as habilidades sociais do portador.
 
 Abordagens Terapêuticas:
@@ -142,14 +152,18 @@ Os principais medicamentos incluem:
 <li> Aripiprazol: Também aprovado para o controle da irritabilidade, com um perfil de efeitos colaterais mais favorávels
 </li>
 </p>
+</span>
         </div>
     </div>
 </center>
 <div class="divtexto">
+    <span class="textos">
+</br>
+</br>
     <center>
 texto aqui
 </center>
-
+</span>
 
 </div>
 </div>
