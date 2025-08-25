@@ -10,12 +10,14 @@
     <link rel="icon" href="{{asset('favicons/favicon-16x16.png')}}" type="image/png">
     <link rel="icon" href="{{asset('favicons/favicon-32x32.png')}}" type="image/png">
       
-    <!--Link css-->
+       <!--Link css-->
+       <link href="{{asset('css/botoes.css')}}" rel="stylesheet">
+    <link href="{{asset('css/cssimage.css')}}" rel="stylesheet">
     <link href="{{asset('css/csspadrao.css')}}" rel="stylesheet">
     <link href="{{asset('css/textos.css')}}" rel="stylesheet">
-    <link href="{{asset('css/cssimage.css')}}" rel="stylesheet">
+    <link href="{{asset('css/inicio.css')}}" rel="stylesheet">
     <link href="{{asset('css/reset.css')}}" rel="stylesheet">
-    <link href="{{asset('css/botoes.css')}}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
    
@@ -36,14 +38,54 @@
         </ul>
 
     </div>
-
+<div class="header">
+    <img src="imagens/mapa.jpg" class="imagem-container">
+    sim kk
+</div>
 
     <div class="div-meio">
         <span>
     dsadasdasdasdas
 </span>
 <br/>
-sadasda
+<p>sadasda
+suysajfkhadslkjhfkjdhfalkjshdfkjhsadkjfhgslkdaghfkjasdhgflkjhagsoidufgwqpiuegdfnbdcvbailhdgnsdbvhlageoiuygqoiuywtyrpuyrfkhjgdafkdljsgfaskljdhgfasdnmbvckhldgsdoiufgoiuyegw
+</p>
+
+<div class="container">
+        <div class="manual-item left">
+               <span class="centro">
+            <h2>Informações de Apoio</h2>
+            <p>Material completo com orientações e recursos disponíveis para apoio e assistência em diversas situações. 
+            <br/>    
+          
+        </p>
+                </span>
+        </div>
+        
+        <div class="manual-item right">
+            <span class="centro">
+            <h2>Duvidas  frequentes</h2>
+            <p>Respostas às dúvidas mais frequentes dos familiares, com linguagem clara e acessível.
+            <br/>
+            <br/>
+           
+        </p>
+            </span>
+        </div>
+        
+        <div class="manual-item left-alt">
+               <span class="centro">
+            <h2>Leis e Direitos</h2>
+            <p>Compilação das principais legislações e direitos assegurados por lei, com explicações detalhadas.
+                <br/>
+                </br>
+               
+            </p>
+                </span>
+        </div>
+        
+    </div>
 </div>
 
 

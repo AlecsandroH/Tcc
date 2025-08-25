@@ -15,7 +15,7 @@
     left: 0;
     right: 0;
     height: 10px;
-    background: linear-gradient(90deg, #4c53af, #4a66c3);
+    background: linear-gradient(90deg, #A7C7E7, #A7C7E7);
 }
 
 .games-title {
@@ -33,7 +33,7 @@
     position: absolute;
     width: 60%;
     height: 5px;
-    background: linear-gradient(90deg, #4c56af, #4a52c3);
+    background: linear-gradient(90deg, #A7C7E7, #A7C7E7);
     bottom: -15px;
     left: 20%;
     border-radius: 3px;
@@ -67,7 +67,7 @@
     height: 250px;
     object-fit: cover;
     transition: all 0.4s ease;
-    border-bottom: 4px solid #4c53af;
+    border-bottom: 4px solid #A7C7E7;
 }
 
 .game-card:hover .game-img {
@@ -78,7 +78,7 @@
 .game-body {
     padding: 40px;
     text-align: center;
-    background: #104375;
+    background: #A7C7E7;
     border-radius: 0 0 15px 15px;
 }
 
@@ -96,7 +96,7 @@
     position: absolute;
     width: 40px;
     height: 3px;
-    background: #4c56af;
+    background: #A7C7E7;
     bottom: -8px;
     left: 50%;
     transform: translateX(-50%);
@@ -104,7 +104,7 @@
 }
 
 .play-btn {
-    background: linear-gradient(135deg, #534caf 0%, #4a5cc3 100%);
+    background: linear-gradient(135deg, #5299e0 0%, #5299e0 100%);
     border: none;
     padding: 10px 30px;
     border-radius: 50px;
@@ -113,7 +113,7 @@
     text-transform: uppercase;
     font-size: 1rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(76, 78, 175, 0.3);
+    box-shadow: 0 4px 15px rgba(112, 114, 238, 0.3);
     color: white;
     position: relative;
     overflow: hidden;
@@ -122,7 +122,7 @@
 .play-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(76, 83, 175, 0.4);
-    background: linear-gradient(135deg, #4351a0 0%, #425cb3 100%);
+    background: linear-gradient(135deg, #386899 0%, #386899 100%);
     color: white;
 }
 
@@ -135,7 +135,7 @@
     position: absolute;
     width: 50px;
     height: 50px;
-    background-color: #4c53af;
+    background-color: #A7C7E7;
     border-radius: 10%;
     top: 50%;
     margin-top: 150px;
