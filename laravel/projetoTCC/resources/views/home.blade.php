@@ -23,35 +23,34 @@
    
 </head>
 <body>
-    <div class="div-cabecalho">
+    <header class="div-cabecalho">
         <a href="/" class="logo">
             <span class="logo-icon"><img src="favicons/apple-touch-icon.png" alt="logo" width="50%" height="50%"></span>
         </a>
         
         <ul class="nav-links">
             <li><a href="/">Início</a></li>
-            <li><a href="#">Tutorial</a></li>
-            <li><a href="/sobrenos">Sobre nós</a></li>
+            <li><a href="/tutorial">Tutorial</a></li>
+            <li><a href="/sobrenos">Sobre Nós</a></li>
             <li><a href="/atividades">Atividades</a></li>
             <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
             <li><a href="/telaoqautismo">O que é o autismo</a></li>
         </ul>
 
-    </div>
-<div class="header">
+</header>
+<div class="cabeçalho-imagem">
     <img src="imagens/mapa.jpg" class="imagem-container">
-    sim kk
+    imagem vai ficar aqui (teste ⬆)
+</div>
+<div class="cabeçalho-texto">
+    texto aqui
 </div>
 
-    <div class="div-meio">
-        <span>
-    dsadasdasdasdas
-</span>
-<br/>
-<p>sadasda
-suysajfkhadslkjhfkjdhfalkjshdfkjhsadkjfhgslkdaghfkjasdhgflkjhagsoidufgwqpiuegdfnbdcvbailhdgnsdbvhlageoiuygqoiuywtyrpuyrfkhjgdafkdljsgfaskljdhgfasdnmbvckhldgsdoiufgoiuyegw
-</p>
 
+    <div class="div-meio">
+<div class="textos-inicio">
+TExtos
+</div>
 <div class="container">
         <div class="manual-item left">
                <span class="centro">
@@ -90,12 +89,12 @@ suysajfkhadslkjhfkjdhfalkjshdfkjhsadkjfhgslkdaghfkjasdhgflkjhagsoidufgwqpiuegdfn
 
 
 
-    <div class="div-final">
+    <footer class="div-final">
 
         <ul class="nav-links">
             <li><a href="/">Início</a></li>
-            <li><a href="#">Tutorial</a></li>
-            <li><a href="/sobrenos">Sobre nós</a></li>
+            <li><a href="/tutorial">Tutorial</a></li>
+            <li><a href="/sobrenos">Sobre Nós</a></li>
             <li><a href="/atividades">Atividades</a></li>
             <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
             <li><a href="/telaoqautismo">O que é o autismo</a></li>
@@ -104,7 +103,7 @@ suysajfkhadslkjhfkjdhfalkjshdfkjhsadkjfhgslkdaghfkjasdhgflkjhagsoidufgwqpiuegdfn
 
             <span class="logo-icon"><img src="favicons/apple-touch-icon.png" alt="logo" width="50%" height="50%"></span>
         
-    </div>
+</footer>
    
 </body>
 </html>

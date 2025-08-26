@@ -11,12 +11,14 @@
     <link rel="icon" href="{{asset('favicons/favicon-32x32.png')}}" type="image/png">
       
 
-<link href="{{asset('css/csspadrao.css')}}" rel="stylesheet">
-<link href="{{asset('css/reset.css')}}" rel="stylesheet">
+    <link href="{{asset('css/csspadrao.css')}}" rel="stylesheet">
+    <link href="{{asset('css/reset.css')}}" rel="stylesheet">
     <link href="{{asset('css/cssimage.css')}}" rel="stylesheet">
     <link href="{{asset('css/atividades.css')}}" rel="stylesheet">
-     <link href="{{asset('css/textos.css')}}" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="{{asset('css/textos.css')}}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -31,7 +33,7 @@
         
         <ul class="nav-links">
             <li><a href="/">Início</a></li>
-            <li><a href="#">Tutorial</a></li>
+            <li><a href="/tutorial">Tutorial</a></li>
             <li><a href="/sobrenos">Sobre nós</a></li>
             <li><a href="/atividades">Atividades</a></li>
             <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
@@ -123,8 +125,8 @@
 
         <ul class="nav-links">
             <li><a href="/">Início</a></li>
-            <li><a href="#">Tutorial</a></li>
-            <li><a href="#">Sobre agente</a></li>
+            <li><a href="/tutorial">Tutorial</a></li>
+            <li><a href="/sobrenos">Sobre Nós</a></li>
             <li><a href="/atividades">Atividades</a></li>
             <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
             <li><a href="/telaoqautismo">O que é o autismo</a></li>

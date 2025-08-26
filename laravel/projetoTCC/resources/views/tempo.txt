@@ -1,0 +1,831 @@
+CSS 1 - Games Carousel (Carrossel de Jogos)
+css
+/* Container principal do carrossel de jogos */
+.games-carousel {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4f0fb 100%); /* Fundo gradiente azul claro */
+    border-radius: 20px; /* Cantos arredondados */
+    padding: 40px 30px; /* Espaçamento interno */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 60px; /* Margem inferior */
+    position: relative; /* Para posicionar elementos filhos */
+    overflow: hidden; /* Esconde conteúdo que ultrapassa */
+}
+
+/* Linha decorativa no topo do carrossel */
+.games-carousel::before {
+    content: ''; /* Elemento pseudo vazio */
+    position: absolute; /* Posicionamento absoluto */
+    top: 0; left: 0; right: 0; /* Cobrir toda a largura */
+    height: 10px; /* Altura da linha */
+    background: linear-gradient(90deg, #A7C7E7, #A7C7E7); /* Gradiente azul */
+}
+
+/* Título do carrossel */
+.games-title {
+    color: #000000; /* Cor do texto */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* Sombra no texto */
+    margin-bottom: 40px; /* Espaço abaixo */
+    position: relative; /* Para posicionar o pseudo-elemento */
+    display: inline-block; /* Ajusta ao conteúdo */
+    font-size: 2.2rem; /* Tamanho da fonte */
+}
+
+/* Linha decorativa abaixo do título */
+.games-title:after {
+    content: ''; /* Elemento pseudo vazio */
+    position: absolute; /* Posicionamento absoluto */
+    width: 60%; height: 5px; /* Largura e altura */
+    background: linear-gradient(90deg, #A7C7E7, #A7C7E7); /* Gradiente azul */
+    bottom: -15px; left: 20%; /* Posicionamento */
+    border-radius: 3px; /* Cantos arredondados */
+    transform: skewX(-15deg); /* Inclinação diagonal */
+}
+
+/* Container do carrossel */
+.carousel-container {
+    position: relative; /* Para posicionar controles */
+    padding: 0 50px; /* Espaçamento lateral */
+}
+
+/* Cartão individual do jogo */
+.game-card {
+    background: white; /* Fundo branco */
+    border-radius: 18px; /* Cantos arredondados */
+    overflow: hidden; /* Esconde overflow */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); /* Sombra */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1); /* Animação suave */
+    margin: 0 20px; /* Margem lateral */
+    border: none; /* Sem borda */
+    transform: scale(0.95); /* Escala reduzida */
+    opacity: 0.9; /* Transparência */
+}
+
+/* Cartão ativo (central) */
+.carousel-item.active .game-card {
+    transform: scale(1); /* Tamanho normal */
+    opacity: 1; /* Opaco */
+}
+
+/* Imagem do jogo */
+.game-img {
+    height: 250px; /* Altura fixa */
+    object-fit: cover; /* Preenche o espaço */
+    transition: all 0.4s ease; /* Transição suave */
+    border-bottom: 4px solid #A7C7E7; /* Borda inferior azul */
+}
+
+/* Efeito hover na imagem */
+.game-card:hover .game-img {
+    transform: scale(1.02); /* Zoom suave */
+    opacity: 0.95; /* Leve transparência */
+}
+
+/* Corpo do cartão */
+.game-body {
+    padding: 40px; /* Espaçamento interno */
+    text-align: center; /* Texto centralizado */
+    background: #A7C7E7; /* Fundo azul */
+    border-radius: 0 0 15px 15px; /* Cantos arredondados apenas embaixo */
+}
+
+/* Título do jogo */
+.game-title {
+    color: #000000; /* Cor do texto */
+    font-weight: 700; /* Negrito */
+    margin-bottom: 15px; /* Espaço abaixo */
+    font-size: 1.5rem; /* Tamanho da fonte */
+    position: relative; /* Para linha decorativa */
+    display: inline-block; /* Ajusta ao conteúdo */
+}
+
+/* Linha decorativa abaixo do título */
+.game-title:after {
+    content: ''; /* Elemento pseudo vazio */
+    position: absolute; /* Posicionamento absoluto */
+    width: 40px; height: 3px; /* Tamanho */
+    background: #A7C7E7; /* Cor azul */
+    bottom: -8px; left: 50%; /* Posicionamento */
+    transform: translateX(-50%); /* Centraliza */
+    border-radius: 3px; /* Cantos arredondados */
+}
+
+/* Botão de jogar */
+.play-btn {
+    background: linear-gradient(135deg, #5299e0 0%, #5299e0 100%); /* Gradiente azul */
+    border: none; /* Sem borda */
+    padding: 10px 30px; /* Espaçamento interno */
+    border-radius: 50px; /* Completamente arredondado */
+    font-weight: 600; /* Negrito */
+    letter-spacing: 0.5px; /* Espaçamento entre letras */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    font-size: 1rem; /* Tamanho da fonte */
+    transition: all 0.3s ease; /* Transição suave */
+    box-shadow: 0 4px 15px rgba(112, 114, 238, 0.3); /* Sombra */
+    color: white; /* Texto branco */
+    position: relative; /* Para efeitos */
+    overflow: hidden; /* Esconde overflow */
+}
+
+/* Efeito hover no botão */
+.play-btn:hover {
+    transform: translateY(-3px); /* Levanta o botão */
+    box-shadow: 0 8px 20px rgba(76, 83, 175, 0.4); /* Sombra mais intensa */
+    background: linear-gradient(135deg, #386899 0%, #386899 100%); /* Gradiente mais escuro */
+    color: white; /* Texto branco */
+}
+
+/* Efeito de clique no botão */
+.play-btn:active {
+    transform: translateY(1px); /* Afunda o botão */
+}
+
+/* Controles do carrossel (setas) */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute; /* Posicionamento absoluto */
+    width: 50px; height: 50px; /* Tamanho quadrado */
+    background-color: #A7C7E7; /* Fundo azul */
+    border-radius: 10%; /* Cantos levemente arredondados */
+    top: 50%; /* Centro vertical */
+    margin-top: 150px; /* Ajuste de posição */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    opacity: 100%; /* Totalmente visível */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+/* Posição da seta anterior */
+.carousel-control-prev {
+    left: -10px; /* Posição à esquerda */
+}
+
+/* Posição da seta próxima */
+.carousel-control-next {
+    right: -10px; /* Posição à direita */
+}
+
+/* Efeito hover nas setas */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: #4c53af; /* Azul mais escuro */
+    transform: translateY(-50%) scale(1.1); /* Aumenta e centraliza */
+}
+
+/* Ícones das setas */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-size: 100%; /* Tamanho completo */
+    width: 25px; height: 25px; /* Tamanho */
+    transition: all 0.3s ease; /* Transição suave */
+    filter: brightness(0) invert(0.5); /* Cor cinza */
+}
+
+/* Efeito hover nos ícones */
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    filter: brightness(0) invert(1); /* Cor branca */
+    transform: scale(1.2); /* Aumenta o ícone */
+}
+
+/* Indicadores do carrossel (bolinhas) */
+.carousel-indicators {
+    bottom: 20px; /* Posição inferior */
+    left: 0; right: 0; /* Centralizado */
+    margin: 0 auto; /* Centraliza */
+    display: flex; /* Layout flex */
+    justify-content: center; /* Centraliza horizontal */
+    padding: 0; /* Sem padding */
+    list-style: none; /* Remove marcadores */
+    z-index: 10; /* Camada superior */
+}
+
+/* Bolinhas indicadoras */
+.carousel-indicators button {
+    width: 10px; height: 10px; /* Tamanho pequeno */
+    background-color: rgba(168, 160, 160, 0.5); /* Cor cinza transparente */
+    border: none; /* Sem borda */
+    margin: 0 5px; /* Espaçamento entre bolinhas */
+    padding: 0; /* Sem padding */
+    overflow: hidden; /* Esconde overflow */
+    cursor: pointer; /* Cursor de pointer */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+/* Bolinha ativa */
+.carousel-indicators button.active {
+    background-color: #0026ff; /* Azul forte */
+    transform: scale(1.2); /* Aumenta a bolinha */
+}
+
+/* Efeito hover nas bolinhas */
+.carousel-indicators button:hover:not(.active) {
+    background-color: rgba(168, 160, 160, 0.8); /* Cinza mais opaco */
+}
+
+/* Responsividade - Tablet */
+@media (max-width: 992px) {
+    .games-title { font-size: 1.8rem; } /* Título menor */
+    .game-img { height: 200px; } /* Imagem menor */
+}
+
+/* Responsividade - Mobile Grande */
+@media (max-width: 768px) {
+    .games-carousel {
+        padding: 30px 15px; /* Menos padding */
+        border-radius: 15px; /* Cantos menos arredondados */
+    }
+    .carousel-container { padding: 0 30px; } /* Menos padding */
+    .game-card { margin: 0 10px; } /* Menos margem */
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 40px; height: 40px; /* Setas menores */
+    }
+    .carousel-control-prev { left: -5px; } /* Ajuste de posição */
+    .carousel-control-next { right: -5px; } /* Ajuste de posição */
+    .carousel-indicators { bottom: 10px; } /* Indicadores mais próximos */
+}
+
+/* Responsividade - Mobile Pequeno */
+@media (max-width: 576px) {
+    .games-title { font-size: 1.5rem; } /* Título ainda menor */
+    .game-img { height: 180px; } /* Imagem ainda menor */
+    .game-body { padding: 20px 15px; } /* Menos padding */
+    .play-btn {
+        padding: 8px 20px; /* Botão menor */
+        font-size: 0.9rem; /* Texto menor */
+    }
+}
+CSS 2 - Estilos Gerais (Header, Cards, etc.)
+css
+/* Cabeçalho principal */
+header {
+    background: linear-gradient(135deg, #4b6cb7, #182848); /* Gradiente azul */
+    color: white; /* Texto branco */
+    text-align: center; /* Texto centralizado */
+    padding: 2rem 0; /* Espaçamento vertical */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+/* Título principal */
+h1 {
+    font-size: 2.5rem; /* Tamanho grande */
+    margin-bottom: 1rem; /* Espaço abaixo */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2); /* Sombra no texto */
+}
+
+/* Subtítulo */
+.subtitle {
+    font-size: 1.2rem; /* Tamanho médio */
+    opacity: 0.9; /* Leve transparência */
+}
+
+/* Container principal */
+.container {
+    max-width: 1000px; /* Largura máxima */
+    margin: 2rem auto; /* Centraliza com margem */
+    padding: 0 20px; /* Padding lateral */
+}
+
+/* Cards de conteúdo */
+.card {
+    background: white; /* Fundo branco */
+    border-radius: 10px; /* Cantos arredondados */
+    padding: 1.5rem; /* Espaçamento interno */
+    margin-bottom: 2rem; /* Espaço entre cards */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animações */
+}
+
+/* Efeito hover nos cards */
+.card:hover {
+    transform: translateY(-5px); /* Levanta o card */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* Sombra mais intensa */
+}
+
+/* Título dos cards */
+.card h2 {
+    color: #4b6cb7; /* Azul */
+    margin-bottom: 1rem; /* Espaço abaixo */
+    padding-bottom: 0.5rem; /* Espaço abaixo do texto */
+    border-bottom: 3px solid #ffd700; /* Linha dourada abaixo */
+    display: inline-block; /* Ajusta ao conteúdo */
+}
+
+/* Lista de direitos */
+.rights-list {
+    list-style: none; /* Remove marcadores */
+    padding: 0; /* Remove padding padrão */
+}
+
+/* Itens da lista */
+.rights-list li {
+    background: #f8f9fa; /* Fundo cinza claro */
+    margin-bottom: 0.8rem; /* Espaço entre itens */
+    padding: 1rem; /* Espaçamento interno */
+    border-left: 4px solid #4b6cb7; /* Borda lateral azul */
+    border-radius: 4px; /* Cantos levemente arredondados */
+    display: flex; /* Layout flex */
+    align-items: center; /* Alinha verticalmente */
+}
+
+/* Marcador personalizado da lista */
+.rights-list li:before {
+    content: "✓"; /* Checkmark */
+    color: #4b6cb7; /* Azul */
+    font-weight: bold; /* Negrito */
+    margin-right: 1rem; /* Espaço à direita */
+    font-size: 1.2rem; /* Tamanho maior */
+}
+
+/* Área de destaque */
+.highlight {
+    background: #fff9c4; /* Amarelo claro */
+    padding: 2rem; /* Espaçamento interno */
+    border-radius: 10px; /* Cantos arredondados */
+    text-align: center; /* Texto centralizado */
+    margin: 2rem 0; /* Margem vertical */
+    border: 2px dashed #ffd700; /* Borda tracejada dourada */
+}
+
+/* Rodapé */
+footer {
+    background: #182848; /* Azul escuro */
+    color: white; /* Texto branco */
+    text-align: center; /* Texto centralizado */
+    padding: 1.5rem 0; /* Espaçamento vertical */
+    margin-top: 3rem; /* Espaço acima */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; } /* Título menor */
+    .container { padding: 0 15px; } /* Menos padding */
+}
+CSS 3 - Botões e Popups
+css
+/* Botão azul padrão */
+#openBtn {
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    background-color: #4626CF; /* Azul escuro */
+    color: white; /* Texto branco */
+    margin-right: 10px; /* Espaço à direita */
+    border-color: #4626CF; /* Cor da borda */
+    border-width: 5px; /* Espessura da borda */
+    box-sizing: border-box; /* Inclui borda no tamanho */
+    margin-top: 20px; /* Espaço acima */
+    border-radius: 10px; /* Cantos arredondados */
+    cursor: pointer; /* Cursor de pointer */
+    transition: background-color 0.3s; /* Transição de cor */
+    transition: border-color 0.1s; /* Transição da borda */
+}
+
+/* Efeito hover botão azul */
+#openBtn:hover {
+    background-color: #120A5C; /* Azul mais escuro */
+    border-color: #120A5C; /* Borda mais escura */
+}
+
+/* Botão amarelo */
+#openBtn2 {
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    background-color: #FFD700; /* Amarelo */
+    color: rgb(0, 0, 0); /* Texto preto */
+    margin-right: 10px; /* Espaço à direita */
+    border-color: #FFD700; /* Cor da borda */
+    border-width: 5px; /* Espessura da borda */
+    box-sizing: border-box; /* Inclui borda no tamanho */
+    border-radius: 10px; /* Cantos arredondados */
+    cursor: pointer; /* Cursor de pointer */
+    transition: background-color 0.3s; /* Transição de cor */
+    transition: border-color 0.1s; /* Transição da borda */
+}
+
+/* Efeito hover botão amarelo */
+#openBtn2:hover {
+    background-color: #a18a07; /* Amarelo escuro */
+    border-color: #a18a07; /* Borda escura */
+}
+
+/* Botão vermelho */
+#openBtn3 {
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    background-color: #cf2626; /* Vermelho */
+    color: white; /* Texto branco */
+    border-color: #cf2626; /* Cor da borda */
+    border-width: 5px; /* Espessura da borda */
+    border-radius: 10px; /* Cantos arredondados */
+    cursor: pointer; /* Cursor de pointer */
+    transition: background-color 0.3s; /* Transição de cor */
+    transition: border-color 0.1s; /* Transição da borda */
+}
+
+/* Efeito hover botão vermelho */
+#openBtn3:hover {
+    background-color: #5c0a0a; /* Vermelho escuro */
+    border-color: #5c0a0a; /* Borda escura */
+}
+
+/* Popup azul */
+.popup {
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Posição fixa na tela */
+    top: 50%; left: 50%; /* Centro da tela */
+    font-family: 'Comic Neue', cursive; /* Fonte infantil */
+    transform: translate(-50%, -50%); /* Centraliza perfeitamente */
+    width: 800px; /* Largura fixa */
+    background-color: rgb(95, 88, 226); /* Azul roxo */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    z-index: 1000; /* Camada superior */
+}
+
+/* Popup amarelo */
+.popup2 {
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Posição fixa na tela */
+    top: 50%; left: 50%; /* Centro da tela */
+    font-family: 'Comic Neue', cursive; /* Fonte infantil */
+    transform: translate(-50%, -50%); /* Centraliza perfeitamente */
+    width: 800px; /* Largura fixa */
+    background-color: #F1E702; /* Amarelo */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    z-index: 1000; /* Camada superior */
+}
+
+/* Popup vermelho */
+.popup3 {
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Posição fixa na tela */
+    top: 50%; left: 50%; /* Centro da tela */
+    font-family: 'Comic Neue', cursive; /* Fonte infantil */
+    transform: translate(-50%, -50%); /* Centraliza perfeitamente */
+    width: 800px; /* Largura fixa */
+    background-color: rgb(246, 76, 76); /* Vermelho */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    z-index: 1000; /* Camada superior */
+}
+
+/* Cabeçalho do popup */
+.popup-header {
+    display: flex; /* Layout flex */
+    justify-content: space-between; /* Espaço entre elementos */
+    align-items: center; /* Alinha verticalmente */
+    font-family: 'Comic Neue', cursive; /* Fonte infantil */
+    padding: 10px 15px; /* Espaçamento interno */
+    border-bottom: 1px solid; /* Borda inferior */
+    border-image: linear-gradient(to right, red, orange, yellow, blue); /* Borda gradiente */
+    border-image-slice: 1; /* Configuração do gradiente */
+}
+
+/* Título do popup */
+.popup-title {
+    margin: 0; /* Remove margem */
+    font-size: 18px; /* Tamanho da fonte */
+    font-family: 'Comic Neue', cursive; /* Fonte infantil */
+    font-family: Fira Sans, sans-serif; /* Fallback para fonte */
+}
+
+/* Botão de fechar */
+.close-btn {
+    background: none; /* Sem fundo */
+    border: none; /* Sem borda */
+    font-size: 20px; /* Tamanho do ícone */
+    cursor: pointer; /* Cursor de pointer */
+    color: #aaa; /* Cor cinza */
+}
+
+/* Efeito hover botão fechar */
+.close-btn:hover {
+    color: #333; /* Cor mais escura */
+}
+
+/* Conteúdo do popup */
+.popup-content {
+    padding: 15px; /* Espaçamento interno */
+}
+
+/* Overlay (fundo escuro) */
+.overlay {
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Posição fixa na tela */
+    top: 0; left: 0; /* Cobre toda a tela */
+    width: 100%; height: 100%; /* Tamanho total */
+    background-color: rgba(0, 0, 0, 0.5); /* Preto semi-transparente */
+    z-index: 999; /* Camada abaixo do popup */
+}
+
+/* Botão de fechar melhorado */
+.close-btn {
+    background: none; /* Sem fundo */
+    border: none; /* Sem borda */
+    font-size: 24px; /* Tamanho maior */
+    cursor: pointer; /* Cursor de pointer */
+    color: rgba(101, 0, 0, 0.8); /* Vermelho transparente */
+    transition: all 0.2s ease; /* Transição suave */
+    line-height: 1; /* Altura de linha */
+    padding: 0 4px; /* Pequeno padding */
+}
+
+/* Efeito hover botão fechar melhorado */
+.close-btn:hover {
+    color: rgb(255, 0, 0); /* Vermelho vivo */
+    transform: scale(1.1); /* Aumenta levemente */
+}
+
+/* Versões alternativas dos botões de fechar */
+.close-btn2, .close-btn3 {
+    /* Mesmos estilos do close-btn */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: rgba(101, 0, 0, 0.8);
+    transition: all 0.2s ease;
+    line-height: 1;
+    padding: 0 4px;
+}
+
+.close-btn2:hover, .close-btn3:hover {
+    color: rgb(255, 0, 0);
+    transform: scale(1.1);
+}
+
+/* Conteúdo do popup melhorado */
+.popup-content {
+    padding: 20px; /* Mais espaçamento */
+    line-height: 1.6; /* Altura de linha confortável */
+    font-family: 'Comic Neue', cursive; /* Fonte infantil */
+}
+
+/* Overlay melhorado */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Preto semi-transparente */
+    z-index: 999;
+    backdrop-filter: blur(3px); /* Efeito de desfoque no fundo */
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Invisível */
+        transform: translate(-50%, -45%); /* Levemente acima */
+    }
+    to {
+        opacity: 1; /* Totalmente visível */
+        transform: translate(-50%, -50%); /* Posição correta */
+    }
+}
+
+/* Efeito hover nos popups */
+.popup:hover {
+    box-shadow: 0 12px 30px rgba(13, 0, 255, 0.25); /* Sombra azul */
+}
+
+.popup2:hover {
+    box-shadow: 0 12px 30px rgba(225, 255, 0, 0.25); /* Sombra amarela */
+}
+
+.popup3:hover {
+    box-shadow: 0 12px 30px rgba(255, 0, 0, 0.25); /* Sombra vermelha */
+}
+
+/* Parágrafos dentro do popup */
+.popup-content p {
+    margin-bottom: 15px; /* Espaço entre parágrafos */
+}
+
+/* Animação de escala para mostrar popup */
+.popup.show {
+    animation: fadeInScale 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Mesmo para popup2 e popup3 */
+.popup2.show, .popup3.show {
+    animation: fadeInScale 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Animação de escala */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0; /* Invisível */
+        transform: translate(-50%, -50%) scale(0.9); /* Pequeno e centralizado */
+    }
+    100% {
+        opacity: 1; /* Visível */
+        transform: translate(-50%, -50%) scale(1); /* Tamanho normal */
+    }
+}
+
+/* Botões manuais adicionais */
+#openinfA {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007a19; /* Verde */
+    color: white;
+    border-color: #007a19;
+    border-width: 5px;
+    font-family: 'Comic Neue', cursive;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    transition: border-color 0.1s;
+}
+
+#openinfA:hover {
+    background-color: #00ff33; /* Verde claro */
+    border-color: #00ff33;
+}
+
+#openPP {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #5c0a0a; /* Vermelho escuro */
+    color: white;
+    font-family: 'Comic Neue', cursive;
+    border-color: #5c0a0a;
+    border-width: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    transition: border-color 0.1s;
+}
+
+#openPP:hover {
+    background-color: #ff0000; /* Vermelho */
+    border-color: #ff0000;
+}
+
+#openLD {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #c7aa04; /* Amarelo escuro */
+    color: white;
+    border-color: #c7aa04;
+    border-width: 5px;
+    font-family: 'Comic Neue', cursive;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    transition: border-color 0.1s;
+}
+
+#openLD:hover {
+    background-color: #ffd900; /* Amarelo */
+    border-color: #ffd900;
+}
+
+/* Textos dentro dos botões */
+.textos-botao {
+    font-family: 'Comic Neue', cursive;
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 255, 255);
+    line-height: 1.6;
+}
+CSS 4 - Jogo das Cores
+css
+/* Container do jogo */
+.game-container {
+    max-width: 800px; /* Largura máxima */
+    width: 100%; /* Largura total */
+    background: white; /* Fundo branco */
+    margin-top: 10px; /* Espaço acima */
+    margin-bottom: 50px; /* Espaço abaixo */
+    border-radius: 20px; /* Cantos arredondados */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra */
+    overflow: hidden; /* Esconde overflow */
+    justify-content: center; /* Centraliza horizontal */
+    align-items: center; /* Centraliza vertical */
+}
+
+/* Cabeçalho do jogo */
+.game-header {
+    background: linear-gradient(90deg, #4c5baf, #4a66c3); /* Gradiente azul */
+    color: white; /* Texto branco */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Texto centralizado */
+}
+
+/* Título do jogo */
+.game-header h2 {
+    margin: 0; /* Remove margem */
+    font-size: 28px; /* Tamanho grande */
+    font-weight: 600; /* Peso da fonte */
+}
+
+/* Área de conteúdo do jogo */
+.game-content {
+    padding: 30px; /* Espaçamento interno */
+    text-align: center; /* Texto centralizado */
+}
+
+/* Display do alvo (cor a ser encontrada) */
+.target-display {
+    font-size: 24px; /* Tamanho grande */
+    margin-bottom: 30px; /* Espaço abaixo */
+    color: #333; /* Cor do texto */
+}
+
+/* Cor alvo destacada */
+.target-color {
+    font-weight: bold; /* Negrito */
+    text-transform: uppercase; /* Maiúsculas */
+    padding: 5px 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Cantos arredondados */
+    background: #f0f0f0; /* Fundo cinza claro */
+}
+
+/* Grade de cores */
+.colors-grid {
+    display: grid; /* Layout grid */
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+    gap: 15px; /* Espaço entre células */
+    margin-bottom: 30px; /* Espaço abaixo */
+}
+
+/* Botões de cor */
+.color-btn {
+    height: 100px; /* Altura fixa */
+    border: none; /* Sem borda */
+    border-radius: 15px; /* Cantos arredondados */
+    cursor: pointer; /* Cursor de pointer */
+    transition: all 0.3s ease; /* Transição suave */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+    position: relative; /* Para pseudo-elemento */
+    overflow: hidden; /* Esconde overflow */
+}
+
+/* Efeito hover nos botões de cor */
+.color-btn:hover {
+    transform: translateY(-5px); /* Levanta o botão */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* Sombra mais intensa */
+}
+
+/* Efeito de brilho ao passar o mouse */
+.color-btn::after {
+    content: ''; /* Elemento vazio */
+    position: absolute; /* Posicionamento absoluto */
+    top: 0; left: 0; right: 0; bottom: 0; /* Cobre todo o botão */
+    background: rgba(255,255,255,0.3); /* Branco semi-transparente */
+    opacity: 0; /* Invisível */
+    transition: opacity 0.3s; /* Transição de opacidade */
+}
+
+/* Mostra o brilho no hover */
+.color-btn:hover::after {
+    opacity: 1; /* Visível */
+}
+
+/* Rodapé do jogo */
+.game-footer {
+    background: #f9f9f9; /* Fundo cinza muito claro */
+    padding: 20px; /* Espaçamento interno */
+    border-top: 1px solid #eee; /* Borda superior */
+}
+
+/* Container de detalhes */
+.details-container {
+    margin-bottom: 20px; /* Espaço abaixo */
+}
+
+/* Elementos de detalhes (acordeão) */
+details {
+    background: white; /* Fundo branco */
+    border-radius: 10px; /* Cantos arredondados */
+    padding: 15px; /* Espaçamento interno */
+    margin-bottom: 15px; /* Espaço entre elementos */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra muito suave */
+}
+
+/* Resumo do acordeão */
+summary {
+    font-weight: 600; /* Semi-negrito */
+    cursor: pointer; /* Cursor de pointer */
+    outline: none; /* Remove contorno */
+    color: #4c53af; /* Azul */
+}
+
+/* Conteúdo do acordeão */
+.details-content {
+    margin-top: 10px; /* Espaço acima */
+    color: #555; /* Cinza escuro */
+    line-height: 1.5; /* Altura de linha */
+}
+
+/* Botão de voltar */
+.btn-voltar {
+    background: linear-gradient(135deg, #4c56af, #4a60c3); /* Gradiente azul */
+    color: white; /* Texto branco */
+    border: none; /* Sem borda */
+    padding: 12px 25px; /* Espaçamento interno */
+    border-radius: 50px; /* Completamente arredondado */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: 

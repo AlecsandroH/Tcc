@@ -5,12 +5,12 @@
     background: #fff;
     line-height: 1.6;
     font-size: 1.1rem;
-    font-family: 'Montserrat', sans-serif;
+
 }
 
 
 .textos-manuais {
-    font-family: 'Montserrat', sans-serif;
+
     font-size: 50px;
     margin: 0;
     padding: 0;
@@ -85,7 +85,7 @@
 
 
 
-/* Responsividade */
+
 @media (max-width: 768px) {
     .divtexto-manuais {
         margin: 20px;

@@ -23,7 +23,7 @@
 </head>
 <body>
   
-    <div class="div-cabecalho">
+    <header class="div-cabecalho">
         <a href="/" class="logo">
             <span class="logo-icon"><img src="favicons/apple-touch-icon.png" alt="logo" width="50%" height="50%"></span>
         </a>
@@ -31,8 +31,8 @@
         
         <ul class="nav-links">
             <li><a href="/">Início</a></li>
-            <li><a href="#">Tutorial</a></li>
-            <li><a href="/sobrenos">Sobre nós</a></li>
+            <li><a href="/tutorial">Tutorial</a></li>
+            <li><a href="/sobrenos">Sobre Nós</a></li>
             <li><a href="/atividades">Atividades</a></li>
             <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
             <li><a href="/telaoqautismo">O que é o autismo</a></li>
@@ -40,8 +40,7 @@
 
 
          
-        </button>
-    </div>
+</header>
 
     <div class="imagem-container">
         <img src="imagens/fundoquebra.jpg">
@@ -175,12 +174,12 @@ texto aqui
 
 
 
-    <div class="div-final">
+    <footer class="div-final">
         <span class="font">
         <ul class="nav-links">
             <li><a href="/">Início</a></li>
-            <li><a href="#">Tutorial</a></li>
-            <li><a href="/sobrenos">Sobre nós</a></li>
+            <li><a href="/tutorial">Tutorial</a></li>
+            <li><a href="/sobrenos">Sobre Nós</a></li>
             <li><a href="/atividades">Atividades</a></li>
             <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
             <li><a href="/telaoqautismo">O que é o autismo</a></li>
@@ -189,7 +188,7 @@ texto aqui
 
             <span class="logo-icon"><img src="favicons/apple-touch-icon.png" alt="logo" width="50%" height="50%"></span>
         
-    </div>
+</footer>
    
 </body>
 </html>

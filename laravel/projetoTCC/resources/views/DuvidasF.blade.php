@@ -17,6 +17,7 @@
     <link href="{{asset('css/cssimage.css')}}" rel="stylesheet">
     <link href="{{asset('css/reset.css')}}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -28,8 +29,8 @@
         
         <ul class="nav-links">
             <li><a href="/">Início</a></li>
-            <li><a href="#">Tutorial</a></li>
-            <li><a href="/sobrenos">Sobre nós</a></li>
+            <li><a href="/tutorial">Tutorial</a></li>
+            <li><a href="/sobrenos">Sobre Nós</a></li>
             <li><a href="/atividades">Atividades</a></li>
             <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
             <li><a href="/telaoqautismo">O que é o autismo</a></li>
@@ -56,8 +57,8 @@
 
 <ul class="nav-links">
     <li><a href="/">Início</a></li>
-    <li><a href="#">Tutorial</a></li>
-    <li><a href="#">Sobre agente</a></li>
+    <li><a href="/tutorial">Tutorial</a></li>
+    <li><a href="/sobrenos">Sobre Nós</a></li>
     <li><a href="/atividades">Atividades</a></li>
     <li><a href="/convivendocomtea">Convivendo com TEA</a></li>
     <li><a href="/telaoqautismo">O que é o autismo</a></li>

@@ -51,6 +51,10 @@ Route::get('/sobrenos', function () {
     return view('sobrenos');
 });
 
+Route::get('/tutorial', function () {
+    return view('tutorial');
+});
+
 Route::get('/leisedireitos', [AutismoController::class, 'index']);
 Auth::routes();
 

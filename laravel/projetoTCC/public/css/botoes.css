@@ -75,6 +75,7 @@ display: none;
 position: fixed;
 top: 50%;
 left: 50%;
+font-family: 'Comic Neue', cursive;
 transform: translate(-50%, -50%);
 width: 800px;
 background-color: rgb(95, 88, 226);
@@ -88,6 +89,7 @@ display: none;
 position: fixed;
 top: 50%;
 left: 50%;
+font-family: 'Comic Neue', cursive;
 transform: translate(-50%, -50%);
 width: 800px;
 background-color: #F1E702;
@@ -101,6 +103,7 @@ display: none;
 position: fixed;
 top: 50%;
 left: 50%;
+font-family: 'Comic Neue', cursive;
 transform: translate(-50%, -50%);
 width: 800px;
 background-color: rgb(246, 76, 76);
@@ -115,6 +118,7 @@ z-index: 1000;
 display: flex;
 justify-content: space-between;
 align-items: center;
+font-family: 'Comic Neue', cursive;
 padding: 10px 15px;
     border-bottom: 1px solid ;
     border-image: linear-gradient(to right, red, orange, yellow, blue);
@@ -124,6 +128,7 @@ padding: 10px 15px;
 .popup-title {
 margin: 0;
 font-size: 18px;
+font-family: 'Comic Neue', cursive;
 font-family: Fira Sans, sans-serif;
 }
 
@@ -208,7 +213,7 @@ z-index: 999;
 .popup-content {
     padding: 20px;
     line-height: 1.6;
-    font-family: Fira Sans, sans-serif;
+    font-family: 'Comic Neue', cursive;
     
 }
 
@@ -296,6 +301,7 @@ border-bottom:10px solid #007a19;
 border-right:10px solid #007a19;
 border-top:10px solid #007a19;
 border-left:10px solid #007a19;
+font-family: 'Comic Neue', cursive;
 border-width: 5px;
 border-radius: 10px;
 cursor: pointer;
@@ -315,6 +321,7 @@ padding: 10px 20px;
 font-size: 16px;
 background-color: #5c0a0a;
 color: white;
+font-family: 'Comic Neue', cursive;
 border-color: #5c0a0a;
 border-bottom:10px solid #5c0a0a;
 border-right:10px solid #5c0a0a;
@@ -339,6 +346,7 @@ background-color: #c7aa04;
 color: white;
 border-color: #c7aa04;
 border-bottom:10px solid #c7aa04;
+font-family: 'Comic Neue', cursive;
 border-right:10px solid #c7aa04;
 border-top:10px solid #c7aa04;
 border-left:10px solid #c7aa04;
@@ -355,12 +363,10 @@ border-color: #ffd900;
 }
 
 
-/*botao tela oq é autismo*/
-
 .textos-botao {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Comic Neue', cursive;
     margin: 0;
     padding: 0;
-    color: black;
+    color: rgb(255, 255, 255);
     line-height: 1.6;
 }

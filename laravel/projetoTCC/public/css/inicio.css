@@ -18,13 +18,33 @@
     line-height: 1.6;
 }
 
-.header {
+.cabeçalho-imagem {
     background: #3498db;
     text-align: center;
     padding: 15px 0;
-    height: 700px;
+    float: left;
+    height: 500px;
+    width: 50%;
 
 }
+
+.cabeçalho-texto {
+    background: #ff0000;
+    text-align: center;
+    padding: 15px 0;
+    float: right;
+    height: 500px;
+    width: 50%;
+}
+
+.textos-inicio {
+    background: #ffffff;
+    text-align: center;
+    justify-content: center;
+    padding: 15px 0;
+    top: 1000px;
+}
+
 
 .header h1 {
     color: white;
@@ -32,22 +52,6 @@
     margin: 0;
 }
 
-.div-centro-manuais{
-    color: rgb(255, 255, 255);
-    margin-top: 0px;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    width: 100%;
-    height: 500px;
-    align-items: center;
-    background-color: white;
-    text-align: center;
-     border-top: 5px solid ;
-    border-image: linear-gradient(to right, red, orange, yellow, blue);
-    border-image-slice: 1;
-
-}
 
 .container {
     display: grid;
@@ -73,16 +77,19 @@
 
 /*cores*/
 .left {
-    background-color: #3100e4;
+    background-color: #D6A86A;
+    max-width: 300px;
 }
 
 .right {
-    background-color: #62da00;
+    background-color: #D6A86A;
     color: rgb(0, 0, 0);
+    max-width: 300px;
 }
 
 .left-alt {
-    background-color: #ff00ea;
+    background-color: #D6A86A;
+    max-width: 300px;
 }
 
 
@@ -99,10 +106,6 @@
 }
 
 
-.botoes-manuais{
 
-    color:rgb(255, 255, 255);
-    text-decoration: none;
-    
-    }
-    
+
+
