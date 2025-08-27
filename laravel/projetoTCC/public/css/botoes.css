@@ -1,5 +1,18 @@
 /*Todos os botões*/
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --gradient-primary: linear-gradient(135deg, #3498db, #2980b9);
+            --gradient-secondary: linear-gradient(135deg, #2ecc71, #27ae60);
+            --gradient-accent: linear-gradient(135deg, #e74c3c, #c0392b);
+            --shadow: 0 10px 30px rgba(0,0,0,0.15);
+            --shadow-hover: 0 15px 40px rgba(0,0,0,0.2);
+        }
 
+        
 #openBtn {
 padding: 10px 20px;
 font-size: 16px;
@@ -362,6 +375,27 @@ background-color: #ffd900;
 border-color: #ffd900;
 }
 
+ #btn-inicio-oqautismo, #btn-inicio-convivendocomtea {
+            background: var(--gradient-primary);
+            border: none;
+            padding: 1.5rem 3rem;
+            border-radius: 50px;
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+            margin: 2rem auto;
+            display: block;
+            width: fit-content;
+        }
+
+ #btn-inicio-oqautismo:hover, #btn-inicio-convivendocomtea:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: var(--shadow-hover);
+        }
+
 
 .textos-botao {
     font-family: 'Comic Neue', cursive;
@@ -370,3 +404,4 @@ border-color: #ffd900;
     color: rgb(255, 255, 255);
     line-height: 1.6;
 }
+

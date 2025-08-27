@@ -28,7 +28,7 @@
 
 <header class="div-cabecalho">
         <a href="/" class="logo">
-            <span class="logo-icon"><img src="favicons/apple-touch-icon.png" alt="logo" width="50%" height="50%"></span>
+     <span class="logo-icon"><img src="imagens/testelogonome.png" alt="logo" width="50%" height="50%"></span>
         </a>
         
         <ul class="nav-links">
@@ -100,7 +100,7 @@
                         <div class="game-body">
                             <h4 class="game-title">Quebra-Cabeça</h4>
                             <p class="font">Monte peças e divirta-se</p>
-                            <a href="{{ route('jogo.quebra') }}" class="btn play-btn">Jogar Agora</a>
+                            <a href="{{ route('jogo.quebra') }}" class="btnplay-btn">Jogar Agora</a>
                         </div>
                     </div>
                 </div>

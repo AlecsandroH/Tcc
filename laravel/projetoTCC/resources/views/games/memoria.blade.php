@@ -21,7 +21,7 @@
 <body>
     <header class="div-cabecalho">
         <a href="/" class="logo">
-            <span class="logo-icon"><img src="favicons/apple-touch-icon.png" alt="logo" width="50%" height="50%"></span>
+             <span class="logo-icon"><img src="imagens/testelogonome.png" alt="logo" width="50%" height="50%"></span>
         </a>
         
         <ul class="nav-links">

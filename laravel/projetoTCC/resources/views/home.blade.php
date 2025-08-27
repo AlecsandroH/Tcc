@@ -11,21 +11,24 @@
     <link rel="icon" href="{{asset('favicons/favicon-32x32.png')}}" type="image/png">
       
        <!--Link css-->
-       <link href="{{asset('css/botoes.css')}}" rel="stylesheet">
+    <link href="{{asset('css/botoes.css')}}" rel="stylesheet">
     <link href="{{asset('css/cssimage.css')}}" rel="stylesheet">
     <link href="{{asset('css/csspadrao.css')}}" rel="stylesheet">
     <link href="{{asset('css/textos.css')}}" rel="stylesheet">
+     <link href="{{asset('css/carroseulinicio.css')}}" rel="stylesheet">
     <link href="{{asset('css/inicio.css')}}" rel="stylesheet">
     <link href="{{asset('css/reset.css')}}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
+    
+  
    
 </head>
 <body>
     <header class="div-cabecalho">
         <a href="/" class="logo">
-            <span class="logo-icon"><img src="favicons/apple-touch-icon.png" alt="logo" width="50%" height="50%"></span>
+            <span class="logo-icon"><img src="imagens/testelogonome.png" alt="logo" width="50%" height="50%"></span>
         </a>
         
         <ul class="nav-links">
@@ -38,54 +41,122 @@
         </ul>
 
 </header>
-<div class="cabeçalho-imagem">
-    <img src="imagens/mapa.jpg" class="imagem-container">
-    imagem vai ficar aqui (teste ⬆)
-</div>
-<div class="cabeçalho-texto">
-    texto aqui
-</div>
-
+    <div class="hero-section">
+        <div class="cabeçalho-imagem">
+            <img src="imagens/mapa.jpg" alt="Imagem representativa">
+        </div>
+        <div class="cabeçalho-texto">
+            <h1>Bem-vindo ao Nosso Projeto</h1>
+            <p>Um espaço dedicado ao apoio e informação sobre Transtorno do Espectro Autista</p>
+        </div>
+    </div>
 
     <div class="div-meio">
-<div class="textos-inicio">
-TExtos
-</div>
-<div class="container">
-        <div class="manual-item left">
-               <span class="centro">
-            <h2>Informações de Apoio</h2>
-            <p>Material completo com orientações e recursos disponíveis para apoio e assistência em diversas situações. 
-            <br/>    
-          
-        </p>
-                </span>
+        <div class="textos-inicio">
+            <h2>Recursos e Informações</h2>
         </div>
         
-        <div class="manual-item right">
-            <span class="centro">
-            <h2>Duvidas  frequentes</h2>
-            <p>Respostas às dúvidas mais frequentes dos familiares, com linguagem clara e acessível.
-            <br/>
-            <br/>
-           
-        </p>
-            </span>
+        <div class="container">
+            <div class="manual-item">
+                <h2>Informações de Apoio</h2>
+                <p>Material completo com orientações e recursos disponíveis para apoio e assistência em diversas situações.</p>
+            </div>
+            
+            <div class="manual-item">
+                <h2>Dúvidas Frequentes</h2>
+                <p>Respostas às dúvidas mais frequentes dos familiares, com linguagem clara e acessível.</p>
+            </div>
+            
+            <div class="manual-item">
+                <h2>Leis e Direitos</h2>
+                <p>Compilação das principais legislações e direitos assegurados por lei, com explicações detalhadas.</p>
+            </div>
         </div>
         
-        <div class="manual-item left-alt">
-               <span class="centro">
-            <h2>Leis e Direitos</h2>
-            <p>Compilação das principais legislações e direitos assegurados por lei, com explicações detalhadas.
+        <button id="btn-inicio-oqautismo" onclick="window.location.href='/telaoqautismo';">
+            O que é Autismo
+        </button>
+
+    <div class="pages-carousel">
+    <h2>Nossas Páginas</h2>
+    
+    <button class="page-arrow left" onclick="scrollPages(-1)">‹</button>
+    <button class="page-arrow right" onclick="scrollPages(1)">›</button>
+    
+    <div class="pages-wrapper" id="pagesWrapper">
+        <div class="page-card">
+            <img src="{{ asset('imagens/cores.jpg') }}" alt="Tutorial">
+            <div class="page-body">
+                <h4>Tutorial</h4>
+                <p>Aprenda a usar o site</p>
+                   <br/>
+                <a href="/tutorial" class ="btnvermais">Ver mais</a>
+            </div>
+        </div>
+
+        <div class="page-card">
+            <img src="{{ asset('imagens/memoria.jpg') }}" alt="Sobre nós">
+            <div class="page-body">
+                <h4>Sobre Nós</h4>
+                <p>Conheça o projeto</p>
                 <br/>
-                </br>
-               
-            </p>
-                </span>
+                <br/>
+                <a href="/sobrenos" class ="btnvermais">Ver mais</a>
+            </div>
         </div>
-        
+
+        <div class="page-card">
+            <img src="{{ asset('imagens/objetos.jpg') }}" alt="Atividades">
+            <div class="page-body">
+                <h4>Atividades</h4>
+                <p>Explore nossas atividades</p>
+</br>
+                <a href="/atividades" class ="btnvermais">Ver mais</a>
+            </div>
+        </div>
+
+        <div class="page-card">
+            <img src="{{ asset('imagens/quebra.jpg') }}" alt="Convivendo com TEA">
+            <div class="page-body">
+                <h4>Convivendo com TEA</h4>
+                <p>Dicas para conviver</p>
+                <br/>
+                <a href="/convivendocomtea" class ="btnvermais">Ver mais</a>
+            </div>
+        </div>
+
+        <div class="page-card">
+            <img src="{{ asset('imagens/quebra.jpg') }}" alt="Autismo">
+            <div class="page-body">
+                <h4>O que é o Autismo</h4>
+                <p>Saiba mais sobre o TEA</p>
+                
+                <a href="/telaoqautismo" class ="btnvermais">Ver mais</a>
+            </div>
+        </div>
     </div>
 </div>
+
+
+    <div class="div-inicio-direitos">
+        <div class="div-direitos-texto">
+            <h3>Direitos e Informações</h3>
+            <p>Conteúdo informativo sobre direitos e recursos disponíveis</p>
+        </div>
+        <button id="btn-inicio-convivendocomtea" onclick="window.location.href='/convivendocomtea';">
+            Convivendo com TEA
+        </button>
+    </div>
+
+
+<script src="js/carroseulinicio.js"></script>
+
+        
+</div>
+</div>
+
+
+
 
 
 
