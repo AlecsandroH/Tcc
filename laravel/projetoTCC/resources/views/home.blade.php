@@ -46,8 +46,9 @@
             <img src="imagens/mapa.jpg" alt="Imagem representativa">
         </div>
         <div class="cabeçalho-texto">
-            <h1>Bem-vindo ao Nosso Projeto</h1>
-            <p>Um espaço dedicado ao apoio e informação sobre Transtorno do Espectro Autista</p>
+            <h1>Bem-vindo ao Apoio Azul</h1>
+            <p>Bem vindo ao Apoio Azul: Conectando e Informando
+Dedicamos esse espaço ao apoio e comunidade reunindo recursos e informações relacionadas ao TEA, valorizando o que é importante para o desenvolvimento e cotidiano.</p>
         </div>
     </div>
 
