@@ -120,3 +120,5 @@
         function resetBoard() {
             [firstCard, lockBoard] = [null, false];
         }
+
+        

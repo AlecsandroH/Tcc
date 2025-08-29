@@ -13,6 +13,7 @@
     <link href="{{asset('css/reset.css')}}" rel="stylesheet">
     <link href="{{asset('css/cssimage.css')}}" rel="stylesheet">
     <link href="{{asset('css/memoria.css')}}" rel="stylesheet">
+    <link href="{{asset('css/boneco.css')}}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -71,6 +72,15 @@
             </div>
         </div>
     </div>
+
+    
+    <div id="character-container">
+    <img id="characterImage" src="/imagens/1.png" alt="Personagem" class="character">
+    <div id="speechBubble" class="speech-bubble" style="display: none;">
+        <p id="speechText"></p>
+    </div>
+</div>
+
 
     <script src="js/memoria.js"></script>
 

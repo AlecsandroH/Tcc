@@ -100,7 +100,7 @@
                         <div class="game-body">
                             <h4 class="game-title">Quebra-Cabeça</h4>
                             <p class="font">Monte peças e divirta-se</p>
-                            <a href="{{ route('jogo.quebra') }}" class="btnplay-btn">Jogar Agora</a>
+                            <a href="{{ route('jogo.quebra') }}" class="btn play-btn">Jogar Agora</a>
                         </div>
                     </div>
                 </div>
