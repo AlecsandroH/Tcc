@@ -64,6 +64,12 @@
         <p><strong>Recursos:</strong> Aplicativos como <a href="https://www.prodeaf.net" target="_blank">ProDeaf</a> e <a href="https://www.handtalk.me" target="_blank">Hand Talk</a> auxiliam na comunicação não-verbal.</p>
     </div>
 
+     <div class="card">
+        <h2>Rotina, Aprendizado e Cotidiano</h2>
+        <p><strong>Recursos:</strong> Aplicativos como <a href="https://www.rotinadivertida.com.br/" target="_blank">Rotina Divertida</a> e <a href="https://www.matraquinha.com.br/" target="_blank">Mantraquinha</a> trabalham tarefas de dia-a-dia de forma intuitiva e com contexto.</p>
+    </div>
+    
+
     <footer class="div-final">
 
 <ul class="nav-links">

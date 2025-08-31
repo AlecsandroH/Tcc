@@ -47,8 +47,8 @@
         </div>
         <div class="cabeçalho-texto">
             <h1>Bem-vindo ao Apoio Azul</h1>
-            <p>Bem vindo ao Apoio Azul: Conectando e Informando
-Dedicamos esse espaço ao apoio e comunidade reunindo recursos e informações relacionadas ao TEA, valorizando o que é importante para o desenvolvimento e cotidiano.</p>
+            <p> Conectando e Informando </p>
+<p>Dedicamos esse espaço ao apoio e comunidade reunindo recursos e informações relacionadas ao TEA, valorizando o que é importante para o desenvolvimento e cotidiano.</p>
         </div>
     </div>
 
@@ -65,12 +65,22 @@ Dedicamos esse espaço ao apoio e comunidade reunindo recursos e informações r
             
             <div class="manual-item">
                 <h2>Dúvidas Frequentes</h2>
-                <p>Respostas às dúvidas mais frequentes dos familiares, com linguagem clara e acessível.</p>
+                <p> Como é feito o diagnóstico?<br><br>
+                     O Autismo possuí graus? Quais?<br><br>
+                    Crianças com autismo possuem quais dificuldades com aprendizado?<br><br>
+                    Como é feito o tratamento?<br>
+                    </p>
             </div>
             
             <div class="manual-item">
                 <h2>Leis e Direitos</h2>
-                <p>Compilação das principais legislações e direitos assegurados por lei, com explicações detalhadas.</p>
+                <p><li>Benefício de Prestação Continuada (BPC/LOAS)<br><br></li>
+                <li>Carteira de Identificação do Autista (CIA)<br><br></li>
+                <li>Acompanhamento Psicopedagógico</li><br>
+                <li>Atendimento prioritário</li><br>
+                <li>Inclusão escolar</li><br><br>    
+
+                </p>
             </div>
         </div>
         
@@ -120,7 +130,7 @@ Dedicamos esse espaço ao apoio e comunidade reunindo recursos e informações r
             <img src="{{ asset('imagens/quebra.jpg') }}" alt="Convivendo com TEA">
             <div class="page-body">
                 <h4>Convivendo com TEA</h4>
-                <p>Dicas para conviver</p>
+                Dicas para o cotidiano</br>
                 <br/>
                 <a href="/convivendocomtea" class ="btnvermais">Ver mais</a>
             </div>
