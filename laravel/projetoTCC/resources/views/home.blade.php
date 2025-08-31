@@ -60,7 +60,9 @@
         <div class="container">
             <div class="manual-item">
                 <h2>Informações de Apoio</h2>
-                <p>Material completo com orientações e recursos disponíveis para apoio e assistência em diversas situações.</p>
+                <p>Na visão geral, os TEAs são um grupo de condições caracterizadas por algum grau de alteração do comportamento social, 
+                    comunicação e linguagem, e por um repertório restrito, estereotipado e repetitivo de interesses e atividades.
+                    </p>
             </div>
             
             <div class="manual-item">
