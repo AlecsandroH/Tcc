@@ -67,6 +67,7 @@
             justify-content: center;
             cursor: pointer;
             transition: all 0.3s ease;
+            position: relative;
         }
 
         .control-btn:hover {
@@ -74,14 +75,48 @@
             transform: scale(1.1);
         }
 
+        .control-btn.active {
+            background: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
         .control-btn img {
             width: 24px;
             height: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .control-btn.active img {
+            transform: scale(1.1);
+        }
+
+        .btn-tooltip {
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .control-btn:hover .btn-tooltip {
+            opacity: 1;
+            visibility: visible;
+            bottom: -30px;
         }
 
         .game-content {
             padding: 30px;
             text-align: center;
+            position: relative;
         }
 
         .target-display {
@@ -189,6 +224,20 @@
             
             .game-content {
                 padding: 20px;
+            }
+            
+            .header-controls {
+                gap: 10px;
+            }
+            
+            .control-btn {
+                width: 35px;
+                height: 35px;
+            }
+            
+            .control-btn img {
+                width: 20px;
+                height: 20px;
             }
         }
         
@@ -317,109 +366,148 @@
             font-weight: 700;
         }
 
-        .info-modal {
+        /* Estilos para o assistente */
+        .assistant {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            visibility: hidden;
-            opacity: 0;
-            transition: all 0.3s ease;
-            z-index: 2000;
+            bottom: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            cursor: pointer;
+            z-index: 1000;
+            transition: transform 0.3s ease;
         }
 
-        .info-modal.active {
+        .assistant:hover {
+            transform: scale(1.1);
+        }
+
+        .assistant img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border: 3px solid #4c5baf;
+            transition: all 0.3s ease;
+        }
+
+        .assistant:hover img {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            border-color: #4CAF50;
+        }
+
+        .assistant.talking img {
+            animation: assistantTalk 0.5s infinite alternate;
+        }
+
+        @keyframes assistantTalk {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+
+        .assistant-speech {
+            position: absolute;
+            bottom: 90px;
+            right: 0;
+            background: white;
+            padding: 12px 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 200px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .assistant-speech.active {
             opacity: 1;
             visibility: visible;
         }
 
-        .info-content {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            max-width: 600px;
-            width: 90%;
-            transform: scale(0.9);
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .info-modal.active .info-content {
-            transform: scale(1);
-        }
-
-        .info-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .info-title {
-            font-size: 24px;
-            color: #4c5baf;
-            margin: 0;
-        }
-
-        .close-btn {
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: #999;
-        }
-
-        .info-body {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-
-        .info-character {
-            flex: 0 0 150px;
-        }
-
-        .info-character img {
-            max-width: 100%;
-        }
-
-        .info-text {
-            flex: 1;
-            font-size: 16px;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        .info-speech {
-            background: #f0f5ff;
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 15px;
-            position: relative;
-        }
-
-        .info-speech:after {
+        .assistant-speech:after {
             content: '';
             position: absolute;
             bottom: -10px;
-            left: 20px;
+            right: 15px;
             border-width: 10px 10px 0;
             border-style: solid;
-            border-color: #f0f5ff transparent transparent transparent;
+            border-color: white transparent transparent transparent;
+        }
+
+        .game-hint {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            max-width: 200px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .game-hint.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Novos estilos para mensagem de vitória */
+        .victory-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .victory-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+            color: #4CAF50;
+            animation: victoryPulse 1.5s infinite;
+        }
+
+        @keyframes victoryPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .victory-title {
+            font-size: 32px;
+            color: #4CAF50;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .victory-text {
+            font-size: 18px;
+            margin-bottom: 25px;
+            color: #333;
         }
 
         @media (max-width: 768px) {
-            .info-body {
-                flex-direction: column;
+            .assistant {
+                width: 60px;
+                height: 60px;
+                bottom: 15px;
+                right: 15px;
+            }
+
+            .assistant-speech {
+                bottom: 70px;
+                max-width: 150px;
+                font-size: 12px;
             }
             
-            .info-character {
-                flex: 0 0 auto;
+            .victory-icon {
+                font-size: 50px;
+            }
+            
+            .victory-title {
+                font-size: 28px;
             }
         }
 
@@ -430,6 +518,32 @@
             
             .message-btn {
                 width: 100%;
+            }
+            
+            .assistant {
+                width: 50px;
+                height: 50px;
+                bottom: 10px;
+                right: 10px;
+            }
+            
+            .assistant-speech {
+                bottom: 60px;
+                max-width: 120px;
+                font-size: 11px;
+                padding: 8px 10px;
+            }
+            
+            .victory-icon {
+                font-size: 40px;
+            }
+            
+            .victory-title {
+                font-size: 24px;
+            }
+            
+            .victory-text {
+                font-size: 16px;
             }
         }
     </style>
@@ -450,22 +564,31 @@
         </ul>
     </header>
     
+    <!-- Assistente flutuante -->
+    <div class="assistant" id="assistant">
+        <img src="/imagens/1.png" alt="Assistente">
+        <div class="assistant-speech" id="assistantSpeech">Olá! Posso te ajudar?</div>
+    </div>
+    
     <center>
         <div class="game-container">
             <div class="game-header">
                 <div class="header-controls">
-                    <button class="control-btn" id="btnInfo">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjEwIj48L2NpcmNsZT48bGluZSB4MT0iMTIiIHkxPSIxNiIgeDI9IjEyIiB5Mj0iMTIiPjwvbGluZT48bGluZSB4MT0iMTIiIHkxPSI4IiB4Mj0iMTIuMDEiIHkyPSI4Ij48L2xpbmU+PC9zdmc+" alt="Informações">
-                    </button>
                     <button class="control-btn" id="btnSound">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHstcm9rZS1saW5lam9pbj0icm91bmQiPjxwb2x5Z29uIHBvaW50cz0iMTEgNSA2IDkgMiA5IDIgMTUgNiAxNSAxMSAxOSAxMSA1Ij48L3BvbHlnb24+PHBhdGggZD0iTTE5LjA3IDQuOTNhMTAgMTAgMCAwIDEgMCAxNC4xNE0xNS41NCA4LjQ2YTUgNSAwIDAgMSAwIDcuMDciPjwvcGF0aD48L3N2Zz4=" alt="Som">
+                        <svg id="soundIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                        </svg>
+                        <span class="btn-tooltip">Ativar/Desativar Som</span>
                     </button>
                 </div>
                 <h2>Jogo das Cores</h2>
-                <div style="width: 70px;"></div> <!-- Espaçador para centralizar o título -->
+                <div style="width: 40px;"></div> <!-- Espaçador para centralizar o título -->
             </div>
             
             <div class="game-content">
+                <div class="game-hint" id="gameHint"></div>
+                
                 <div class="target-display">
                     Encontre a cor: <span id="targetColor" class="target-color"></span>
                 </div>
@@ -480,39 +603,22 @@
 
         <div class="message" id="message">
             <div class="message-content">
-                <div class="message-character" id="messageCharacter">
-                    <img src="/imagens/1.png" alt="Personagem">
+                <div id="victoryContainer" class="victory-container hidden">
+                    <div class="victory-icon">🎉</div>
+                    <div class="victory-title">Vitória!</div>
+                    <div class="victory-text" id="victoryText"></div>
                 </div>
-                <div class="win-title" id="winTitle">Vitória!</div>
-                <div class="message-text" id="messageText"></div>
+                
+                <div id="standardMessage">
+                    <div class="message-character" id="messageCharacter">
+                        <img src="/imagens/1.png" alt="Personagem">
+                    </div>
+                    <div class="win-title" id="winTitle">Vitória!</div>
+                    <div class="message-text" id="messageText"></div>
+                </div>
                 
                 <div class="message-buttons">
-                    <button class="message-btn hidden" id="btnJogarNovamente">Jogar Novamente</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="info-modal" id="infoModal">
-            <div class="info-content">
-                <div class="info-header">
-                    <h3 class="info-title">Sobre o Jogo</h3>
-                    <button class="close-btn" id="closeInfo">&times;</button>
-                </div>
-                <div class="info-body">
-                    <div class="info-character">
-                        <img src="/imagens/1.png" alt="Personagem" id="infoCharImage">
-                    </div>
-                    <div class="info-text">
-                        <h4>Como jogar?</h4>
-                        <p>O jogo vai pedir para você encontrar uma cor específica
-                        
-                        <h4>Para que serve?</h4>
-                        <p>Este jogo ajuda no reconhecimento de cores e desenvolvimento da percepção visual
-                        
-                        <div class="info-speech" id="infoSpeech">
-                            Clique no ícone de som para eu explicar!
-                        </div>
-                    </div>
+                    <button class="message-btn" id="btnJogarNovamente">Jogar Novamente</button>
                 </div>
             </div>
         </div>
@@ -550,19 +656,23 @@
         // Elementos DOM
         const messageCharacter = document.getElementById("messageCharacter");
         const messageText = document.getElementById("messageText");
+        const victoryContainer = document.getElementById("victoryContainer");
+        const victoryText = document.getElementById("victoryText");
+        const standardMessage = document.getElementById("standardMessage");
         const btnJogarNovamente = document.getElementById("btnJogarNovamente");
-        const infoModal = document.getElementById("infoModal");
-        const btnInfo = document.getElementById("btnInfo");
         const btnSound = document.getElementById("btnSound");
-        const closeInfo = document.getElementById("closeInfo");
-        const infoCharImage = document.getElementById("infoCharImage");
-        const infoSpeech = document.getElementById("infoSpeech");
+        const soundIcon = document.getElementById("soundIcon");
+        const assistant = document.getElementById("assistant");
+        const assistantSpeech = document.getElementById("assistantSpeech");
+        const gameHint = document.getElementById("gameHint");
 
         // Variáveis de controle
         let talkingInterval;
         let isTalking = false;
         let soundEnabled = true;
         let currentAudio = null;
+        let currentTextAnimation = null;
+        let assistantActive = false;
 
         // Inicialização do jogo
         const selectedColors = [];
@@ -581,6 +691,7 @@
         selectedColors.forEach(cor => {
             let btn = document.createElement('button');
             btn.className = `color-btn ${cor.classe}`;
+            btn.setAttribute('data-color', cor.nome);
             btn.onclick = () => {
                 if (cor.nome === target.nome) {
                     showMessage('win', `Parabéns! Você acertou a cor ${target.nome}!`);
@@ -592,23 +703,18 @@
         });
 
         // Event Listeners
-        btnInfo.addEventListener('click', () => {
-            infoModal.classList.add('active');
-        });
-
-        closeInfo.addEventListener('click', () => {
-            infoModal.classList.remove('active');
-            stopTalking();
-        });
-
         btnSound.addEventListener('click', () => {
             soundEnabled = !soundEnabled;
             if (soundEnabled) {
-                btnSound.innerHTML = '<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwb2x5Z29uIHBvaW50cz0iMTEgNSA2IDkgMiA5IDIgMTUgNiAxNSAxMSAxOSAxMSA1Ij48L3BvbHlnb24+PHBhdGggZD0iTTE5LjA3IDQuOTNhMTAgMTAgMCAwIDEgMCAxNC4xNE0xNS41NCA4LjQ2YTUgNSAwIDAgMSAwIDcuMDciPjwvcGF0aD48L3N2Zz4=" alt="Som">';
-                speakInfo();
+                soundIcon.innerHTML = '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>';
+                btnSound.querySelector('.btn-tooltip').textContent = 'Desativar Som';
+                btnSound.classList.add('active');
+                showAssistantMessage("Som ativado! Clique em mim se precisar de ajuda.");
             } else {
-                btnSound.innerHTML = '<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwb2x5Z29uIHBvaW50cz0iMTEgNSA2IDkgMiA5IDIgMTUgNiAxNSAxMSAxOSAxMSA1Ij48L3BvbHlnb24+PGxpbmUgeDE9IjE3IiB5MT0iOSIgeDI9IjIzIiB5Mj0iMTUiPjwvbGluZT48bGluZSB4MT0iMjMiIHkxPSI5IiB4Mj0iMTciIHkyPSIxNSI+PC9saW5lPjwvc3ZnPg==" alt="Som Desligado">';
-                stopTalking();
+                soundIcon.innerHTML = '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line>';
+                btnSound.querySelector('.btn-tooltip').textContent = 'Ativar Som';
+                btnSound.classList.remove('active');
+                showAssistantMessage("Som desativado. Clique novamente para ativar.");
             }
         });
 
@@ -621,6 +727,27 @@
             location.reload();
         });
 
+        // Interação com o assistente
+        assistant.addEventListener('click', () => {
+            assistantActive = !assistantActive;
+            if (assistantActive) {
+                showAssistantMessage("Procure a cor " + target.nome + " entre os botões coloridos! Clique na cor " + target.nome + " para vencer!");
+                showHint("Dica: A cor que você procura é " + target.nome);
+                
+                // Destacar a cor correta
+                const correctButton = document.querySelector(`.color-btn[data-color="${target.nome}"]`);
+                if (correctButton) {
+                    correctButton.style.boxShadow = "0 0 0 3px #4CAF50, 0 8px 15px rgba(0,0,0,0.2)";
+                    setTimeout(() => {
+                        correctButton.style.boxShadow = "0 4px 8px rgba(0,0,0,0.1)";
+                    }, 3000);
+                }
+            } else {
+                hideAssistantMessage();
+                hideHint();
+            }
+        });
+
         // Funções do jogo
         function showMessage(type, text) {
             const message = document.getElementById('message');
@@ -629,28 +756,34 @@
             message.className = 'message';
             message.classList.add(type);
             
-            messageText.innerHTML = text;
-            
             if (type === 'win') {
-                winTitle.style.display = 'block';
-                messageCharacter.innerHTML = '<img src="/imagens/4.png" alt="Personagem Feliz">';
+                // Mostrar mensagem de vitória sem personagem
+                standardMessage.classList.add('hidden');
+                victoryContainer.classList.remove('hidden');
+                victoryText.innerHTML = text;
                 playerWin();
             } else {
+                // Mostrar mensagem padrão com personagem para erros
+                standardMessage.classList.remove('hidden');
+                victoryContainer.classList.add('hidden');
                 winTitle.style.display = 'none';
+                messageText.innerHTML = text;
                 messageCharacter.innerHTML = '<img src="/imagens/2.png" alt="Personagem Triste">';
                 playerLose();
             }
             
             message.classList.add('active');
-            btnJogarNovamente.classList.add('hidden');
             
-            // Iniciar animação de fala na mensagem
-            startTalkingMessage(type === 'win' ? 'feliz' : 'triste');
+            // Iniciar animação de fala na mensagem se for erro
+            if (type === 'error') {
+                startTalkingMessage('triste');
+            }
             
             // Mostrar botão após animação
             setTimeout(() => {
-                stopTalkingMessage();
-                btnJogarNovamente.classList.remove('hidden');
+                if (type === 'error') {
+                    stopTalkingMessage();
+                }
             }, 4000);
         }
 
@@ -658,7 +791,6 @@
             isTalking = true;
             let i = 0;
             const characterImg = messageCharacter.querySelector('img');
-            const originalSrc = characterImg.src;
             
             talkingInterval = setInterval(() => {
                 if (isTalking) {
@@ -679,48 +811,6 @@
             }
         }
 
-        function speakInfo() {
-            if (!soundEnabled) return;
-            
-            stopTalking();
-            isTalking = true;
-            let i = 0;
-            
-            // Animação de fala no modal
-            const talkingIntervalModal = setInterval(() => {
-                if (isTalking) {
-                    infoCharImage.src = (i % 2 === 0) ? "/imagens/1.png" : "/imagens/4.png";
-                    i++;
-                }
-            }, 300);
-            
-            // Texto explicativo com efeito de digitação
-            const fullText = "Olá! Eu vou te explicar como jogar. Você precisa encontrar a cor que é pedida na tela.";
-            let charIndex = 0;
-            infoSpeech.textContent = "";
-            
-            const typeInterval = setInterval(() => {
-                if (charIndex < fullText.length) {
-                    infoSpeech.textContent += fullText.charAt(charIndex);
-                    charIndex++;
-                } else {
-                    clearInterval(typeInterval);
-                    setTimeout(() => {
-                        clearInterval(talkingIntervalModal);
-                        infoCharImage.src = "/imagens/1.png";
-                        isTalking = false;
-                    }, 1000);
-                }
-            }, 50);
-        }
-
-        function stopTalking() {
-            isTalking = false;
-            if (talkingInterval) {
-                clearInterval(talkingInterval);
-            }
-        }
-
         function playSound(sound) {
             if (!soundEnabled) return;
             if (currentAudio) {
@@ -732,11 +822,88 @@
 
         function playerWin() {
             playSound("/sons/acerto.mp3");
+            showAssistantMessage("Parabéns! Você acertou! Clique em 'Jogar Novamente' para continuar.", 5000);
+            createConfetti();
         }
 
         function playerLose() {
             playSound("/sons/erro.mp3");
+            showAssistantMessage("Tente novamente! Você consegue! A cor correta é " + target.nome + ".", 4000);
         }
+
+        function showAssistantMessage(text, duration = 3000) {
+            // Parar qualquer animação anterior
+            if (currentTextAnimation) {
+                clearInterval(currentTextAnimation);
+            }
+            
+            // Configurar a fala do assistente
+            assistantSpeech.textContent = "";
+            assistantSpeech.classList.add('active');
+            assistant.classList.add('talking');
+            
+            // Animar o assistente
+            assistant.style.transform = 'scale(1.1)';
+            setTimeout(() => {
+                assistant.style.transform = 'scale(1)';
+            }, 300);
+            
+            // Animação de digitação
+            let charIndex = 0;
+            currentTextAnimation = setInterval(() => {
+                if (charIndex < text.length) {
+                    assistantSpeech.textContent += text.charAt(charIndex);
+                    charIndex++;
+                } else {
+                    clearInterval(currentTextAnimation);
+                }
+            }, 40);
+            
+            // Esconder a mensagem após o tempo especificado
+            setTimeout(() => {
+                assistantSpeech.classList.remove('active');
+                assistant.classList.remove('talking');
+                assistantActive = false;
+            }, duration);
+        }
+
+        function hideAssistantMessage() {
+            assistantSpeech.classList.remove('active');
+            assistant.classList.remove('talking');
+        }
+
+        function showHint(text) {
+            gameHint.textContent = text;
+            gameHint.classList.add('active');
+        }
+
+        function hideHint() {
+            gameHint.classList.remove('active');
+        }
+
+        function createConfetti() {
+            const messageContent = document.querySelector('.message-content');
+            const colors = ['#4CAF50', '#FFD600', '#4285F4', '#E91E63', '#9C27B0', '#FF9800'];
+            
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animation = `confetti-fall ${Math.random() * 3 + 2}s linear forwards`;
+                messageContent.appendChild(confetti);
+                
+                // Remover após a animação
+                setTimeout(() => {
+                    confetti.remove();
+                }, 5000);
+            }
+        }
+
+        // Inicialização
+        setTimeout(() => {
+            showAssistantMessage("Olá! Sou seu assistente. Clique em mim para obter ajuda ou no ícone de som para controlar o áudio!", 5000);
+        }, 2000);
     </script>
 </body>
 </html>
