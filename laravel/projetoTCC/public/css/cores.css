@@ -1,5 +1,5 @@
-
-.game-container {
+ /* Estilos anteriores mantidos */
+ .game-container {
     max-width: 800px;
     width: 100%;
     background: white;
@@ -18,23 +18,93 @@
     color: white;
     padding: 20px;
     text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .game-header h2 {
     margin: 0;
     font-size: 28px;
     font-weight: 600;
+    flex: 1;
+    text-align: center;
+}
+
+.header-controls {
+    display: flex;
+    gap: 15px;
+}
+
+.control-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.control-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.control-btn.active {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.control-btn img {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease;
+}
+
+.control-btn.active img {
+    transform: scale(1.1);
+}
+
+.btn-tooltip {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.control-btn:hover .btn-tooltip {
+    opacity: 1;
+    visibility: visible;
+    bottom: -30px;
 }
 
 .game-content {
     padding: 30px;
     text-align: center;
+    position: relative;
 }
 
 .target-display {
     font-size: 24px;
     margin-bottom: 30px;
     color: #333;
+    position: relative;
 }
 
 .target-color {
@@ -90,31 +160,6 @@
     border-top: 1px solid #eee;
 }
 
-.details-container {
-    margin-bottom: 20px;
-}
-
-details {
-    background: white;
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-summary {
-    font-weight: 600;
-    cursor: pointer;
-    outline: none;
-    color: #4c53af;
-}
-
-.details-content {
-    margin-top: 10px;
-    color: #555;
-    line-height: 1.5;
-}
-
 .btn-voltar {
     background: linear-gradient(135deg, #4c56af, #4a60c3);
     color: white;
@@ -162,8 +207,23 @@ summary {
     .game-content {
         padding: 20px;
     }
+    
+    .header-controls {
+        gap: 10px;
+    }
+    
+    .control-btn {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .control-btn img {
+        width: 20px;
+        height: 20px;
+    }
 }
 
+/* MENSAGENS MELHORADAS */
 .message {
     position: fixed;
     top: 0;
@@ -188,12 +248,15 @@ summary {
 .message-content {
     background: white;
     padding: 30px;
-    border-radius: 15px;
+    border-radius: 20px;
     text-align: center;
-    max-width: 400px;
+    max-width: 500px;
     width: 90%;
     transform: scale(0.9);
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
 .message.active .message-content {
@@ -201,23 +264,43 @@ summary {
 }
 
 .message.win .message-content {
-    border: 5px solid #4CAF50;
+    background: linear-gradient(135deg, #f6f9fc, #e3f2fd);
+    border: 3px solid #4CAF50;
+    box-shadow: 0 15px 40px rgba(76, 175, 80, 0.4);
 }
 
 .message.error .message-content {
-    border: 5px solid #FF5252;
+    background: linear-gradient(135deg, #fef7f7, #ffebee);
+    border: 3px solid #FF5252;
+    box-shadow: 0 15px 40px rgba(255, 82, 82, 0.4);
 }
 
-.message-emoji {
-    font-size: 50px;
-    display: block;
-    margin-bottom: 15px;
+.message-character {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+.message-character img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .message-text {
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 22px;
+    margin-bottom: 25px;
     color: #333;
+    font-weight: 600;
+    line-height: 1.4;
 }
 
 .message-buttons {
@@ -227,21 +310,239 @@ summary {
 }
 
 .message-btn {
-    padding: 10px 20px;
+    padding: 12px 25px;
     border-radius: 50px;
     border: none;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+    background: linear-gradient(135deg, #4c5eaf, #4a60c3);
+    color: white;
+    box-shadow: 0 4px 10px rgba(76, 86, 175, 0.3);
 }
 
-.message-btn:first-child {
-    background: #4c5eaf;
-    color: white;
+.message-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(76, 78, 175, 0.4);
 }
 
 .message-btn.hidden {
     display: none;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #f0f;
+    opacity: 0.8;
+    border-radius: 0;
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(500px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.win-title {
+    font-size: 32px;
+    color: #4CAF50;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.error-title {
+    font-size: 32px;
+    color: #FF5252;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* MELHORIAS NO ASSISTENTE - SEMPRE VISÍVEL */
+.assistant {
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    width: 220px;
+    height: 220px;
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+}
+
+.assistant:hover {
+    transform: scale(1.1);
+}
+
+.assistant img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 3px solid #4c5baf;
+    transition: all 0.3s ease;
+}
+
+.assistant:hover img {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border-color: #4CAF50;
+}
+
+.assistant.talking img {
+    animation: assistantTalk 0.5s infinite alternate;
+}
+
+@keyframes assistantTalk {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}
+
+.assistant-speech {
+    position: absolute;
+    bottom: 130px;
+    right: 0;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    max-width: 250px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 500;
+    z-index: 1001;
+    border: 2px solid #4c5baf;
+}
+
+.assistant-speech.active {
+    opacity: 1;
+    visibility: visible;
+    bottom: 140px;
+}
+
+.assistant-speech:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: 15px;
+    border-width: 10px 10px 0;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+/* DICA REPOSICIONADA - AGORA FICA ABAIXO DO TEXTO ALVO */
+.game-hint {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #fff9c4, #ffecb3);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    max-width: 300px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    border: 2px solid #FFD600;
+    color: #5d4037;
+    font-weight: 600;
+    z-index: 100;
+    text-align: center;
+}
+
+.game-hint.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.game-hint:before {
+    content: "💡";
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.game-hint:after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent #FFD600 transparent;
+}
+
+/* Novos estilos para mensagem de vitória */
+.victory-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.victory-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #4CAF50;
+    animation: victoryPulse 1.5s infinite;
+}
+
+@keyframes victoryPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.victory-title {
+    font-size: 36px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.victory-text {
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #333;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .assistant {
+        width: 100px;
+        height: 100px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .assistant-speech {
+        bottom: 110px;
+        max-width: 200px;
+        font-size: 14px;
+        padding: 12px 15px;
+    }
+    
+    .victory-icon {
+        font-size: 50px;
+    }
+    
+    .victory-title {
+        font-size: 28px;
+    }
+    
+
 }
 
 @media (max-width: 480px) {
@@ -252,4 +553,60 @@ summary {
     .message-btn {
         width: 100%;
     }
+    
+    .assistant {
+        width: 80px;
+        height: 80px;
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .assistant-speech {
+        bottom: 90px;
+        max-width: 150px;
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+    
+    .victory-icon {
+        font-size: 40px;
+    }
+    
+    .victory-title {
+        font-size: 24px;
+    }
+    
+    .victory-text {
+        font-size: 16px;
+    }
+
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Estilo para o boneco na mensagem de vitória */
+.assistant-in-message {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px;
+    animation: bounce 1s infinite alternate;
+}
+
+.assistant-in-message img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Efeito de destaque para a cor correta */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(76, 175, 80, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); }
+}
+
+.highlight-correct {
+    animation: pulse 2s infinite;
 }
