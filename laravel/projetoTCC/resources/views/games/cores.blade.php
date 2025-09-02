@@ -366,13 +366,20 @@
             font-weight: 700;
         }
 
-        /* Estilos para o assistente */
+        .error-title {
+            font-size: 28px;
+            color: #FF5252;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        /* Estilos para o assistente - AUMENTADO */
         .assistant {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            width: 80px;
-            height: 80px;
+            width: 120px; /* Aumentado de 80px */
+            height: 120px; /* Aumentado de 80px */
             cursor: pointer;
             z-index: 1000;
             transition: transform 0.3s ease;
@@ -408,7 +415,7 @@
 
         .assistant-speech {
             position: absolute;
-            bottom: 90px;
+            bottom: 130px; /* Ajustado para o assistente maior */
             right: 0;
             background: white;
             padding: 12px 15px;
@@ -490,14 +497,14 @@
 
         @media (max-width: 768px) {
             .assistant {
-                width: 60px;
-                height: 60px;
+                width: 100px; /* Ajustado para responsividade */
+                height: 100px;
                 bottom: 15px;
                 right: 15px;
             }
 
             .assistant-speech {
-                bottom: 70px;
+                bottom: 110px; /* Ajustado para o assistente maior */
                 max-width: 150px;
                 font-size: 12px;
             }
@@ -521,14 +528,14 @@
             }
             
             .assistant {
-                width: 50px;
-                height: 50px;
+                width: 80px; /* Ajustado para responsividade */
+                height: 80px;
                 bottom: 10px;
                 right: 10px;
             }
             
             .assistant-speech {
-                bottom: 60px;
+                bottom: 90px; /* Ajustado para o assistente maior */
                 max-width: 120px;
                 font-size: 11px;
                 padding: 8px 10px;
@@ -545,6 +552,10 @@
             .victory-text {
                 font-size: 16px;
             }
+        }
+
+        .hidden {
+            display: none !important;
         }
     </style>
 </head>
@@ -564,9 +575,9 @@
         </ul>
     </header>
     
-    <!-- Assistente flutuante -->
+    <!-- Assistente flutuante - AUMENTADO -->
     <div class="assistant" id="assistant">
-        <img src="/imagens/1.png" alt="Assistente">
+        <img src="/imagens/1.png" alt="Assistente" id="assistantImg">
         <div class="assistant-speech" id="assistantSpeech">Olá! Posso te ajudar?</div>
     </div>
     
@@ -613,7 +624,8 @@
                     <div class="message-character" id="messageCharacter">
                         <img src="/imagens/1.png" alt="Personagem">
                     </div>
-                    <div class="win-title" id="winTitle">Vitória!</div>
+                    <div class="win-title hidden" id="winTitle">Vitória!</div>
+                    <div class="error-title hidden" id="errorTitle">Tente Novamente</div>
                     <div class="message-text" id="messageText"></div>
                 </div>
                 
@@ -659,10 +671,13 @@
         const victoryContainer = document.getElementById("victoryContainer");
         const victoryText = document.getElementById("victoryText");
         const standardMessage = document.getElementById("standardMessage");
+        const winTitle = document.getElementById("winTitle");
+        const errorTitle = document.getElementById("errorTitle");
         const btnJogarNovamente = document.getElementById("btnJogarNovamente");
         const btnSound = document.getElementById("btnSound");
         const soundIcon = document.getElementById("soundIcon");
         const assistant = document.getElementById("assistant");
+        const assistantImg = document.getElementById("assistantImg");
         const assistantSpeech = document.getElementById("assistantSpeech");
         const gameHint = document.getElementById("gameHint");
 
@@ -673,6 +688,7 @@
         let currentAudio = null;
         let currentTextAnimation = null;
         let assistantActive = false;
+        let assistantSpriteInterval;
 
         // Inicialização do jogo
         const selectedColors = [];
@@ -751,7 +767,6 @@
         // Funções do jogo
         function showMessage(type, text) {
             const message = document.getElementById('message');
-            const winTitle = document.getElementById('winTitle');
             
             message.className = 'message';
             message.classList.add(type);
@@ -761,12 +776,15 @@
                 standardMessage.classList.add('hidden');
                 victoryContainer.classList.remove('hidden');
                 victoryText.innerHTML = text;
+                winTitle.classList.add('hidden');
+                errorTitle.classList.add('hidden');
                 playerWin();
             } else {
                 // Mostrar mensagem padrão com personagem para erros
                 standardMessage.classList.remove('hidden');
                 victoryContainer.classList.add('hidden');
-                winTitle.style.display = 'none';
+                winTitle.classList.add('hidden');
+                errorTitle.classList.remove('hidden');
                 messageText.innerHTML = text;
                 messageCharacter.innerHTML = '<img src="/imagens/2.png" alt="Personagem Triste">';
                 playerLose();
@@ -778,13 +796,6 @@
             if (type === 'error') {
                 startTalkingMessage('triste');
             }
-            
-            // Mostrar botão após animação
-            setTimeout(() => {
-                if (type === 'error') {
-                    stopTalkingMessage();
-                }
-            }, 4000);
         }
 
         function startTalkingMessage(mood) {
@@ -837,6 +848,10 @@
                 clearInterval(currentTextAnimation);
             }
             
+            if (assistantSpriteInterval) {
+                clearInterval(assistantSpriteInterval);
+            }
+            
             // Configurar a fala do assistente
             assistantSpeech.textContent = "";
             assistantSpeech.classList.add('active');
@@ -847,6 +862,13 @@
             setTimeout(() => {
                 assistant.style.transform = 'scale(1)';
             }, 300);
+            
+            // Animação de sprites do assistente (troca de imagens)
+            let spriteIndex = 1;
+            assistantSpriteInterval = setInterval(() => {
+                assistantImg.src = `/imagens/${spriteIndex}.png`;
+                spriteIndex = spriteIndex % 5 + 1; // Cicla entre 1.png e 5.png
+            }, 500);
             
             // Animação de digitação
             let charIndex = 0;
@@ -864,12 +886,18 @@
                 assistantSpeech.classList.remove('active');
                 assistant.classList.remove('talking');
                 assistantActive = false;
+                clearInterval(assistantSpriteInterval);
+                assistantImg.src = "/imagens/1.png"; // Volta para a imagem padrão
             }, duration);
         }
 
         function hideAssistantMessage() {
             assistantSpeech.classList.remove('active');
             assistant.classList.remove('talking');
+            if (assistantSpriteInterval) {
+                clearInterval(assistantSpriteInterval);
+            }
+            assistantImg.src = "/imagens/1.png"; // Volta para a imagem padrão
         }
 
         function showHint(text) {
