@@ -918,3 +918,5 @@
     </script>
 </body>
 </html>
+
+deixe a mensagem mais bonita, deixe a dica muito mais bonito, e quando acerta ou erra o boneco tem que ficar visivel
