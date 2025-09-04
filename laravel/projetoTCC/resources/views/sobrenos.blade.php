@@ -45,7 +45,18 @@
 
 Nosso Trabalho:
 
-
+<div>
+    Objetivos
+</div>
+<div>
+    Visão
+</div>
+<div>
+   Didáticas
+</div>
+<div>
+    Orientação e informação
+</div>
         
 </div>
 
