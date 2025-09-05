@@ -154,7 +154,7 @@
     <div class="div-inicio-direitos">
         <div class="div-direitos-texto">
             <h3>Informando</h3>
-            <p> </p>
+            <p> teste2</p>
         </div>
         <button id="btn-inicio-convivendocomtea" onclick="window.location.href='/convivendocomtea';">
             Convivendo com TEA
