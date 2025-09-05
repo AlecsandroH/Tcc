@@ -153,8 +153,8 @@
 
     <div class="div-inicio-direitos">
         <div class="div-direitos-texto">
-            <h3>Direitos e Informações</h3>
-            <p>Conteúdo informativo sobre direitos e recursos disponíveis</p>
+            <h3>Informando</h3>
+            <p> teste2</p>
         </div>
         <button id="btn-inicio-convivendocomtea" onclick="window.location.href='/convivendocomtea';">
             Convivendo com TEA
