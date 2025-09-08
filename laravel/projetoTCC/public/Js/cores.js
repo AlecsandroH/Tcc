@@ -103,7 +103,7 @@ assistant.addEventListener('click', () => {
             correctButton.classList.add('highlight-correct');
             setTimeout(() => {
                 correctButton.classList.remove('highlight-correct');
-            }, 3000);
+            }, 5000);
         }
     } else {
         hideAssistantMessage();
@@ -126,7 +126,7 @@ function showMessage(type, text) {
         playerWin();
         
         // Mostrar assistente feliz
-        assistantImg.src = "/imagens/3.png";
+        assistantImg.src = "/imagens/1.png";
         showAssistantMessage("Parabéns! Você acertou! 🎉", 5000);
     } else {
         // Mostrar mensagem de erro com boneco
@@ -161,7 +161,7 @@ function playerLose() {
     playSound("/sons/erro.mp3");
 }
 
-function showAssistantMessage(text, duration = 3000) {
+function showAssistantMessage(text, duration = 5000) {
     // Parar qualquer animação anterior
     if (currentTextAnimation) {
         clearInterval(currentTextAnimation);
@@ -186,8 +186,8 @@ function showAssistantMessage(text, duration = 3000) {
     let spriteIndex = 1;
     assistantSpriteInterval = setInterval(() => {
         assistantImg.src = `/imagens/${spriteIndex}.png`;
-        spriteIndex = spriteIndex % 5 + 1; // Cicla entre 1.png e 5.png
-    }, 500);
+        spriteIndex = spriteIndex % 3 + 1; 
+     }, 200);
     
     // Animação de digitação
     let charIndex = 0;
