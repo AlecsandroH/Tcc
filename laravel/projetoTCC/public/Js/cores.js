@@ -244,5 +244,5 @@ if (isFirstVisit) {
         showAssistantMessage("Olá! Sou seu assistente. Clique em mim para obter ajuda ou no ícone de som para controlar o áudio!", 5000);
         // Marcar que já visitou nesta sessão
         sessionStorage.setItem('firstVisit', 'false');
-    }, 2000);
+    }, 500);
 }
