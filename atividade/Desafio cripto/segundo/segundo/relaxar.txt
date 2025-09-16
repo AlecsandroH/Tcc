@@ -1,0 +1,10 @@
+O que é Hash?
+Resposta:
+é um algoritmo matemático que transforma qualquer bloco de dados em uma série de caracteres de comprimento fixo. Independentemente do comprimento dos dados de entrada, o mesmo tipo de hash de saída será sempre um valor hash do mesmo comprimento.
+Para mim e para você, a forma mais comum de hashing tem a ver com senhas. Por exemplo, se você esquece sua senha em algum serviço online, você provavelmente vai ter que executar uma redefinição de senha. Quando você redefine sua senha, você geralmente não recebe sua senha de texto simples em troca. Isso porque o serviço online não armazena sua senha em texto plano. Ele armazenam um valor de hash para a senha. Na verdade, esse serviço (a menos que você esteja usando uma senha incrivelmente simples para que o valor de hash seja amplamente reconhecido) não tem nenhuma ideia da sua senha real.
+
+Descubra tipo de HASH esse abaixo: 
+DEA5C724B49DBE37E6BAF8C556E7C5C7ABFA68E60352D2910E693DBD9BD77214
+a senha é o "HASH" se não der certo, tome um chá para relaxar.
+
+
