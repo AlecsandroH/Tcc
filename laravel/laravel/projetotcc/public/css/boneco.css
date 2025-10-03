@@ -1,0 +1,42 @@
+.character-container {
+    position: relative;      
+    text-align: center;
+    margin-left: 20px;  
+}
+
+.character {
+    width: 500px;
+    height: auto;
+    margin-top: 0px;
+    top: 300px;
+    position: fixed;
+}
+
+.speech-bubble {
+    position: absolute;
+    top: 100px;
+    left: 250px;
+    transform: translateX(-50%);
+    background: #fff;
+    border: 3px solid #000;
+    border-radius: 15px;
+    padding: 10px 20px;
+    max-width: 250px;
+    text-align: center;
+    display: none;
+    font-weight: bold;
+    color: #333;
+    z-index: 1000;
+}
+
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 15px 15px 0;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+}

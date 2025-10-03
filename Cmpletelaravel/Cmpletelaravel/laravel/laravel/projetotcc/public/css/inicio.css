@@ -1,0 +1,175 @@
+.divtexto-manuais {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.textos-manuais {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+        .cabeçalho-imagem {
+            background: var(--gradient-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .cabeçalho-imagem img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .cabeçalho-texto {
+            background: white;
+            padding: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .cabeçalho-texto h1 {
+     font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+
+        .cabeçalho-texto p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+.textos-inicio {
+    background: #ffffff;
+    text-align: center;
+    justify-content: center;
+    padding: 15px 0;
+    top: 1000px;
+}
+
+
+.header h1 {
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 30px;
+}
+
+
+.manual-item {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.manual-item:hover {
+    transform: translateY(-5px);
+       justify-content: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/*cores*/
+.left {
+    background-color: #D6A86A;
+    max-width: 300px;
+    
+}
+
+.right {
+    background-color: #D6A86A;
+    color: rgb(0, 0, 0);
+    max-width: 300px;
+}
+
+.left-alt {
+    background-color: #D6A86A;
+    max-width: 300px;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .divtexto-manuais {
+        margin: 20px;
+        padding: 15px;
+    }
+    .header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+.div-inicio-direitos {
+    background-color: rgb(179, 3, 3);
+    font-family: 'Comic Neue', cursive;
+    padding: 40px 5%;
+    width: 100vw; 
+    height: 400px;
+    color: black;
+    margin: 0; 
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw; 
+    margin-right: -50vw;
+    box-sizing: border-box; 
+}
+
+.div-direitos-texto {
+    font-family: 'Comic Neue', cursive;
+    margin: 0;
+    padding: 0;
+    color: var(--cor-texto);
+    background-color: #f5f5f5;
+    line-height: 1.6;
+    max-width: 800px;
+    height: 250px;
+    
+}
+
+            #btn-inicio-oqautismo, #btn-inicio-convivendocomtea {
+                width: 90%;
+                text-align: center;
+            }
+
+                    /* Hero Section */
+        .hero-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 500px;
+            margin: 2rem 5%;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+

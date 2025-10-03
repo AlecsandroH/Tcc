@@ -1,0 +1,413 @@
+.div-meio {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    min-height: calc(100vh - 160px);
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.auth-card {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 
+        0 15px 35px rgba(50, 50, 93, 0.1), 
+        0 5px 15px rgba(0, 0, 0, 0.07);
+    padding: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 18px 40px rgba(50, 50, 93, 0.15), 
+        0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.auth-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #FF6B6B, #FFD166, #06D6A0, #118AB2);
+    background-size: 400% 100%;
+    animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #FF6B6B, #FFD166, #06D6A0, #118AB2);
+    border-radius: 2px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-3, .mb-4 {
+    margin-bottom: 1.2rem;
+}
+
+.mb-4 {
+    margin-bottom: 1.8rem;
+}
+
+/* ===== FORMULÁRIO ===== */
+.form-label {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+    color: #34495e;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+
+.form-control {
+    width: 350px;
+    padding: 0.85rem 1.2rem;
+    border: 2px solid #e8ecef;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #3F448C;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15), inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    background-color: white;
+    transform: translateY(-1px);
+}
+
+
+
+/* ===== BOTÕES ===== */
+.btn {
+    display: inline-block;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 2px solid transparent;
+    padding: 0.85rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #131c46 0%, #142157 100%);
+    color: white;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #142157 0%, #131c46 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.w-100 {
+    width: 100%;
+}
+
+/* ===== ALERTAS ===== */
+.alert {
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    border-left: 4px solid;
+    animation: slideIn 0.3s ease-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.alert-success {
+    background-color: #f0f9f4;
+    color: #0f5132;
+    border-color: #2ecc71;
+    box-shadow: 0 2px 5px rgba(46, 204, 113, 0.1);
+}
+
+.alert-danger {
+    background-color: #fdf2f2;
+    color: #721c24;
+    border-color: #e74c3c;
+    box-shadow: 0 2px 5px rgba(231, 76, 60, 0.1);
+}
+
+.alert p {
+    margin: 0.3rem 0;
+}
+
+.alert p:first-child {
+    margin-top: 0;
+}
+
+.alert p:last-child {
+    margin-bottom: 0;
+}
+
+/* ===== LINKS ===== */
+.text-decoration-none {
+    text-decoration: none;
+}
+
+a {
+    color: #2d2c55;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    position: relative;
+    text-decoration: none;
+}
+
+
+
+a:hover {
+    color: #256Edc;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    position: relative;
+    text-decoration: none;
+}
+
+
+
+
+
+/* ===== FUNCIONALIDADES DE SENHA ===== */
+.password-container {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: -15px;
+    top: 55px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.password-toggle:hover {
+    color: #34db4a;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .div-cabecalho {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .nav-links a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+
+    .auth-card {
+        padding: 1.8rem;
+        margin: 1rem;
+    }
+    
+    .div-meio {
+        padding: 1rem;
+    }
+    
+    .auth-card:hover {
+        transform: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .form-control {
+        padding: 0.75rem 1rem;
+    }
+    
+    .btn {
+        padding: 0.75rem 1.2rem;
+    }
+}
+
+/* ===== ACESSIBILIDADE ===== */
+/* Foco visível para usuários de teclado */
+button:focus, 
+a:focus, 
+input:focus {
+    outline: 3px solid #3498db;
+    outline-offset: 2px;
+}
+
+/* Esconder outline para usuários de mouse, mas manter para teclado */
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) a:focus,
+body:not(.user-is-tabbing) input:focus {
+    outline: none;
+}
+
+/* Alto contraste para usuários que preferem */
+@media (prefers-contrast: high) {
+    .form-control {
+        border-width: 3px;
+    }
+    
+    .btn {
+        border-width: 3px;
+    }
+}
+
+/* Redução de movimento para usuários sensíveis */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .auth-card::before {
+        animation: none;
+        background: #3498db;
+    }
+    
+    .auth-card:hover {
+        transform: none;
+    }
+}
+
+/* ===== ANIMAÇÕES ADICIONAIS ===== */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+.btn-primary:focus {
+    animation: pulse 0.5s ease;
+}
+
+/* ===== ESTILOS PARA ESTADOS DE CARREGAMENTO ===== */
+.btn.loading {
+    opacity: 0.7;
+    pointer-events: none;
+    position: relative;
+}
+
+.btn.loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 0.8s ease infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Melhor contraste para texto */
+p, label, .form-label {
+    color: #2c3e50;
+}
+
+/* Espaçamento consistente entre elementos do formulário */
+form > * {
+    margin-bottom: 1rem;
+}
+
+/* Indicador visual para campos obrigatórios */
+.form-label:after {
+    content: " *";
+    color: #e74c3c;
+}
